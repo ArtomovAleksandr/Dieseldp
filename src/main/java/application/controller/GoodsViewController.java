@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class GoodsViewController {
-    @GetMapping()
+    @GetMapping("/")
     public String index(){
-        return "redirect:/index";
+        return "index";
     }
 
 }
