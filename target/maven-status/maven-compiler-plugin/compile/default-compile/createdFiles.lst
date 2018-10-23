@@ -1,1 +1,5 @@
 application\controller\GoodsViewController.class
+application\entity\goods\Uzels.class
+application\entity\goods\Groups.class
+application\entity\goods\Fabrica.class
+application\entity\goods\Category.class
