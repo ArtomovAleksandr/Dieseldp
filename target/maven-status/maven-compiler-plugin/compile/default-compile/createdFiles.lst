@@ -1,5 +1,8 @@
 application\controller\GoodsViewController.class
 application\entity\goods\Uzels.class
 application\entity\goods\Groups.class
+application\entity\currency\HistoryCurrent.class
+application\entity\currency\Current.class
+application\entity\goods\Goods.class
 application\entity\goods\Fabrica.class
 application\entity\goods\Category.class

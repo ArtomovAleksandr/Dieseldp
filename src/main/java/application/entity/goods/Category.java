@@ -2,18 +2,17 @@ package application.entity.goods;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+//категория
 @Data
 @Entity
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    int visible;
+    boolean visible;
+    @Column(columnDefinition = "TINYINT")
     int metric;
     String name;
     public Category(){}
