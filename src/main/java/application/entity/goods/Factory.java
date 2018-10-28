@@ -9,7 +9,7 @@ import javax.persistence.Id;
 //производитель
 @Data
 @Entity
-public class Fabrica {
+public class Factory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;

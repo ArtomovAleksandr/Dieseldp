@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/fabrica")
-public class FabracaViewController {
-    @GetMapping("/")
+@RequestMapping("/factory")
+public class FactoryViewController {
+    @GetMapping()
     public String index(){
-        return "fabrica/fabrica_create";
+        return "factory/factory_create";
     }
     @GetMapping("/{id}")
     public String edit(@PathVariable int id, Model model){
-        return "fabrica/fabrica_edit";
+        return "factory/factory_edit";
     }
 }

@@ -16,8 +16,8 @@ public class Goods {
     Current current;//id валюты
     @ManyToOne(targetEntity = Category.class,fetch = FetchType.EAGER)
     Category category;//id категории
-    @ManyToOne(targetEntity = Fabrica.class,fetch = FetchType.EAGER)
-    Fabrica fabrica;//id производителя
+    @ManyToOne(targetEntity = Factory.class,fetch = FetchType.EAGER)
+    Factory fabrica;//id производителя
     @ManyToOne(targetEntity = Groups.class,fetch = FetchType.EAGER)
     Groups group;//id группы
     @ManyToOne(targetEntity = Uzels.class,fetch = FetchType.EAGER)
