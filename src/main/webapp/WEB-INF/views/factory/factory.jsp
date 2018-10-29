@@ -10,42 +10,42 @@
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container main-div mt-md-5">
+    <h1>Производители</h1>
     <div class="tools-div form-control text-right">
-        <a class="btn btn-outline-warning ml-2" href="/admins/create">Create</a>
+        <a class="btn btn-outline-warning ml-2" href="/factory/create">Create</a>
     </div>
     <div>
         <table class="table table-bordered mt-2">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Login</th>
-                <th scope="col">Email</th>
+                <th scope="col">Название Производителя</th>
+            <%--     <th scope="col">Email</th> --%>
                 <th colspan="2"></th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${admins}" var="admin">
+            <c:forEach items="${factory}" var="factor">
                 <tr>
-                    <th scope="row">${admin.id}</th>
-                    <td scope="row">${admin.login}</td>
-                    <td scope="row">${admin.email}</td>
+                    <th scope="row">${factor.id}</th>
+                    <td scope="row">${factor.name}</td>
+              <%--       <td scope="row">${admin.email}</td> --%>
                     <td colspan="2">
-                        <c:set var="current" scope="session" value="${login}"/>
-                        <c:choose>
-                            <c:when test="${admin.login!=current}">
-                                <button class="btn btn-outline-danger m-2 del" type="submit" value="${admin.id}">
+                    <%--     <c:set var="current" scope="session" value="${login}"/> --%>
+                    <%--    <c:choose> --%>
+
+                                <button class="btn btn-outline-danger m-2 del" type="submit" value="${factor.id}">
                                     Delete
                                 </button>
-                            </c:when>
-                            <c:otherwise>
-                                <a href="/admins/${admin.id}">
+
+
+                                <a href="/admins/${factor.id}">
                                     <button class="btn btn-outline-info m-2" name="id" type="submit"
-                                            value="${admin.id}">
+                                            value="${factor.id}">
                                         Edit
                                     </button>
                                 </a>
-                            </c:otherwise>
-                        </c:choose>
+
                     </td>
                 </tr>
             </c:forEach>

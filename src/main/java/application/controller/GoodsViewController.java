@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GoodsViewController {
     @GetMapping("/")
     public String index(){
-        return "factory/factory_create";
+        return "redirect:/factory";
     }
 
 }
