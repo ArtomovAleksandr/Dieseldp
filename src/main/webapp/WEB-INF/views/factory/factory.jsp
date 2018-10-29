@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isELIgnored="false" contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <c:import url="../template/head.jsp"></c:import>
@@ -33,14 +33,14 @@
                     <td colspan="2">
                     <%--     <c:set var="current" scope="session" value="${login}"/> --%>
                     <%--    <c:choose> --%>
-
-                                <button class="btn btn-outline-danger m-2 del" type="submit" value="${factor.id}">
+                           <%--   <a href="/factory/${factor.id}"> --%>
+                                <button class="btn btn-outline-danger m-2 del"  value="${factor.id}">
                                     Delete
                                 </button>
+                           <%--   </a>  --%>
 
-
-                                <a href="/admins/${factor.id}">
-                                    <button class="btn btn-outline-info m-2" name="id" type="submit"
+                                <a href="/factory/${factor.id}">
+                                    <button class="btn btn-outline-info m-2" name="id"
                                             value="${factor.id}">
                                         Edit
                                     </button>
@@ -55,8 +55,9 @@
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
-<%-- <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/admins/admins.js" type="text/javascript"></script>  --%>
+<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
+<script src="../../../resources/js/factory/factory_delete.js" type="text/javascript"></script>
+<%-- <script src="../../../resources/js/admins/admins.js" type="text/javascript"></script>  --%>
 </body>
 </html>
 

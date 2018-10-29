@@ -39,4 +39,16 @@ public class FactoryController {
         return new JSONResultOk<>(newFactory);
 
     }
+    @DeleteMapping("/{id}")
+    public JSONResult<Factory> deleteFactory(@PathVariable int id) {
+        Factory newFactory = new Factory();
+        try {
+            newFactory = factoryServise.getById(id);
+            factoryServise.delete(id);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return new JSONResultError<>(newFactory, ex.getMessage());
+        }
+        return new JSONResultOk<>(newFactory);
+    }
 }
