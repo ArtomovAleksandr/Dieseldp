@@ -14,4 +14,15 @@ public class Factory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
+
+    public Factory() {
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
