@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1.0/factory",produces = "applications/json")
+@RequestMapping(value = "/api/v1.0/factory")
 public class FactoryController {
     @Autowired
     FactoryServise factoryServise;

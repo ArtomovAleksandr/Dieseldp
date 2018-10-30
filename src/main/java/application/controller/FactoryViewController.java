@@ -30,6 +30,13 @@ public class FactoryViewController {
     }
     @GetMapping("/{id}")
     public String edit(@PathVariable int id, Model model){
+        Factory factory=new Factory();
+        try {
+            factory =factoryServise.getById(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        model.addAttribute("factory",factory);
         return "factory/factory_edit";
     }
     @GetMapping("/create")

@@ -9,10 +9,10 @@
 
 <body>
 <c:import url="../template/header.jsp"></c:import>
-<div class="container main-div mt-md-5">
-    <h1>Производители</h1>
+<div class="container main-div">
+    <h3>Производители</h3>
     <div class="tools-div form-control text-right">
-        <a class="btn btn-outline-warning ml-2" href="/factory/create">Create</a>
+        <a class="btn btn-outline-warning" href="/factory/create">Создать</a>
     </div>
     <div>
         <table class="table table-bordered mt-2">
@@ -34,15 +34,15 @@
                     <%--     <c:set var="current" scope="session" value="${login}"/> --%>
                     <%--    <c:choose> --%>
                            <%--   <a href="/factory/${factor.id}"> --%>
-                                <button class="btn btn-outline-danger m-2 del"  value="${factor.id}">
-                                    Delete
+                                <button class="btn btn-outline-danger  del"  value="${factor.id}">
+                                    Удалить
                                 </button>
                            <%--   </a>  --%>
 
                                 <a href="/factory/${factor.id}">
-                                    <button class="btn btn-outline-info m-2" name="id"
+                                    <button class="btn btn-outline-info " name="id"
                                             value="${factor.id}">
-                                        Edit
+                                        Редактировать
                                     </button>
                                 </a>
 

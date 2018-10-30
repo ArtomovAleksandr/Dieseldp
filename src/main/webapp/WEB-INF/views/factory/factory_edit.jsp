@@ -10,19 +10,19 @@
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container main-div mt-3">
-    <h1>Administrator: ${admin.login}</h1>
+    <h1>Редактировать производителя: ${factory.name}</h1>
     <form id="form" class="form edit-admin-form mt-3 mb-5">
-        <input type="text" id="id" name="id" hidden>
+        <input type="text" value="${factory.id}" name="id" hidden>
         <div class="row">
             <div class="col mt-2">
-                <label for="login">Login: </label>
+                <label for="name">Производитель: </label>
             </div>
             <div class="col-md-8">
-                <input type="text" id="login" class="form-control" readonly name="login"
-                       value="${admin.login}" placeholder="Enter here...">
+                <input type="text" id="name" class="form-control" name="name"
+                       value="${factory.name}" placeholder="Enter here...">
             </div>
         </div>
-        <div class="row mt-2">
+    <%--    <div class="row mt-2">
             <div class="col mt-2">
                 <label for="email">Email: </label>
             </div>
@@ -48,11 +48,11 @@
                 <input type="password" id="password2" class="form-control" name="confirm"
                        placeholder="Enter here...">
             </div>
-        </div>
+        </div> --%>
         <div class="mt-4 row">
             <div class="col-md-12 text-center">
-                <button type="submit" id="save" value="${admin.id}" class="btn btn-outline-success pl-5 pr-5">
-                    Save
+                <button type="submit" id="save" value="${factory.id}" class="btn btn-outline-success pl-5 pr-5">
+                    Сохранить
                 </button>
             </div>
         </div>
@@ -61,10 +61,10 @@
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
 <%-- <script src="../../../resources/js/services/FormsValidator.js" type="text/javascript"></script>
-<script src="../../../resources/js/services/jquery.validate.js" type="text/javascript"></script>
-<script src="../../../resources/js/DTO/DTOAdministrator.js" type="text/javascript"></script>
+<script src="../../../resources/js/services/jquery.validate.js" type="text/javascript"></script> --%>
+<script src="../../../resources/js/DTO/DTOFactory.js" type="text/javascript"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/admins/admin_edit.js" type="text/javascript"></script>  --%>
+<script src="../../../resources/js/factory/factory_edit.js" type="text/javascript"></script>
 </body>
 </html>
 
