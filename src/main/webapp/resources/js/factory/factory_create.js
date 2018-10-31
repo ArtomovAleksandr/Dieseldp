@@ -2,7 +2,7 @@ $(function () {
    $("#save").click(
       function (e) {
           let name=$('#factory').val();
-          var factory=new Factory(0,name);
+          var factory=new Factory(name);
           function success() {
               console.log("done!");
               location.replace("/factory")
