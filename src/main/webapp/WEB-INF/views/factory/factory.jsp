@@ -9,6 +9,7 @@
 
 <body>
 <c:import url="../template/header.jsp"></c:import>
+<% Integer countpagin=(Integer) request.getAttribute("countpagin");%>
 <div class="container main-div">
     <h3>Производители</h3>
     <div class="tools-div form-control text-right">
@@ -27,7 +28,7 @@
             <tbody>
             <c:forEach items="${factory}" var="factor">
                 <tr>
-                    <th scope="row">${factor.id}</th>
+                    <th scope="row">${factor.show_namber}</th>
                     <td scope="row">${factor.name}</td>
               <%--       <td scope="row">${admin.email}</td> --%>
                     <td colspan="2">
@@ -56,12 +57,16 @@
 
     <nav aria-label="...">
         <ul class="pagination pagination-lg">
-            <li class="page-item disabled">
+           <% for(int i=1;i<=countpagin;i++){ %>
+            <li class="page-item"><a class="page-link" href="/factory/show/<%=i%>" ><%= i %></a></li>
+
+            <%}%>
+        <%--    <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">1</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-        </ul>
+            <li class="page-item"><a class="page-link" href="/factory/show/2">2</a></li>
+            <li class="page-item"><a class="page-link" href="/factory/show/3">3</a></li>
+        </ul> --%>
     </nav>
 </div>
 <c:import url="../template/footer.jsp"></c:import>
