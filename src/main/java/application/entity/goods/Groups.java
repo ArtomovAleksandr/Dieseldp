@@ -3,10 +3,8 @@ package application.entity.goods;
 import lombok.Data;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 //группа
 @Data
 @Entity
@@ -15,5 +13,11 @@ public class Groups {
     @GeneratedValue(strategy =GenerationType.IDENTITY)
     int id;
     String name;
+    @Transient
+    int show_namber;
     public Groups(){}
+
+    public void setShow_namber(int show_namber) {
+        this.show_namber = show_namber;
+    }
 }

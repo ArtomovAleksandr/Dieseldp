@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FactoryServise implements EntityService<Factory> {
+public class FactoryService implements EntityService<Factory> {
     @Autowired
    FactoryRepository factoryRepository;
 
