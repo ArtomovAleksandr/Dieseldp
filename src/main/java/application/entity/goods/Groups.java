@@ -17,6 +17,14 @@ public class Groups {
     int show_namber;
     public Groups(){}
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void setShow_namber(int show_namber) {
         this.show_namber = show_namber;
     }
