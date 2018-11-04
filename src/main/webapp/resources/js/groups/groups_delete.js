@@ -12,7 +12,7 @@ $(function () {
             console.log('fail!');
         };
 
-        service.del("/api/v1.0/factory/" + $del.val(), success, fail);
+        service.del("/api/v1.0/groups/" + $del.val(), success, fail);
 
     })
 });

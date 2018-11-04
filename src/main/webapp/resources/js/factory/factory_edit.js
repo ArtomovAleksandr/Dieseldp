@@ -3,7 +3,6 @@ $(function () {
    $("#save").click(function (e) {
       e.preventDefault();
       let name=$("#name").val();
-    //  let id=$("#save").val();
       let factory=new Factory(name);
       function succes() {
           console.log("done!edit");

@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/api/FactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/api/FactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/FactoryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/controller/FactoryViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/GoodsViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/controller/GoodsViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entity/goods/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/entity/goods/Groups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/service/implementation/FactoryServise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/service/implementation/FactoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/FactoryViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/controller/FactoryViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/GoodsViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/controller/GoodsViewController.class" afterDir="false" />
-    </list>
+    <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +43,8 @@
               <file leaf-file-name="FactoryViewController.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/FactoryViewController.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="449">
-                      <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+                    <state relative-caret-position="245">
+                      <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -146,7 +137,7 @@
               <file leaf-file-name="GroupsViewController.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/GroupsViewController.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="755">
+                    <state relative-caret-position="418">
                       <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
                       <folding>
                         <element signature="imports" expanded="true" />
@@ -759,12 +750,12 @@
       <workItem from="1540981547606" duration="239000" />
       <workItem from="1541016364424" duration="4348000" />
       <workItem from="1541100985299" duration="7472000" />
-      <workItem from="1541185083386" duration="3702000" />
+      <workItem from="1541185083386" duration="4533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71739000" />
+    <option name="totallyTimeSpent" value="72570000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -801,8 +792,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32972974" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4918919" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32756758" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32756758" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="7" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="7" />
@@ -1190,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/FactoryViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        <state relative-caret-position="245">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
