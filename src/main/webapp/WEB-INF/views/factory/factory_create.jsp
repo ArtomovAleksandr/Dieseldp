@@ -22,15 +22,6 @@
                        placeholder="Введите название производителя...">
             </div>
         </div>
-       <%-- <div class="row mt-2">
-            <div class="col mt-2">
-                <label for="email">Email: </label>
-            </div>
-            <div class="col-md-8">
-                <input type="text" id="email" class="form-control" name="email"
-                       placeholder="Enter here...">
-            </div>
-        </div> --%>
         <div class="mt-4 row">
             <div class="col-md-12 text-center">
                 <button type="submit" id="save" class="btn btn-outline-danger pl-5 pr-5">
@@ -42,13 +33,10 @@
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
-<%--  <script src="../../../resources/js/services/FormsValidator.js" type="text/javascript"></script>
-<script src="../../../resources/js/services/jquery.validate.js" type="text/javascript"></script>
-<script src="../../../resources/js/DTO/DTOAdministrator.js" type="text/javascript"></script> --%>
 <script src="../../../resources/js/DTO/DTOFactory.js"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/factory/factory_create.js"></script>
-<%-- <script src="../../../resources/js/admins/admin_create.js" type="text/javascript"></script>  --%>
+
 </body>
 </html>
 

@@ -21,7 +21,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Название Производителя</th>
-            <%--     <th scope="col">Email</th> --%>
+
                 <th colspan="2"></th>
             </tr>
             </thead>
@@ -30,16 +30,10 @@
                 <tr>
                     <th scope="row">${factor.show_namber}</th>
                     <td scope="row">${factor.name}</td>
-              <%--       <td scope="row">${admin.email}</td> --%>
                     <td colspan="2">
-                    <%--     <c:set var="current" scope="session" value="${login}"/> --%>
-                    <%--    <c:choose> --%>
-                           <%--   <a href="/factory/${factor.id}"> --%>
                                 <button class="btn btn-outline-danger  del"  value="${factor.id}">
                                     Удалить
                                 </button>
-                           <%--   </a>  --%>
-
                                 <a href="/factory/${factor.id}">
                                     <button class="btn btn-outline-info " name="id"
                                             value="${factor.id}">
@@ -61,19 +55,14 @@
             <li class="page-item"><a class="page-link" href="/factory/show/<%=i%>" ><%= i %></a></li>
 
             <%}%>
-        <%--    <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="/factory/show/2">2</a></li>
-            <li class="page-item"><a class="page-link" href="/factory/show/3">3</a></li>
-        </ul> --%>
+
     </nav>
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/factory/factory_delete.js" type="text/javascript"></script>
-<%-- <script src="../../../resources/js/admins/admins.js" type="text/javascript"></script>  --%>
+
 </body>
 </html>
 

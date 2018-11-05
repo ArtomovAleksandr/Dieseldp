@@ -6,7 +6,7 @@ $(function () {
         let factory=new Groups(name);
         function succes() {
             console.log("done!edit");
-            location.replace("/factory")
+            location.replace("/groups/show/1")
         }
         function fail(e) {
             console.log(e);

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/group")
+@RequestMapping("/groups")
 public class GroupsViewController {
     private static int sizepagin=5;
 

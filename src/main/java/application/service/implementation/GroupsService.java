@@ -30,6 +30,6 @@ public class GroupsService implements EntityService<Groups> {
 
     @Override
     public void delete(int id) throws Exception {
-          groupsRepository.findById(id);
+          groupsRepository.deleteById(id);
     }
 }

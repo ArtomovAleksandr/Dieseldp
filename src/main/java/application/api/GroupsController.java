@@ -19,6 +19,7 @@ public class GroupsController {
         Groups newGroups = new Groups();
         try {
             newGroups.setName(groups.getName());
+            newGroups=groupsService.save(newGroups);
         } catch (Exception ex) {
             ex.printStackTrace();
             return new JSONResultError<>(newGroups, ex.getMessage());
@@ -38,6 +39,7 @@ public class GroupsController {
         }
         return new JSONResultOk<>(newGroup);
     }
+    @DeleteMapping("/{id}")
     public JSONResult<Groups> deleteGroups(@PathVariable int id){
         Groups newGroups=new Groups();
         try{

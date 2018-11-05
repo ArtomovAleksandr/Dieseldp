@@ -5,11 +5,11 @@ $(function () {
             var groups=new Groups(name);
             function success() {
                 console.log("done!");
-                location.replace("/groups")
+                location.replace("/groups/show/1");
             }
             function fail() {
                 console.log("error!")
-                location.replace("/groups")
+                location.replace("/groups/show/1");
             }
             let servise=new AJAXService();
             servise.post("/api/v1.0/groups",groups,success,fail);
