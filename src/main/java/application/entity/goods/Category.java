@@ -15,5 +15,19 @@ public class Category {
     @Column(columnDefinition = "TINYINT")
     int metric;
     String name;
+    @Transient
+    int show_namber;
     public Category(){}
+
+    public void setShow_namber(int show_namber) {
+        this.show_namber = show_namber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
