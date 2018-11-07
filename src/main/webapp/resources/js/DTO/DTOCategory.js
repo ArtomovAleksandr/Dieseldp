@@ -1,5 +1,6 @@
 class Category {
-    constructor(name){
+    constructor(name,visible){
         this.name=name;
+        this.visible=visible;
     }
 }

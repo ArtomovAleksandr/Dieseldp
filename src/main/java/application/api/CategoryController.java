@@ -18,12 +18,26 @@ public class CategoryController {
         Category newCategory=new Category();
         try {
             newCategory.setName(category.getName());
+            newCategory.setVisible(category.isVisible());
             newCategory= categoryServise.save(newCategory);
         }catch (Exception e){
             e.printStackTrace();
             return  new JSONResultError<>(newCategory,e.getMessage());
         }
         return new JSONResultOk<>(newCategory);
+    }
+    @PostMapping("/move_basket/{id}")
+    public JSONResult<Category> moveBasket(@PathVariable int id){
+        Category category=new Category();
+        try {
+            category=categoryServise.getById(id);
+            category.setVisible(false);
+            category=categoryServise.save(category);
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return new JSONResultError<>(category,ex.getMessage());
+        }
+        return new JSONResultOk<>(category);
     }
     @PutMapping("/{id}")
     public JSONResult<Category> updateFactory(@RequestBody Category category,@PathVariable int id){

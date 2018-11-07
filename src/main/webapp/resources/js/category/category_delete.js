@@ -1,6 +1,7 @@
 $(function () {
-   $("#del").click(
+   $(".del").click(
        function (e) {
+           e.preventDefault();
            $del=$(this);
            let service=new AJAXService();
            function success() {

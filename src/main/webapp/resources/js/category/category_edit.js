@@ -7,7 +7,7 @@ $(function () {
           let category=new Category(name);
            function succes() {
                console.log("done!edit");
-               location.replace("/category")
+               location.replace("/category/show/1")
            }
            function fail(e) {
                console.log(e);

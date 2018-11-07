@@ -18,12 +18,6 @@ public class FactoryViewController {
     private static int sizepagin=5;
     @Autowired
     private FactoryService factoryService;
- //   @GetMapping()
-   // String indexShow(){
-    //    Integer factory_view= (Integer) session.getAttribute("factory");
-    //    if(factory_view==null) factory_view=1;
- //       return "redirect:/factory/show/1";
- //   }
 
     @GetMapping("/show/{id}")
     public String index(@PathVariable int id, Model model){

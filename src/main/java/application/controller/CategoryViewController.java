@@ -19,7 +19,7 @@ public class CategoryViewController {
     private static int sizepagin=5;
     @Autowired
     private CategoryServise categoryServise;
-
+    @GetMapping("/show/{id}")
     public String index(@PathVariable int id, Model model){
         List<Category> categoryList=new ArrayList<>();
         try{
