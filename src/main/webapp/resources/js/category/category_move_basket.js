@@ -1,36 +1,29 @@
 $(function () {
     $(".del").click(
         function (e) {
-       /*      $del=$(this);
-            let name= $del.parent().children().eq(1).val();
-          //  let name=$("#category").val();
-            var category=new Category(name,0);
+            e.preventDefault();
+            $del=$(this);
+            let service=new AJAXService();
+            let category=new Category("name");
             function success() {
-                console.log("done!");
-                location.replace("/category/show/1")
-            }
+                $del.parent().parent().remove();
+                console.log('done!');
+            };
+
             function fail() {
-                console.log("error!")
-                location.replace("/category/show/1")
-            }
-            let servise=new AJAXService();
-            servise.post("/api/v1.0/category",category,success,fail);
-            e.preventDefault();*/
-
-              e.preventDefault();
-                $del=$(this);
-                let service=new AJAXService();
-                function success() {
-                    $del.parent().parent().remove();
-                    console.log('done!');
-                };
-
-                function fail() {
-                    console.log('fail!');
-                };
-
-                service.post("/api/v1.0/category/move_basket/" + $del.val(), success, fail);
-
+                console.log('fail!');
+            };
+            service.put("/api/v1.0/category/move_basket/"+$del.val(),category,success,fail);
         }
-    );
+
+
+
+
+    )
+
+
+
+
+
+
 });

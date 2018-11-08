@@ -17,6 +17,7 @@ class AJAXService {
             type: 'PUT',
             dataType: 'json',
             url: url,
+        //    contentType:"text/html; charset=utf-8",
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(entityDTO),
             async: true,

@@ -26,7 +26,7 @@ public class CategoryController {
         }
         return new JSONResultOk<>(newCategory);
     }
-    @PostMapping("/move_basket/{id}")
+    @PutMapping(value = "/move_basket/{id}")
     public JSONResult<Category> moveBasket(@PathVariable int id){
         Category category=new Category();
         try {
