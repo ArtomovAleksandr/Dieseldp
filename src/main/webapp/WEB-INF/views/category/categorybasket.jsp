@@ -11,9 +11,9 @@
 <c:import url="../template/header.jsp"></c:import>
 <% Integer countpagin=(Integer) request.getAttribute("countpagin");%>
 <div class="container main-div">
-    <h3>Категории</h3>
+    <h3>Корзина Категорий</h3>
     <div class="tools-div form-control text-right">
-        <a class="btn btn-outline-primary" href="/category/basket/show/1">В корзину</a>
+        <a class="btn btn-outline-primary" href="/category/show/1">К категориям</a>
         <a class="btn btn-outline-warning" href="/category/create">Создать</a>
     </div>
     <div>
@@ -35,13 +35,12 @@
                                 <button class="btn btn-outline-danger  del"  value="${categor.id}">
                                     Удалить
                                 </button>
-                                <a href="/category/${categor.id}">
-                                    <button class="btn btn-outline-info " name="id"
+                            <%--    <a href="/category/restore/${categor.id}"> --%>
+                                    <button class="btn btn-outline-info restore" name="id"
                                             value="${categor.id}">
-                                        Редактировать
+                                        Востановить
                                     </button>
-                                </a>
-
+                           <%--    </a>  --%>
                     </td>
                 </tr>
             </c:forEach>
@@ -53,7 +52,7 @@
     <nav aria-label="...">
         <ul class="pagination pagination-lg">
            <% for(int i=1;i<=countpagin;i++){ %>
-            <li class="page-item"><a class="page-link" href="/category/show/<%=i%>" ><%= i %></a></li>
+            <li class="page-item"><a class="page-link" href="/category/basket/show/<%=i%>" ><%= i %></a></li>
 
             <%}%>
 
@@ -63,7 +62,8 @@
 <!--Scripts-->
 <script src="../../../resources/js/DTO/DTOCategory.js" type="text/javascript"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/category/category_move_basket.js" type="text/javascript"></script>
+<script src="../../../resources/js/category/category_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/category/category_restore.js" type="text/javascript"></script>
 
 </body>
 </html>

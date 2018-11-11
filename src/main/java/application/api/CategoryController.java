@@ -39,6 +39,19 @@ public class CategoryController {
         }
         return new JSONResultOk<>(category);
     }
+    @PutMapping(value = "/restore/{id}")
+    public JSONResult<Category> redtoreBasket(@PathVariable int id){
+        Category category=new Category();
+        try {
+            category=categoryServise.getById(id);
+            category.setVisible(true);
+            category=categoryServise.save(category);
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return new JSONResultError<>(category,ex.getMessage());
+        }
+        return new JSONResultOk<>(category);
+    }
     @PutMapping("/{id}")
     public JSONResult<Category> updateFactory(@RequestBody Category category,@PathVariable int id){
         Category newCategory=new Category();
