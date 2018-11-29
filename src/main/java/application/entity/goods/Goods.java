@@ -20,8 +20,8 @@ public class Goods {
     Factory fabrica;//id производителя
     @ManyToOne(targetEntity = Groups.class,fetch = FetchType.EAGER)
     Groups group;//id группы
-    @ManyToOne(targetEntity = Uzels.class,fetch = FetchType.EAGER)
-    Uzels uzel;//id узел
+    @ManyToOne(targetEntity = Uzel.class,fetch = FetchType.EAGER)
+    Uzel uzel;//id узел
     String num;//кассовый номер
     String katalog;//каталожный номер
     String name;//название

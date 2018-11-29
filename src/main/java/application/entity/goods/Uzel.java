@@ -9,10 +9,18 @@ import javax.persistence.Id;
 //узел
 @Data
 @Entity
-public class Uzels {
+public class Uzel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
-    public Uzels(){}
+    public Uzel(){}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
