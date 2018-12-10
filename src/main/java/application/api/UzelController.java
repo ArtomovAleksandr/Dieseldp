@@ -1,6 +1,7 @@
 package application.api;
 
 
+
 import application.entity.goods.Groups;
 import application.entity.goods.Uzel;
 import application.helper.JSONResult;
@@ -27,6 +28,32 @@ public class UzelController {
             return new JSONResultError<>(newUzel, ex.getMessage());
         }
         return new JSONResultOk<>(newUzel);
+    }
+    @PutMapping(value = "/move_basket/{id}")
+    public JSONResult<Uzel> moveBasket(@PathVariable int id){
+        Uzel uzel=new Uzel();
+        try {
+            uzel=uzelService.getById(id);
+            uzel.setVisible(false);
+            uzel=uzelService.save(uzel);
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return new JSONResultError<>(uzel,ex.getMessage());
+        }
+        return new JSONResultOk<>(uzel);
+    }
+    @PutMapping(value = "/restore/{id}")
+    public JSONResult<Uzel> redtoreBasket(@PathVariable int id){
+        Uzel uzel=new Uzel();
+        try {
+            uzel=uzelService.getById(id);
+            uzel.setVisible(true);
+            uzel=uzelService.save(uzel);
+        }catch (Exception ex){
+            ex.printStackTrace();
+            return new JSONResultError<>(uzel,ex.getMessage());
+        }
+        return new JSONResultOk<>(uzel);
     }
     @PutMapping("/{id}")
     public JSONResult<Uzel> updateUzel(@RequestBody Uzel uzel,@PathVariable int  id){

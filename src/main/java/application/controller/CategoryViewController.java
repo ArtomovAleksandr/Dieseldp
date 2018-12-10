@@ -1,8 +1,7 @@
 package application.controller;
 
 import application.entity.goods.Category;
-import application.entity.goods.Factory;
-import application.service.implementation.CategoryServise;
+import application.service.implementation.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,12 +16,12 @@ import java.util.*;
 public class CategoryViewController {
     private static int sizepagin=5;
     @Autowired
-    private CategoryServise categoryServise;
+    private CategoryService categoryService;
     @GetMapping("/show/{id}")
     public String index(@PathVariable int id, Model model){
         List<Category> categoryList=new ArrayList<>();
         try{
-            categoryList= categoryServise.getAll();
+            categoryList= categoryService.getAll();
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -38,7 +37,7 @@ public class CategoryViewController {
     public String indexBasket(@PathVariable int id, Model model){
         List<Category> categoryList=new ArrayList<>();
         try{
-            categoryList= categoryServise.getAll();
+            categoryList= categoryService.getAll();
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -53,7 +52,7 @@ public class CategoryViewController {
     public String edit(@PathVariable int id, Model model){
         Category category=new Category();
         try {
-            category = categoryServise.getById(id);
+            category = categoryService.getById(id);
         } catch (Exception e) {
             e.printStackTrace();
         }

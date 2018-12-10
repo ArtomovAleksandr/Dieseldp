@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class CategoryServise implements EntityService<Category> {
+public class CategoryService implements EntityService<Category> {
     @Autowired
     CategoryRepository categoryRepository;
     @Override

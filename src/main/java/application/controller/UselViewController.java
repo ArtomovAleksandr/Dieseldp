@@ -35,7 +35,7 @@ public class UselViewController {
         model.addAttribute("countpagin",countpagin);
         return "uzels/uzels";
     }
- /*   @GetMapping("/basket/show/{id}")
+    @GetMapping("/basket/show/{id}")
     public String indexBasket(@PathVariable int id, Model model){
         List<Uzel> uzelList=new ArrayList<>();
         try{
@@ -43,13 +43,13 @@ public class UselViewController {
         }catch (Exception ex){
             ex.printStackTrace();
         }
-        categoryList=setNumberShowNumber(categoryList,false);
+        uzelList=setNumberShowNumber(uzelList,false);
         List<Uzel> usels = paginListUsers(uzelList,id);
         int countpagin= (int) ((uzelList.size()/(sizepagin+0.01))+1);
         model.addAttribute("usels", usels );
         model.addAttribute("countpagin",countpagin);
-        return "usel/uselbasket";
-    }*/
+        return "usels/uselsbasket";
+    }
     @GetMapping("/{id}")
     public String edit(@PathVariable int id, Model model){
         Uzel uzel=new Uzel();

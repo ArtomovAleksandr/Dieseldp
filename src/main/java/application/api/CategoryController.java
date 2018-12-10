@@ -4,7 +4,7 @@ import application.entity.goods.Category;
 import application.helper.JSONResult;
 import application.helper.JSONResultError;
 import application.helper.JSONResultOk;
-import application.service.implementation.CategoryServise;
+import application.service.implementation.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/v1.0/category")
 public class CategoryController {
     @Autowired
-    CategoryServise categoryServise;
+    CategoryService categoryService;
     @PostMapping
     public JSONResult<Category> addFactory(@RequestBody Category category){
         Category newCategory=new Category();
         try {
             newCategory.setName(category.getName());
             newCategory.setVisible(category.isVisible());
-            newCategory= categoryServise.save(newCategory);
+            newCategory= categoryService.save(newCategory);
         }catch (Exception e){
             e.printStackTrace();
             return  new JSONResultError<>(newCategory,e.getMessage());
@@ -30,9 +30,9 @@ public class CategoryController {
     public JSONResult<Category> moveBasket(@PathVariable int id){
         Category category=new Category();
         try {
-            category=categoryServise.getById(id);
+            category= categoryService.getById(id);
             category.setVisible(false);
-            category=categoryServise.save(category);
+            category= categoryService.save(category);
         }catch (Exception ex){
             ex.printStackTrace();
             return new JSONResultError<>(category,ex.getMessage());
@@ -43,9 +43,9 @@ public class CategoryController {
     public JSONResult<Category> redtoreBasket(@PathVariable int id){
         Category category=new Category();
         try {
-            category=categoryServise.getById(id);
+            category= categoryService.getById(id);
             category.setVisible(true);
-            category=categoryServise.save(category);
+            category= categoryService.save(category);
         }catch (Exception ex){
             ex.printStackTrace();
             return new JSONResultError<>(category,ex.getMessage());
@@ -56,9 +56,9 @@ public class CategoryController {
     public JSONResult<Category> updateFactory(@RequestBody Category category,@PathVariable int id){
         Category newCategory=new Category();
         try {
-            newCategory= categoryServise.getById(id);
+            newCategory= categoryService.getById(id);
             newCategory.setName(category.getName());
-            newCategory= categoryServise.save(newCategory);
+            newCategory= categoryService.save(newCategory);
         }catch (Exception ex){
             ex.printStackTrace();
             return new JSONResultError<>(newCategory,ex.getMessage());
@@ -70,8 +70,8 @@ public class CategoryController {
     public JSONResult<Category> deleteFactory(@PathVariable int id) {
         Category newCategory = new Category();
         try {
-            newCategory = categoryServise.getById(id);
-            categoryServise.delete(id);
+            newCategory = categoryService.getById(id);
+            categoryService.delete(id);
         } catch (Exception ex) {
             ex.printStackTrace();
             return new JSONResultError<>(newCategory, ex.getMessage());

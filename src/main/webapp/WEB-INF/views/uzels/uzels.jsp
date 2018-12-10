@@ -31,7 +31,7 @@
                     <td scope="row">${uzel.name}</td>
                     <td colspan="2">
                                 <button class="btn btn-outline-danger  del"  value="${uzel.id}">
-                                    Удалить
+                                    Скрыть
                                 </button>
                                 <a href="/groups/${uzel.id}">
                                     <button class="btn btn-outline-info " name="id"
