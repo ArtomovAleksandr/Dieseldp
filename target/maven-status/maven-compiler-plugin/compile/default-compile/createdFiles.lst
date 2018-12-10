@@ -1,5 +1,5 @@
-application\entity\goods\Uzels.class
 application\entity\goods\Groups.class
+application\repository\UzelRepository.class
 application\entity\goods\Factory.class
 application\entity\currency\Current.class
 application\service\implementation\FactoryService.class
@@ -11,14 +11,18 @@ application\repository\FactoryRepository.class
 application\entity\goods\Goods.class
 application\repository\CategoryRepository.class
 application\helper\JSONResult.class
+application\api\UzelController.class
 application\controller\GoodsViewController.class
 application\repository\GroupsRepository.class
+application\service\implementation\UzelServise.class
 application\entity\currency\HistoryCurrent.class
 application\api\GroupsController.class
 application\entity\goods\Category.class
 application\helper\JSONResultOk.class
 application\api\FactoryController.class
+application\entity\goods\Uzel.class
 application\controller\CategoryViewController.class
 application\service\implementation\CategoryServise.class
 application\api\CategoryController.class
+application\controller\UselViewController.class
 application\controller\GroupsViewController.class

@@ -11,15 +11,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value="/api/v1.0/uzel")
+@RequestMapping(value="/api/v1.0/uzels")
 public class UzelController {
     @Autowired
     UzelServise uzelService;
     @PostMapping()
-    public JSONResult<Uzel> addGroups(@RequestBody Uzel uzel) {
+    public JSONResult<Uzel> addUzel(@RequestBody Uzel uzel) {
         Uzel newUzel = new Uzel();
         try {
             newUzel.setName(uzel.getName());
+            newUzel.setVisible(uzel.isVisible());
             newUzel=uzelService.save(newUzel);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -28,7 +29,7 @@ public class UzelController {
         return new JSONResultOk<>(newUzel);
     }
     @PutMapping("/{id}")
-    public JSONResult<Uzel> updateGroup(@RequestBody Uzel uzel,@PathVariable int  id){
+    public JSONResult<Uzel> updateUzel(@RequestBody Uzel uzel,@PathVariable int  id){
         Uzel newUzel=new Uzel();
         try{
             newUzel=uzelService.getById(id);
@@ -41,7 +42,7 @@ public class UzelController {
         return new JSONResultOk<>(newUzel);
     }
     @DeleteMapping("/{id}")
-    public JSONResult<Uzel> deleteGroups(@PathVariable int id){
+    public JSONResult<Uzel> deleteUzel(@PathVariable int id){
         Uzel newUzel=new Uzel();
         try{
             newUzel=uzelService.getById(id);

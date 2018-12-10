@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/uzel")
+@RequestMapping("/uzels")
 public class UselViewController {
     private static int sizepagin=5;
     @Autowired
@@ -28,12 +28,12 @@ public class UselViewController {
         }catch (Exception ex){
             ex.printStackTrace();
         }
-         //categoryList=setNumberShowNumber(categoryList,true);
+        uzelsList=setNumberShowNumber(uzelsList,true);
         List<Uzel> uzels = paginListUsers(uzelsList,id);
         int countpagin= (int) ((uzelsList.size()/(sizepagin+0.01))+1);
         model.addAttribute("uzels", uzels );
         model.addAttribute("countpagin",countpagin);
-        return "uzel/uzel";
+        return "uzels/uzels";
     }
  /*   @GetMapping("/basket/show/{id}")
     public String indexBasket(@PathVariable int id, Model model){
@@ -59,15 +59,15 @@ public class UselViewController {
             e.printStackTrace();
         }
         model.addAttribute("usels",uzel);
-        return "uzel/uzel_edit";
+        return "uzels/uzel_edit";
     }
     @GetMapping("/create")
     public String createFactory(){
-        return "uzel/uzel_create";
+        return "uzels/uzels_create";
     }
 
-  /*   private List setNumberShowNumber(List<Uzel> uzels, boolean isVisible){
-        List<Category> list=new ArrayList<>();
+     private List setNumberShowNumber(List<Uzel> uzels, boolean isVisible){
+        List<Uzel> list=new ArrayList<>();
         int j=1;
          for (int i = 0; i< uzels.size(); i++){
              if(isVisible== uzels.get(i).isVisible()) {
@@ -78,7 +78,7 @@ public class UselViewController {
          }
 
       return list;
-     }*/
+     }
      private List<Uzel> paginListUsers(List<Uzel>list,int id){
          List<Uzel> users = new ArrayList<>();
          for(int i=(id-1)*sizepagin;i<id*sizepagin && i<list.size();i++){
