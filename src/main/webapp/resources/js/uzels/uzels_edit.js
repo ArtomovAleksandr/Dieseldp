@@ -7,7 +7,7 @@ $(function () {
           let uzel=new Uzel(name);
            function succes() {
                console.log("done!edit");
-               location.replace("/usels/show/1")
+               location.replace("/uzels/show/1")
            }
            function fail(e) {
                console.log(e);

@@ -48,7 +48,7 @@ public class UselViewController {
         int countpagin= (int) ((uzelList.size()/(sizepagin+0.01))+1);
         model.addAttribute("usels", usels );
         model.addAttribute("countpagin",countpagin);
-        return "usels/uselsbasket";
+        return "uzels/uzelsbasket";
     }
     @GetMapping("/{id}")
     public String edit(@PathVariable int id, Model model){
@@ -58,8 +58,8 @@ public class UselViewController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        model.addAttribute("usels",uzel);
-        return "uzels/uzel_edit";
+        model.addAttribute("uzels",uzel);
+        return "uzels/uzels_edit";
     }
     @GetMapping("/create")
     public String createFactory(){

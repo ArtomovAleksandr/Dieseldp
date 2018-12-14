@@ -13,8 +13,8 @@ public class Current {
     private int id;
     private String name;
     private String shortname;
-    @Column(precision = 6,scale = 2)
-    @Type(type="big_decimal")
-    private double value;
+ //   @Column(precision = 6,scale = 2)
+   // @Type(type="big_decimal")
+   // private double value;
     public Current(){}
 }

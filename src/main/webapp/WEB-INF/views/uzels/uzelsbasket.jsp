@@ -26,7 +26,7 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${uzels}" var="uzel">
+            <c:forEach items="${usels}" var="uzel">
                 <tr>
                     <th scope="row">${uzel.show_namber}</th>
                     <td scope="row">${uzel.name}</td>
@@ -61,7 +61,7 @@
 <!--Scripts-->
 <script src="../../../resources/js/DTO/DTOUzel.js" type="text/javascript"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/uzels/uzels_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/uzels/usels_delete.js" type="text/javascript"></script>
 <script src="../../../resources/js/uzels/uzels_restore.js" type="text/javascript"></script>
 
 </body>

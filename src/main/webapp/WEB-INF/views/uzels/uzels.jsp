@@ -13,6 +13,7 @@
 <div class="container main-div">
     <h3>Узлы</h3>
     <div class="tools-div form-control text-right">
+        <a class="btn btn-outline-primary" href="/uzels/basket/show/1">Скрытые Узлы</a>
         <a class="btn btn-outline-warning" href="/uzels/create">Создать</a>
     </div>
     <div>
@@ -33,7 +34,7 @@
                                 <button class="btn btn-outline-danger  del"  value="${uzel.id}">
                                     Скрыть
                                 </button>
-                                <a href="/groups/${uzel.id}">
+                                <a href="/uzels/${uzel.id}">
                                     <button class="btn btn-outline-info " name="id"
                                             value="${uzel.id}">
                                         Редактировать
@@ -51,15 +52,16 @@
     <nav aria-label="...">
         <ul class="pagination pagination-lg">
            <% for(int i=1;i<=countpagin;i++){ %>
-            <li class="page-item"><a class="page-link" href="/uzel/show/<%=i%>" ><%= i %></a></li>
+            <li class="page-item"><a class="page-link" href="/uzels/show/<%=i%>" ><%= i %></a></li>
 
             <%}%>
     </nav>
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
+<script src="../../../resources/js/DTO/DTOUzel.js" type="text/javascript"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/uzel/uzels_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/uzels/uzels_move_basket.js" type="text/javascript"></script>
 </body>
 </html>
 
