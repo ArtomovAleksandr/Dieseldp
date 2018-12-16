@@ -1,3 +1,4 @@
+application\controller\MainViewController.class
 application\entity\goods\Groups.class
 application\repository\UzelRepository.class
 application\entity\goods\Factory.class
@@ -26,3 +27,4 @@ application\controller\CategoryViewController.class
 application\api\CategoryController.class
 application\controller\UselViewController.class
 application\controller\GroupsViewController.class
+application\entity\goods\Unit.class

@@ -25,19 +25,19 @@ public class Goods {
     String num;//кассовый номер
     String katalog;//каталожный номер
     String name;//название
+    @Column(columnDefinition = "VARCHAR(10)")
     String unit;//еденица измерения
     String mark;//маркировка
     @Column(precision = 8,scale = 2)
     @Type(type="big_decimal")
     double inprice;//входная цена
     boolean countprice;//вычисляемая цена
-    @Column(precision = 4,scale = 2)
-    @Type(type="big_decimal")
-    double rate;
+    @Column(columnDefinition = "TINYINT")
+    int addition;
     @Column(precision = 8,scale = 2)
     @Type(type="big_decimal")
     double outprice;//выходная цена
-    int mincount;//минимальное количество
-    int maxcount;//максимальное количество
-    String urlfoto;
+  //  int mincount;//минимальное количество
+  //  int maxcount;//максимальное количество
+  //  String urlfoto;
 }
