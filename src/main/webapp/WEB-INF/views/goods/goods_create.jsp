@@ -29,81 +29,86 @@
                          placeholder="Введите каталожный номер товара">
               </div>
           </div>
-          <%--<div class="mt-4 row">--%>
-              <%--<div class="col-md-4">--%>
-                  <%--<label class="input-group-text" for="catalog">Каталож. номер</label>--%>
-              <%--</div>--%>
-              <%--<div class="col-md-8">--%>
-                  <%--<input type="text" id="catalog" class="form-control" name="catalog"--%>
-                         <%--placeholder="Введите каталожный номер товара">--%>
-              <%--</div>--%>
-          <%--</div>--%>
+
          <div class="row">
-            <div class="input-group col-md mt-3">
-                <div class="input-group-prepend">
-                          <label class="input-group-text" for="goods">Название товара</label>
+
+            <div class="col-md-4 mt-3">
+                <div>
+                    <label class="input-group-text" for="goods">Название товара</label>
                 </div>
-                <input type="text" id="goods" class="form-control" name="namegoods"
-                       placeholder="Введите название товара...">
             </div>
-            <%--<div class="col-md-8">--%>
-
-            <%--</div>--%>
+             <div class="input-group col-md-8 mt-3">
+                 <div class="input-group">
+                     <input type="text" id="goods" class="form-control" name="namegoods"
+                                placeholder="Введите название товара...">
+                 </div>
+             </div>
          </div>
-          <div class="mt-4 row">
-              <div class="col-md-3">
-                       <label for="unit">Еденица измерения</label>
-              </div>
-              <div class="col-md-2">
-                    <select id="unit">
-                      <option value="шт." selected>шт.</option>
-                      <option value="к-т">к-т</option>
-                      <option value="см.">см.</option>
-                    </select>
+        <div class="row">
+            <div class="input-group col-md-8 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="mark">Макировка</label>
+                </div>
 
-              </div>
-              <div class="col-md-3">
-                  <label for="mark">Маркировка</label>
-              </div>
-              <div class="col-md-4">
-                  <input type="text" id="mark" class="form-control" name="mark">
-              </div>
-          </div>
-          <div class="row mt-4">
-              <div class="col-md-3">
-                  <label for="inprice">Входная цена</label>
-              </div>
-              <div class="col-md-3">
-                  <input type="text" value="0.00" id="inprice" name="inprice" class="form-control" placeholder="Введите входную цену товара ...">
-              </div>
-              <div class="col-md-6 input-group">
-                  <div class="input-group-prepend">
-                      <label class="input-group-text" for="current">Валюта</label>
-                  </div>
-              <%--</div>--%>
-              <%--<div class="col-md-3">--%>
-                  <select class="costom-select ml-2" name="current" id="current">
-                      <option value="1" selected>дол. США</option>
-                      <option value="2">евро</option>
-                      <option value="3">гривня</option>
-                  </select>
-              </div>
-          </div>
-          <div class="row mt-4">
-                  <div class="col-md-3">
-                      <label for="outprice">Исходящая цена</label>
-                  </div>
-                  <div class="col-md-3">
-                      <input type="text" value="0.00" id="outprice" name="outprice" class="form-control" placeholder="Введите исходящую цену товара ...">
-                  </div>
-                  <div class="col-md-3">
-                      <label>Наценка в %</label>
-                  </div>
-                  <div class="col-md-3">
-                      <input type="text" value="100" id="">
-                  </div>
+                <input type="text" id="mark" class="form-control" name="number"
+                       placeholder="Введите маркировку товара">
+            </div>
+            <div class="input-group col-md-4 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="catalog">Еденица измерения</label>
+                </div>
+                <select class="form-control" id="unit">
+                    <option value="шт." selected>шт.</option>
+                    <option value="к-т">к-т</option>
+                    <option value="см.">см.</option>
+                </select>
 
-          </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="input-group col-md-6 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="mark">Входная цена</label>
+                </div>
+
+                <input type="text" id="inprice" class="form-control" name="number"
+                       placeholder="Введите входную цену товара"   value="00.00">
+            </div>
+            <div class="input-group col-md-6 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="current">Еденица измерения</label>
+                </div>
+                <select class="form-control" id="current" name="current">
+                    <option value="1" selected>дол. США</option>
+                    <option value="2">евро</option>
+                    <option value="3">гривня</option>
+                </select>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="input-group col-md-6 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="number">Продажная цена</label>
+                </div>
+
+                <input type="text" id="outprice" class="form-control" name="outprice" value="00.00"
+                       placeholder="Введите продажная цена товара">
+            </div>
+            <div class="input-group col-md-6 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="addition">Наценку в %</label>
+                </div>
+                <input type="text" id="addition" class="form-control" name="catalog" value="75"
+                       placeholder="Введите наценку товара">
+            </div>
+        </div>
          <div class="row mt-4">
              <div class="input-group col-md-6">
                  <div class="input-group-prepend mb-3">
@@ -121,7 +126,6 @@
                      <label class="input-group-text" for="inputGroupSelect02">Options</label>
                  </div>
                  <select class="custom-select" id="inputGroupSelect02">
-                     <%--<option selected>Choose...</option>--%>
                      <option value="1">One</option>
                      <option value="2">Two</option>
                      <option value="3">Three</option>

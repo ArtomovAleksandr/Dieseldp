@@ -33,7 +33,7 @@ public class Goods {
     double inprice;//входная цена
     boolean countprice;//вычисляемая цена
     @Column(columnDefinition = "TINYINT")
-    int addition;
+    int addition;//наценка
     @Column(precision = 8,scale = 2)
     @Type(type="big_decimal")
     double outprice;//выходная цена
