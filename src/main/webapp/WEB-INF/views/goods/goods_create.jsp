@@ -107,7 +107,23 @@
                 </div>
                 <input type="text" id="addition" class="form-control" name="catalog" value="75"
                        placeholder="Введите наценку товара">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="countprice">Вычисляем цену</label>
+                    <div class="input-group-text">
+                        <input type="checkbox" checked id="countprice">
+                    </div>
+                </div>
             </div>
+            <%--<div class="input-group col-md-3 mt-3">--%>
+                <%--<div class="input-group-prepend">--%>
+                    <%--<label class="input-group-text" for="countprice">Вычисляем цену</label>--%>
+                    <%--<div class="input-group-text">--%>
+                        <%--<input type="checkbox" checked id="countprice">--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+
+            <%--</div>--%>
         </div>
          <div class="row mt-4">
              <div class="input-group col-md-6">
