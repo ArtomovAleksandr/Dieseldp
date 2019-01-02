@@ -13,6 +13,10 @@ public class Current {
     private int id;
     private String name;
     private String shortname;
+    @Column(columnDefinition = "Decimal(10,2) default '1.00'")
+    double rate;//входная цена
+ //   @Column(columnDefinition = "default 'true'")
+ //   boolean using;//
  //   @Column(precision = 6,scale = 2)
    // @Type(type="big_decimal")
    // private double value;

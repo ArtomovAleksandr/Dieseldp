@@ -14,8 +14,8 @@ public class HistoryCurrent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    @ManyToOne(targetEntity = Current.class, fetch = FetchType.EAGER)
-    Current currents;
+ //   @ManyToOne(targetEntity = Current.class, fetch = FetchType.EAGER)
+//    Current currents;
     @Column(columnDefinition = "date")
     Date date;
     @Column(precision = 6,scale = 2)

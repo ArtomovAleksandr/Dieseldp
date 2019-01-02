@@ -34,12 +34,12 @@
 
             <div class="col-md-4 mt-3">
                 <div>
-                    <label class="input-group-text" for="goods">Название товара</label>
+                    <label class="input-group-text" for="name">Название товара</label>
                 </div>
             </div>
              <div class="input-group col-md-8 mt-3">
                  <div class="input-group">
-                     <input type="text" id="goods" class="form-control" name="namegoods"
+                     <input type="text" id="name" class="form-control" name="namegoods"
                                 placeholder="Введите название товара...">
                  </div>
              </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="input-group col-md-4 mt-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="catalog">Еденица измерения</label>
+                    <label class="input-group-text" for="unit">Еденица измерения</label>
                 </div>
                 <select class="form-control" id="unit">
                     <option value="шт." selected>шт.</option>
@@ -128,47 +128,44 @@
          <div class="row mt-4">
              <div class="input-group col-md-6">
                  <div class="input-group-prepend mb-3">
-                     <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                     <label class="input-group-text" for="factory">Производитель</label>
                  </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <%--<option selected>Choose...</option>--%>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="custom-select" id="factory" name="factory">
+                    <c:forEach items="${factorys}" var="factory">
+                        <option value="${factory.id}">${factory.name}</option>
+                    </c:forEach>
                  </select>
              </div>
              <div class="input-group col-md-6">
                  <div class="input-group-prepend mb-3">
-                     <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                     <label class="input-group-text" for="category" name="category">Категории</label>
                  </div>
-                 <select class="custom-select" id="inputGroupSelect02">
-                     <option value="1">One</option>
-                     <option value="2">Two</option>
-                     <option value="3">Three</option>
+                 <select class="custom-select" id="category">
+                     <c:forEach items="${categorys}" var="category">
+                         <option value="${category.id}">${category.name}</option>
+                     </c:forEach>
                  </select>
              </div>
          </div>
         <div class="row mt-4">
             <div class="input-group col-md-6">
                 <div class="input-group-prepend mb-3">
-                    <label class="input-group-text" for="inputGroupSelect03">Options</label>
+                    <label class="input-group-text" for="groups">Группы</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect03">
-                    <%--<option selected>Choose...</option>--%>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="custom-select" id="groups">
+                    <c:forEach items="${groups}" var="group">
+                        <option value="${group.id}">${group.name}</option>
+                    </c:forEach>
                 </select>
             </div>
             <div class="input-group col-md-6">
                 <div class="input-group-prepend mb-3">
-                    <label class="input-group-text" for="inputGroupSelect04">Options</label>
+                    <label class="input-group-text" for="uzels">Узлы</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect04">
-                    <%--<option selected>Choose...</option>--%>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="custom-select" id="uzels">
+                    <c:forEach items="${uzels}" var="uzel">
+                        <option value="${uzel.id}">${uzel.name}</option>
+                    </c:forEach>
                 </select>
             </div>
         </div>
@@ -185,9 +182,9 @@
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
-<script src="../../../resources/js/DTO/DTOCategory.js"></script>
+<script src="../../../resources/js/DTO/DTOGoods.js"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/category/category_create.js"></script>
+<script src="../../../resources/js/goods/goods_create.js"></script>
 
 </body>
 </html>

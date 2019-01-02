@@ -1,10 +1,12 @@
 application\controller\MainViewController.class
 application\entity\goods\Groups.class
 application\repository\UzelRepository.class
+application\api\GoodsController.class
 application\entity\goods\Factory.class
 application\entity\currency\Current.class
 application\service\implementation\FactoryService.class
 application\helper\JSONResultError.class
+application\service\implementation\GoodsService.class
 application\controller\FactoryViewController.class
 application\service\interfaces\EntityService.class
 application\service\implementation\GroupsService.class
@@ -17,6 +19,7 @@ application\controller\GoodsViewController.class
 application\repository\GroupsRepository.class
 application\service\implementation\UzelServise.class
 application\entity\currency\HistoryCurrent.class
+application\dto\GoodsDTO.class
 application\api\GroupsController.class
 application\entity\goods\Category.class
 application\helper\JSONResultOk.class
@@ -28,3 +31,4 @@ application\api\CategoryController.class
 application\controller\UselViewController.class
 application\controller\GroupsViewController.class
 application\entity\goods\Unit.class
+application\repository\GoodsRepository.class
