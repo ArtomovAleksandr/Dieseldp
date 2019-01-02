@@ -12,13 +12,13 @@ import java.util.List;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    boolean visible;
+    private int id;
+    private boolean visible;
     @Column(columnDefinition = "TINYINT")
-    int metric;
-    String name;
+    private int metric;
+    private String name;
     @Transient
-    int show_namber;
+    private int show_namber;
 
     @OneToMany(fetch = FetchType.LAZY,targetEntity = Goods.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")

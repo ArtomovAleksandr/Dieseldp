@@ -4,7 +4,7 @@ class Goods {
    //    this.category=category;
   //     this.factory=factory;
        this.num=num;
-       this.katalog=catalog;
+       this.catalog=catalog;
        this.name=name;
        this.unit=unit;
        this.mark=mark;

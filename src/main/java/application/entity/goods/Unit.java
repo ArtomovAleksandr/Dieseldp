@@ -3,7 +3,7 @@ package application.entity.goods;
 import lombok.Data;
 
 import javax.persistence.*;
-
+//удалить
 //единица измерения товара(шт., к-т., см.)
 @Data
 @Entity

@@ -1,8 +1,11 @@
 package application.entity.goods;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 //узел
 @Data
@@ -12,11 +15,15 @@ public class Uzel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
+    @Column(columnDefinition = "default 'true'")
     boolean visible;
     @Transient
     int show_namber;
     public Uzel(){}
-
+    @OneToMany(fetch = FetchType.LAZY,targetEntity = Goods.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "uzel_id")
+    @JsonIgnore
+    List<Uzel> uzels=new ArrayList<>();
     public String getName() {
         return name;
     }

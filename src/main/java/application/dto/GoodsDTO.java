@@ -7,7 +7,7 @@ import lombok.Data;
 public class GoodsDTO {
     int category;
     String num;
-    String katalog;
+    String catalog;
     String name;
     String unit;
     String mark;
@@ -25,8 +25,8 @@ public class GoodsDTO {
         return num;
     }
 
-    public String getKatalog() {
-        return katalog;
+    public String getCatalog() {
+        return catalog;
     }
 
     public String getName() {

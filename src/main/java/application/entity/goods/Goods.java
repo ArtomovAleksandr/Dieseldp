@@ -5,31 +5,34 @@ import lombok.Data;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-//изменить в стрке 20 fabrica to factory
+
 @Data
 @Entity
 public class Goods {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-//    @ManyToOne(targetEntity = Current.class, fetch = FetchType.EAGER)
-//    Current current;//id валюты
+    @ManyToOne(targetEntity = Current.class, fetch = FetchType.EAGER)
+    @JoinColumn(name="current_id")
+    Current current;//id валюты
     @ManyToOne(targetEntity = Category.class,fetch = FetchType.EAGER)
     @JoinColumn(name="category_id")
     Category category;//id категории
-  //  @ManyToOne(targetEntity = Factory.class,fetch = FetchType.EAGER)
-  //  Factory factory;//id производителя
- //   @ManyToOne(targetEntity = Groups.class,fetch = FetchType.EAGER)
- //   Groups groups;//id группы
- //   @ManyToOne(targetEntity = Uzel.class,fetch = FetchType.EAGER)
- //   Uzel uzel;//id узел
+    @ManyToOne(targetEntity = Factory.class,fetch = FetchType.EAGER)
+    @JoinColumn(name="factory_id")
+    Factory factory;//id производителя
+    @ManyToOne(targetEntity = Groups.class,fetch = FetchType.EAGER)
+    @JoinColumn(name="groups_id")
+    Groups groups;//id группы
+    @ManyToOne(targetEntity = Uzel.class,fetch = FetchType.EAGER)
+    @JoinColumn(name="uzel_id")
+    Uzel uzel;//id узел
     @Column(length = 12)
     String num;//кассовый номер
     @Column(length = 20)
-    String katalog;//каталожный номер
+    String catalog;//каталожный номер
     @Column(length = 30)
     String name;//название
-//    @Column(columnDefinition = "VARCHAR(100)")
     @Column(length = 6)
     String unit;//еденица измерения
     @Column(length = 20)
@@ -51,8 +54,24 @@ public class Goods {
     public Goods() {
     }
 
-    public String getKatalog() {
-        return katalog;
+    public Current getCurrent() {
+        return current;
+    }
+
+    public Factory getFactory() {
+        return factory;
+    }
+
+    public Groups getGroups() {
+        return groups;
+    }
+
+    public Uzel getUzel() {
+        return uzel;
+    }
+
+    public String getCatalog() {
+        return catalog;
     }
 
     public String getNum() {
@@ -87,8 +106,24 @@ public class Goods {
         this.num = num;
     }
 
-    public void setKatalog(String katalog) {
-        this.katalog = katalog;
+    public void setCurrent(Current current) {
+        this.current = current;
+    }
+
+    public void setFactory(Factory factory) {
+        this.factory = factory;
+    }
+
+    public void setGroups(Groups groups) {
+        this.groups = groups;
+    }
+
+    public void setUzel(Uzel uzel) {
+        this.uzel = uzel;
+    }
+
+    public void setCatalog(String catalog) {
+        this.catalog = catalog;
     }
 
     public void setName(String name) {
@@ -108,10 +143,6 @@ public class Goods {
     public void setCategory(Category category) {
         this.category = category;
     }
-
- /*   public void setFactory(Factory factory) {
-        this.factory = factory;
-    }*/
 
     public void setAddition(int addition) {
         this.addition = addition;

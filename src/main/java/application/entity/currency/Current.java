@@ -1,9 +1,13 @@
 package application.entity.currency;
 
+import application.entity.goods.Goods;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -14,11 +18,10 @@ public class Current {
     private String name;
     private String shortname;
     @Column(columnDefinition = "Decimal(10,2) default '1.00'")
-    double rate;//входная цена
- //   @Column(columnDefinition = "default 'true'")
- //   boolean using;//
- //   @Column(precision = 6,scale = 2)
-   // @Type(type="big_decimal")
-   // private double value;
+    double rate;//курс валюты
     public Current(){}
+    @OneToMany(fetch = FetchType.LAZY,targetEntity = Goods.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "current_id")
+    @JsonIgnore
+    List<Current> currents=new ArrayList<>();
 }

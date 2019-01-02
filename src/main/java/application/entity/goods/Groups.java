@@ -1,9 +1,12 @@
 package application.entity.goods;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 //группа
 @Data
@@ -16,16 +19,10 @@ public class Groups {
     @Transient
     int show_namber;
     public Groups(){}
+    @OneToMany(fetch = FetchType.LAZY,targetEntity = Goods.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "groups_id")
+    @JsonIgnore
+    List<Groups> groups=new ArrayList<>();
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setShow_namber(int show_namber) {
-        this.show_namber = show_namber;
-    }
 }

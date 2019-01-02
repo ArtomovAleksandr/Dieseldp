@@ -22,11 +22,9 @@ public class GoodsController {
      public JSONResult<Goods> addGoods(@RequestBody GoodsDTO goods){
          Goods newGoods=new Goods();
          Category newCategory=new Category();
-     //    newCategory.setId(goods.getCategory());
-     //    newGoods.setCategory(newCategory);
          try{
              newGoods.setNum(goods.getNum());
-             newGoods.setKatalog(goods.getKatalog());
+             newGoods.setCatalog(goods.getCatalog());
              newGoods.setName(goods.getName());
              newGoods.setMark(goods.getMark());
              newGoods.setUnit(goods.getUnit());
