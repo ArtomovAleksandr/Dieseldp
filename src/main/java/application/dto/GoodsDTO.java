@@ -5,14 +5,18 @@ import lombok.Data;
 
 @Data
 public class GoodsDTO {
-    int category;
-    String num;
-    String catalog;
-    String name;
-    String unit;
-    String mark;
-    double inprice;
-    int addition;
+    private int current;
+   private int category;
+   private int factory;
+   private int groups;
+   private int uzel;
+   private String num;
+   private String catalog;
+   private String name;
+   private String unit;
+   private String mark;
+   private double inprice;
+   private int addition;
 
     public GoodsDTO() {
     }
@@ -27,6 +31,22 @@ public class GoodsDTO {
 
     public String getCatalog() {
         return catalog;
+    }
+
+    public int getCurrent() {
+        return current;
+    }
+
+    public int getFactory() {
+        return factory;
+    }
+
+    public int getGroups() {
+        return groups;
+    }
+
+    public int getUzel() {
+        return uzel;
     }
 
     public String getName() {

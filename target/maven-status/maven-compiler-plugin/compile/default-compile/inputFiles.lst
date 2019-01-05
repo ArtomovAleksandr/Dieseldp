@@ -1,6 +1,8 @@
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\entity\goods\Groups.java
+D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\repository\CurrentRepositry.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\repository\UzelRepository.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\service\implementation\UzelServise.java
+D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\dto\GoodsDTO.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\helper\JSONResultError.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\api\GroupsController.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\helper\JSONResultOk.java
@@ -29,5 +31,6 @@ D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\service\
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\api\GoodsController.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\service\implementation\FactoryService.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\service\interfaces\EntityService.java
+D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\service\implementation\CurrentService.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\repository\GoodsRepository.java
 D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\java\application\api\FactoryController.java

@@ -24,4 +24,8 @@ public class Current {
     @JoinColumn(name = "current_id")
     @JsonIgnore
     List<Current> currents=new ArrayList<>();
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

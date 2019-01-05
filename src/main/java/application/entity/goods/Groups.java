@@ -24,5 +24,7 @@ public class Groups {
     @JsonIgnore
     List<Groups> groups=new ArrayList<>();
 
-
+    public void setId(int id) {
+        this.id = id;
+    }
 }

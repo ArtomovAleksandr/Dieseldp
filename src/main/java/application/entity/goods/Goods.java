@@ -40,12 +40,13 @@ public class Goods {
 
     @Column(columnDefinition = "Decimal(10,2) default '0.00'")
     double inprice;//входная цена
- //   boolean countprice;//вычисляемая цена
+    boolean countprice;//вычисляемая цена
     @Column(columnDefinition = "TINYINT")
     int addition;//наценка
  /*   @Column(precision = 8,scale = 2)
-    @Type(type="big_decimal")
-    double outprice;//выходная цена  */
+    @Type(type="big_decimal")*/
+    @Column(columnDefinition = "Decimal(10,2) default '0.00'")
+    double outprice;//выходная цена
   //  int mincount;//минимальное количество
   //  int maxcount;//максимальное количество
   //  String urlfoto;

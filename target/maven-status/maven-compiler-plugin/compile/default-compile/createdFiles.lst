@@ -8,9 +8,11 @@ application\service\implementation\FactoryService.class
 application\helper\JSONResultError.class
 application\service\implementation\GoodsService.class
 application\controller\FactoryViewController.class
+application\service\implementation\CurrentService.class
 application\service\interfaces\EntityService.class
 application\service\implementation\GroupsService.class
 application\repository\FactoryRepository.class
+application\repository\CurrentRepositry.class
 application\entity\goods\Goods.class
 application\repository\CategoryRepository.class
 application\helper\JSONResult.class

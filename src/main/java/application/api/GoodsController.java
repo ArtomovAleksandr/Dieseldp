@@ -1,8 +1,8 @@
 package application.api;
 
 import application.dto.GoodsDTO;
-import application.entity.goods.Category;
-import application.entity.goods.Goods;
+import application.entity.currency.Current;
+import application.entity.goods.*;
 import application.helper.JSONResult;
 import application.helper.JSONResultError;
 import application.helper.JSONResultOk;
@@ -21,8 +21,29 @@ public class GoodsController {
      @PostMapping
      public JSONResult<Goods> addGoods(@RequestBody GoodsDTO goods){
          Goods newGoods=new Goods();
+         Current newCurrent=new Current();
          Category newCategory=new Category();
+         Factory newFactory=new Factory();
+         Groups newGroups=new Groups();
+         Uzel newUzel=new Uzel();
          try{
+
+             //добавляем Current
+             newCurrent.setId(goods.getCurrent());
+             newGoods.setCurrent(newCurrent);
+             //добавляем категорию
+             newCategory.setId(goods.getCategory());
+             newGoods.setCategory(newCategory);
+             //добавляем Производителя(Factory)
+             newFactory.setId(goods.getFactory());
+             newGoods.setFactory(newFactory);
+             //добавляем Группу(Groups)
+             newGroups.setId(goods.getGroups());
+             newGoods.setGroups(newGroups);
+             //добавляем узел(Uzel)
+             newUzel.setId(goods.getUzel());
+             newGoods.setUzel(newUzel);
+             //--------------------------------
              newGoods.setNum(goods.getNum());
              newGoods.setCatalog(goods.getCatalog());
              newGoods.setName(goods.getName());
@@ -30,15 +51,7 @@ public class GoodsController {
              newGoods.setUnit(goods.getUnit());
              newGoods.setInprice(goods.getInprice());
              newGoods.setAddition(goods.getAddition());
-             //добавляем категорию
-             newCategory.setId(goods.getCategory());
-             newGoods.setCategory(newCategory);
-             //-------------------------------
-        //    newGoods.setCurrent(goods.getCurrent());
-       //     newGoods.setCategory(goods.getCategory());
-      //      newGoods.setFactory(goods.getFactory());
-         /*   newGoods.setGroups(goods.getGroups());
-            newGoods.setUzel(goods.getUzel());*/
+
             goodsService.save(newGoods);
          }catch (Exception e){
              e.printStackTrace();

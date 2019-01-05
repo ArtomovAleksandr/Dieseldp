@@ -81,9 +81,9 @@
                     <label class="input-group-text" for="current">Еденица измерения</label>
                 </div>
                 <select class="form-control" id="current" name="current">
-                    <option value="1" selected>дол. США</option>
-                    <option value="2">евро</option>
-                    <option value="3">гривня</option>
+                    <c:forEach items="${currents}" var="current">
+                        <option value="${current.id}" data-cur="${current.rate}"  >${current.name}</option>
+                    </c:forEach>
                 </select>
 
             </div>
@@ -115,15 +115,7 @@
                     </div>
                 </div>
             </div>
-            <%--<div class="input-group col-md-3 mt-3">--%>
-                <%--<div class="input-group-prepend">--%>
-                    <%--<label class="input-group-text" for="countprice">Вычисляем цену</label>--%>
-                    <%--<div class="input-group-text">--%>
-                        <%--<input type="checkbox" checked id="countprice">--%>
-                    <%--</div>--%>
-                <%--</div>--%>
 
-            <%--</div>--%>
         </div>
          <div class="row mt-4">
              <div class="input-group col-md-6">
@@ -184,8 +176,8 @@
 <!--Scripts-->
 <script src="../../../resources/js/DTO/DTOGoods.js"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/goods/goods_create.js"></script>
-
+<script src="../../../resources/js/goods/goods_create.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/create_price.js" type="text/javascript"></script>
 </body>
 </html>
 
