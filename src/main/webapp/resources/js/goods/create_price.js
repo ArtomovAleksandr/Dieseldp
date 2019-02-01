@@ -1,34 +1,60 @@
 $(function () {
+    $("#inprice").bind('input',function () {
+        var inprice=$(this).val();
+        var addition=$('#addition').val();
+        var current=$('#current').find(':selected').data('cur');
+        if($('#countprice').is(':checked')){
+            $('#price').text(inprice*current*((addition/100)+1));
+        //    console.log(inprice+' :: '+current+' // '+addition);
+        }
+
+    });
+    $("#outprice").bind('input',function () {
+        var outprice=$(this).val();
+  //      var addition=$('#addition').val();
+        var current=$('#current').find(':selected').data('cur');
+        if(!$('#countprice').is(':checked')){
+            $('#price').text(outprice*current);
+        }
+
+    });
+
     $("#countprice").click(
         function () {
+            var current=$('#current').find(':selected').data('cur');
             if ($(this).is(':checked')){
-               console.log('checked');
+                var inprice=$('#inprice').val();
+                var addition=$('#addition').val();
+                $('#price').text(inprice*current*((addition/100)+1));
 
             }else{
-                console.log('onchecked');
-
+                var outprice=$('#outprice').val();
+                $('#price').text(outprice*current);
+            //    console.log('onchecked');
             }
         });
-    $("#inprice").change(
-        function () {
-            var out=$(this).val();
-            console.log('chenge '+out);
+    $('#addition').bind('input',function () {
+        if ($('#countprice').is(':checked')) {
+            var inprice=$('#inprice').val();
+            var addition=$(this).val();
+            var current=$('#current').find(':selected').data('cur');
+            $('#price').text(inprice*current*((addition/100)+1));
         }
-    );
-    $("#outprice").bind('input',function () {
-        var out=$(this).val();
-        console.log('chenge '+out);
     });
-    $("#current").on('change',
+
+   $("#current").on('change',
         function (e) {
-           var selectVal=$(this).val();
-           console.log('selectVal -'+selectVal);
-           var data=$(this).find(':selected').data("cur");
-       //    var data=$("#current").attr('data-current');
-       //    var data=$(this).getAttribute('data-current');
-           console.log('data - '+data);
-           var val= $("#addition").val();
-           console.log('addition '+val );
+           var current=$(this).find(':selected').data("cur");
+
+            if ($('#countprice').is(':checked')){
+                var inprice=$('#inprice').val();
+                var addition=$('#addition').val();
+                $('#price').text(inprice*current*('1.'+addition));
+
+            }else{
+                var outprice=$('#outprice').val();
+                $('#price').text(outprice*current);
+            }
         }
     );
 });

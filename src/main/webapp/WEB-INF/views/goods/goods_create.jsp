@@ -117,6 +117,29 @@
             </div>
 
         </div>
+        <div class="row">
+            <div class="input-group col-md-6 mt-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="number">Вычисляем цену, в грн.</label>
+                </div>
+
+                <label type="text" id="price" class="form-control"></label>
+            </div>
+            <div class="input-group col-md-6 mt-3">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                    <label class="form-check-label" for="inlineRadio1">Наличие</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Под заказ</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                    <label class="form-check-label" for="inlineRadio3">Архив</label>
+                </div>
+            </div>
+        </div>
          <div class="row mt-4">
              <div class="input-group col-md-6">
                  <div class="input-group-prepend mb-3">
