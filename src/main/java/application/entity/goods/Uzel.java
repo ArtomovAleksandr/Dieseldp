@@ -15,7 +15,7 @@ public class Uzel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     String name;
-    @Column(columnDefinition = "default 'true'")
+    @Column(columnDefinition = "boolean default true",nullable = false)
     boolean visible;
     @Transient
     int show_namber;

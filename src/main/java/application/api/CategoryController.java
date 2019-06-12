@@ -40,7 +40,7 @@ public class CategoryController {
         return new JSONResultOk<>(category);
     }
     @PutMapping(value = "/restore/{id}")
-    public JSONResult<Category> redtoreBasket(@PathVariable int id){
+    public JSONResult<Category> restoreBasket(@PathVariable int id){
         Category category=new Category();
         try {
             category= categoryService.getById(id);

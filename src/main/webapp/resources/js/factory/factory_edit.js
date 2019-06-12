@@ -6,7 +6,7 @@ $(function () {
       let factory=new Factory(name);
       function succes() {
           console.log("done!edit");
-          location.replace("/factory")
+          location.replace("/factory/show/1")
       }
       function fail(e) {
          console.log(e);
