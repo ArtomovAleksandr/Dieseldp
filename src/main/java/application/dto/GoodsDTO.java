@@ -16,8 +16,9 @@ public class GoodsDTO {
    private String unit;
    private String mark;
    private double inprice;
+   private boolean countprice;
    private int addition;
-
+   private double outprice;
     public GoodsDTO() {
     }
 
@@ -64,8 +65,11 @@ public class GoodsDTO {
     public double getInprice() {
         return inprice;
     }
-
+    public boolean getCountprice() { return countprice; }
     public int getAddition() {
         return addition;
     }
+    public double getOutprice() { return outprice; }
+
+
 }

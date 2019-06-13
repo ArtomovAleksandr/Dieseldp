@@ -50,8 +50,9 @@ public class GoodsController {
              newGoods.setMark(goods.getMark());
              newGoods.setUnit(goods.getUnit());
              newGoods.setInprice(goods.getInprice());
+             newGoods.setCountprice(goods.getCountprice());
              newGoods.setAddition(goods.getAddition());
-
+             newGoods.setOutprice(goods.getOutprice());
             goodsService.save(newGoods);
          }catch (Exception e){
              e.printStackTrace();

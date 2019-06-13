@@ -12,9 +12,14 @@ $(function () {
            var unit=$("#unit").val();
            var mark=$("#mark").val();
            var inprice=$("#inprice").val();// сделать валидацию входной цены
+           var countprice=false;
+           if ($("#countprice").is(':checked')){
+               countprice=true;
+           }
            var addition=$("#addition").val();
+           var outprice=$("#outprice").val();// сделать валидацию выходной цены
          //  var goods=new Goods(category,factory,groups,uzel);
-           var goods=new Goods(current,category,factory,groups,uzel,number,catalog,name,unit,mark,inprice,addition);
+           var goods=new Goods(current,category,factory,groups,uzel,number,catalog,name,unit,mark,inprice,countprice,addition,outprice);
            function success() {
                console.log("done! goods");
                location.replace("/");

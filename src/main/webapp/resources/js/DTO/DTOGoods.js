@@ -1,5 +1,5 @@
 class Goods {
-   constructor(current,category,factory,groups,uzel,num,catalog,name,unit,mark,inprice,addition){
+   constructor(current,category,factory,groups,uzel,num,catalog,name,unit,mark,inprice,countprice,addition,outprice){
        this.current=current;
        this.category=category;
        this.factory=factory;
@@ -11,6 +11,8 @@ class Goods {
        this.unit=unit;
        this.mark=mark;
        this.inprice=inprice;
+       this.countprice=countprice;
        this.addition=addition;
+       this.outprice=outprice;
    }
 }

@@ -40,11 +40,17 @@ public class Goods {
 
     @Column(columnDefinition = "Decimal(10,2) default '0.00'")
     double inprice;//входная цена
+
+
+
     boolean countprice;//вычисляемая цена
     @Column(columnDefinition = "TINYINT")
     int addition;//наценка
- /*   @Column(precision = 8,scale = 2)
-    @Type(type="big_decimal")*/
+
+
+
+    /*   @Column(precision = 8,scale = 2)
+        @Type(type="big_decimal")*/
     @Column(columnDefinition = "Decimal(10,2) default '0.00'")
     double outprice;//выходная цена
   //  int mincount;//минимальное количество
@@ -141,6 +147,8 @@ public class Goods {
 
     public void setInprice(double inprice) { this.inprice = inprice; }
 
+    public void setCountprice(boolean countprice) { this.countprice = countprice; }
+
     public void setCategory(Category category) {
         this.category = category;
     }
@@ -148,4 +156,5 @@ public class Goods {
     public void setAddition(int addition) {
         this.addition = addition;
     }
+    public void setOutprice(double outprice) { this.outprice = outprice; }
 }
