@@ -43,24 +43,24 @@ public class Goods {
 
 
 
+
     boolean countprice;//вычисляемая цена
     @Column(columnDefinition = "TINYINT")
     int addition;//наценка
 
 
 
+
     /*   @Column(precision = 8,scale = 2)
-        @Type(type="big_decimal")*/
+            @Type(type="big_decimal")*/
     @Column(columnDefinition = "Decimal(10,2) default '0.00'")
     double outprice;//выходная цена
   //  int mincount;//минимальное количество
   //  int maxcount;//максимальное количество
   //  String urlfoto;
-
-
     public Goods() {
     }
-
+    public int getId() { return id; }
     public Current getCurrent() {
         return current;
     }
@@ -100,13 +100,13 @@ public class Goods {
     public double getInprice() {
         return inprice;
     }
-
+    public boolean isCountprice() { return countprice; }
     public int getAddition() {
         return addition;
     }
 
     public Category getCategory() { return category; }
-
+    public double getOutprice() { return outprice; }
   //  public Factory getFactory() { return factory; }
 
     public void setNum(String num) {

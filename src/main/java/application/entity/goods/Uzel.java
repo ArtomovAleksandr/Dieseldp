@@ -11,6 +11,8 @@ import java.util.List;
 @Data
 @Entity
 public class Uzel {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
@@ -28,7 +30,7 @@ public class Uzel {
     public void setId(int id) {
         this.id = id;
     }
-
+    public int getId() { return id; }
     public String getName() {
         return name;
     }

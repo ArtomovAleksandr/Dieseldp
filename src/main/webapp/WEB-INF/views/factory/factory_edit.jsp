@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-8">
                 <input type="text" id="name" class="form-control" name="name"
-                       value="${factory.name}" placeholder="Enter here...">
+                       value="${factory.name}" placeholder="Введите название производителя...">
             </div>
         </div>
 

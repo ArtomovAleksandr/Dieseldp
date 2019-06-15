@@ -19,6 +19,7 @@ application\helper\JSONResult.class
 application\api\UzelController.class
 application\controller\GoodsViewController.class
 application\repository\GroupsRepository.class
+application\repository\UnitRepository.class
 application\service\implementation\UzelServise.class
 application\entity\currency\HistoryCurrent.class
 application\dto\GoodsDTO.class
@@ -30,6 +31,7 @@ application\api\FactoryController.class
 application\entity\goods\Uzel.class
 application\controller\CategoryViewController.class
 application\api\CategoryController.class
+application\service\implementation\UnitServise.class
 application\controller\UselViewController.class
 application\controller\GroupsViewController.class
 application\entity\goods\Unit.class

@@ -27,7 +27,7 @@ $(function () {
            function fail() {
                console.log("error! goods");
                location.replace("/category/show/1")
-        //       location.replace("/");
+
            }
            let servise=new AJAXService();
            servise.post("/api/v1.0/goods",goods,success,fail);
