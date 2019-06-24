@@ -28,4 +28,16 @@ public class Current {
     public void setId(int id) {
         this.id = id;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getShortname() {
+        return shortname;
+    }
+
+    public double getRate() {
+        return rate;
+    }
 }
