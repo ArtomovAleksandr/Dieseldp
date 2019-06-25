@@ -99,4 +99,17 @@ public class GoodsController {
          }
          return new JSONResultOk<>(newGoods);
      }
+     @DeleteMapping("/{id}")
+     public  JSONResult<Goods> deleteGoods(@PathVariable int id){
+         Goods newGood=new Goods();
+         try{
+            newGood=goodsService.getById(id);
+            goodsService.delete(id);
+         }catch (Exception ex){
+             ex.printStackTrace();
+             return new JSONResultError<>(newGood,ex.getMessage());
+         }
+         return new JSONResultOk<>(newGood);
+     }
+
 }

@@ -10,7 +10,7 @@
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container main-div mt-3">
-    <h1>Редактировать товар:${goods.name}</h1>
+    <h1>Добавить товар по шаблону</h1>
     <form id="form" class="form create-admin-form mt-3 mb-5">
           <div class="row">
               <div class="input-group col-md-6 mt-3">
@@ -237,7 +237,7 @@
 
         <div class="mt-4 row">
             <div class="col-md-12 text-center">
-                <button type="submit" id="save" value="${goods.id}" class="btn btn-outline-danger pl-5 pr-5">
+                <button type="submit" id="save" class="btn btn-outline-danger pl-5 pr-5">
                     Сохранить
                 </button>
             </div>
@@ -249,7 +249,7 @@
 <!--Scripts-->
 <script src="../../../resources/js/DTO/DTOGoods.js"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
-<script src="../../../resources/js/goods/goods_edit.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/goods_create.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/create_price.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/create_price_edit.js" type="text/javascript"></script>
 </body>
