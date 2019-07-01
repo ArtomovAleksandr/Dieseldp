@@ -71,5 +71,59 @@ public class GoodsDTO {
     }
     public double getOutprice() { return outprice; }
 
+    public void setCurrent(int current) {
+        this.current = current;
+    }
 
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public void setFactory(int factory) {
+        this.factory = factory;
+    }
+
+    public void setGroups(int groups) {
+        this.groups = groups;
+    }
+
+    public void setUzel(int uzel) {
+        this.uzel = uzel;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public void setCatalog(String catalog) {
+        this.catalog = catalog;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
+    }
+
+    public void setInprice(double inprice) {
+        this.inprice = inprice;
+    }
+
+    public void setCountprice(boolean countprice) {
+        this.countprice = countprice;
+    }
+
+    public void setAddition(int addition) {
+        this.addition = addition;
+    }
+
+    public void setOutprice(double outprice) {
+        this.outprice = outprice;
+    }
 }

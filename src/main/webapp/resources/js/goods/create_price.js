@@ -5,7 +5,6 @@ $(function () {
         var current=$('#current').find(':selected').data('cur');
         if($('#countprice').is(':checked')){
             $('#price').text(inprice*current*((addition/100)+1));
-        //    console.log(inprice+' :: '+current+' // '+addition);
         }
 
     });
@@ -49,7 +48,7 @@ $(function () {
             if ($('#countprice').is(':checked')){
                 var inprice=$('#inprice').val();
                 var addition=$('#addition').val();
-                $('#price').text(inprice*current*('1.'+addition));
+                $('#price').text(inprice*current*((addition/100)+1));
 
             }else{
                 var outprice=$('#outprice').val();

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +35,7 @@ public class GoodsViewController {
     private UnitServise unitServise;
 
     @GetMapping("/{id}")
-    public String edit (@PathVariable int id,Model model){
+    public String edit (@PathVariable int id, Model model){
         List<Factory> factoryList=new ArrayList<>();
         List<Category> categoryList=new ArrayList<>();
         List<Groups> groupsList=new ArrayList<>();

@@ -30,4 +30,7 @@ public class GoodsService implements EntityService<Goods> {
     public void delete(int id) throws Exception {
            goodsRepository.deleteById(id);
     }
+    public List<Goods> getAllfromIdstepSize() throws Exception{
+       return   goodsRepository.mySelect();
+    }
 }

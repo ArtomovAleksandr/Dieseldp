@@ -34,5 +34,6 @@ application\api\CategoryController.class
 application\service\implementation\UnitServise.class
 application\controller\UselViewController.class
 application\controller\GroupsViewController.class
+application\dto\GoodsDTOTable.class
 application\entity\goods\Unit.class
 application\repository\GoodsRepository.class

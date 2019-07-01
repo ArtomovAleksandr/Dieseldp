@@ -42,7 +42,9 @@ public class Goods {
     double inprice;//входная цена
 
 
-
+    @Column(name="in_arhive",nullable = false)
+    //@JoinColumn(name="in_arhive")
+    boolean inarhive=false;
 
     boolean countprice;//вычисляемая цена
     @Column(columnDefinition = "TINYINT")
@@ -100,6 +102,9 @@ public class Goods {
     public double getInprice() {
         return inprice;
     }
+
+    public boolean isInarhive() { return inarhive; }
+
     public boolean isCountprice() { return countprice; }
     public int getAddition() {
         return addition;
@@ -107,7 +112,6 @@ public class Goods {
 
     public Category getCategory() { return category; }
     public double getOutprice() { return outprice; }
-  //  public Factory getFactory() { return factory; }
 
     public void setNum(String num) {
         this.num = num;

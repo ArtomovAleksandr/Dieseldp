@@ -41,6 +41,7 @@
                   <label class="input-group-text" for="factory">Производитель</label>
               </div>
               <select class="custom-select" id="factory" name="factory">
+                  <option value="0" selected>Нет производителя</option>
                   <c:forEach items="${factorys}" var="factory">
                       <%--<c:choose>--%>
                          <%-- <c:when test="${goods.factory.id==factory.id}">
@@ -77,6 +78,7 @@
                   <label class="input-group-text" for="groups">Группы</label>
               </div>
               <select class="custom-select" id="groups">
+                  <option value="0" selected>Нет группы</option>
                   <c:forEach items="${groups}" var="group">
                      <%-- <c:choose>
                           <c:when test="${goods.groups.id==group.id}">
@@ -94,6 +96,7 @@
                   <label class="input-group-text" for="uzels">Узлы</label>
               </div>
               <select class="custom-select" id="uzels">
+                  <option value="0" selected>Нет узла</option>
                   <c:forEach items="${uzels}" var="uzel">
                      <%-- <c:choose>
                           <c:when test="${goods.uzel.id==uzel.id}">
@@ -306,6 +309,7 @@
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/goods_ajax.js" type="text/javascript"></script>
 </body>
 </html>
 
