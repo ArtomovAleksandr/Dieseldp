@@ -125,7 +125,7 @@
              <th scope="col">наценка</th>
               <th scope="col">Прод.цена</th>
               <th scope="colgroup">Цена</th>
-              <th scope="colgroup">Производитель</th>
+              <th scope="colgroup">Производ.</th>
               <th scope="colgroup">Категории</th>
               <th scope="colgroup">Группы</th>
               <th scope="colgroup">Узлы</th>

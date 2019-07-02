@@ -34,4 +34,16 @@ class AJAXService {
             error: fail
         });
     }
+    get(url, entityDTO, success, fail) {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: url,
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(entityDTO),
+            async: true,
+            success: success,
+            error: fail
+        });
+    }
 }

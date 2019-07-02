@@ -73,7 +73,7 @@ public class GoodsController {
          for (Goods goods: goodsList) {
             GoodsDTOTable goodsDTO=new GoodsDTOTable();
             goodsDTO.setId(goods.getId());
-            goodsDTO.setCurrent(goods.getCurrent().getShortname());
+            goodsDTO.setCurrent(goods.getCurrent().getName());
             goodsDTO.setCategory(goods.getCategory().getName());
             goodsDTO.setFactory(goods.getFactory().getName());
             goodsDTO.setGroups(goods.getGroups().getName());

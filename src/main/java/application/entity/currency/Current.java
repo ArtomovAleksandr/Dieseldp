@@ -40,4 +40,8 @@ public class Current {
     public double getRate() {
         return rate;
     }
+
+    public String getName() {
+        return name;
+    }
 }
