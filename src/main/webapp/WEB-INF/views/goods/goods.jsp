@@ -306,10 +306,13 @@
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
 <script src="../../../resources/js/DTO/DTOGoods.js"></script>
+<script src="../../../resources/js/DTO/DTOGoodsTable.js"></script>
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/goods_create_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_ajax.js" type="text/javascript"></script>
+
 </body>
 </html>
 

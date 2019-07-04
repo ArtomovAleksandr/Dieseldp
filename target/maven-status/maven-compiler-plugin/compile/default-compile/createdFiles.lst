@@ -1,4 +1,5 @@
 application\controller\MainViewController.class
+application\dto\GoodsDTOTableAJAX.class
 application\entity\goods\Groups.class
 application\repository\UzelRepository.class
 application\api\GoodsController.class

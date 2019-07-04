@@ -2,6 +2,7 @@ package application.api;
 
 import application.dto.GoodsDTO;
 import application.dto.GoodsDTOTable;
+import application.dto.GoodsDTOTableAJAX;
 import application.entity.currency.Current;
 import application.entity.goods.*;
 import application.helper.JSONResult;
@@ -62,7 +63,7 @@ public class GoodsController {
          return new JSONResultOk<>(newGoods);
      }
      @PostMapping("/rest")
-     public List<GoodsDTOTable> rest(@RequestBody String string){
+     public List<GoodsDTOTable> rest(@RequestBody GoodsDTOTableAJAX data){
          List<GoodsDTOTable> goodsDTOTableList=new ArrayList<>();
          List<Goods> goodsList=new ArrayList<>();
          try {
