@@ -64,6 +64,7 @@ public class GoodsController {
      }
      @PostMapping("/rest")
      public List<GoodsDTOTable> rest(@RequestBody GoodsDTOTableAJAX data){
+
          List<GoodsDTOTable> goodsDTOTableList=new ArrayList<>();
          List<Goods> goodsList=new ArrayList<>();
          try {
@@ -74,7 +75,7 @@ public class GoodsController {
          for (Goods goods: goodsList) {
             GoodsDTOTable goodsDTO=new GoodsDTOTable();
             goodsDTO.setId(goods.getId());
-            goodsDTO.setCurrent(goods.getCurrent().getName());
+            goodsDTO.setCurrent(data.getInputstr());
             goodsDTO.setCategory(goods.getCategory().getName());
             goodsDTO.setFactory(goods.getFactory().getName());
             goodsDTO.setGroups(goods.getGroups().getName());
@@ -84,10 +85,10 @@ public class GoodsController {
             goodsDTO.setName(goods.getName());
             goodsDTO.setUnit(goods.getUnit());
             goodsDTO.setMark(goods.getMark());
-            goodsDTO.setInprice(goods.getInprice());
-            goodsDTO.setCountprice(goods.isCountprice());
+            goodsDTO.setInprice(data.getFactoryid());
+            goodsDTO.setCountprice(data.isArhivebool());
             goodsDTO.setAddition(goods.getAddition());
-            goodsDTO.setOutprice(goods.getOutprice());
+            goodsDTO.setOutprice(data.getCategoryid());
             goodsDTO.setPrice(countPrice(goods.getInprice(),goods.getCurrent().getRate(),goods.isCountprice(),goods.getAddition(),goods.getOutprice()));
             goodsDTOTableList.add(goodsDTO);
          }
