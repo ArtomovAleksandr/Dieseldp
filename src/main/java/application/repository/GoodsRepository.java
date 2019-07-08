@@ -9,9 +9,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface GoodsRepository extends JpaRepository<Goods, Integer> {
+   //     private String qwerysrt;
     //   @Modifying
    //   @Transactional
        @Query(value = "select * from goods where category_id=17",nativeQuery = true)
+     //  @Query(value = qwerysrt,nativeQuery = true)
        public List<Goods> mySelect();
 
 }
