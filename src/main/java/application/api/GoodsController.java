@@ -69,6 +69,8 @@ public class GoodsController {
          List<Goods> goodsList=new ArrayList<>();
          try {
               goodsList= goodsService.getAllfromIdstepSize();
+             List<Goods> goods = goodsService.find(data);
+             System.out.println(goods);
          } catch (Exception e) {
              e.printStackTrace();
          }
