@@ -68,9 +68,9 @@ public class GoodsController {
          List<GoodsDTOTable> goodsDTOTableList=new ArrayList<>();
          List<Goods> goodsList=new ArrayList<>();
          try {
-              goodsList= goodsService.getAllfromIdstepSize();
-             List<Goods> goods = goodsService.find(data);
-             System.out.println(goods);
+              goodsList= goodsService.findByCriteris(data);
+     //        List<Goods> goods = goodsService.findByCriteris(data);
+     //        System.out.println(goods);
          } catch (Exception e) {
              e.printStackTrace();
          }

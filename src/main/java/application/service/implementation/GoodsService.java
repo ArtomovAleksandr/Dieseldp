@@ -6,6 +6,7 @@ import application.repository.GoodsRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -52,9 +53,9 @@ public class GoodsService implements EntityService<Goods> {
 
     public List<Goods> find(GoodsDTOTableAJAX data) {
 
-        List<Goods> resultList = entityManagerFactory.createEntityManager()
-                .createNativeQuery("select * from goods where name like '" + data.getInputstr() + "%' and in_arhive='false'", Goods.class)
-                .getResultList();
+//        List<Goods> resultList = entityManagerFactory.createEntityManager()
+//                .createNativeQuery("select * from goods where name like '" + data.getInputstr() + "%' and in_arhive='false'", Goods.class)
+//                .getResultList();
 
         Specification<Goods> spec1 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
             if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
@@ -76,5 +77,46 @@ public class GoodsService implements EntityService<Goods> {
             return criteriaBuilder.and();
         };
         return goodsRepository.findAll(spec1.or(spec2));
+    }
+    public List<Goods> findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
+        return goodsRepository.findAll(
+                new Specification<Goods>() {
+                    @Override
+                    public Predicate toPredicate(Root<Goods> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                      List<Predicate> predicates=new ArrayList<>();
+
+                          if(data.getInputstr()!=null && data.getInputstr().trim().length()>0){
+                              predicates.add(criteriaBuilder.or(
+                                      criteriaBuilder.like(root.get("catalog"),data.getInputstr()+"%"),
+                                      criteriaBuilder.like(root.get("num"),data.getInputstr()+"%"),
+                                      criteriaBuilder.like(root.get("name"),data.getInputstr()+"%"))
+                              );
+                          }
+                          if(data.getUzelid()>0) {
+                            predicates.add(criteriaBuilder.equal(root.get("uzel"), data.getUzelid()));
+                          }
+                          if(data.getGroupsid()>0) {
+                            predicates.add(criteriaBuilder.equal(root.get("groups"), data.getGroupsid()));
+                          }
+                          if(data.getCategoryid()>1) {
+                            predicates.add(criteriaBuilder.equal(root.get("category"), data.getCategoryid()));
+                          }
+                          if(data.getFactoryid()>0) {
+                               predicates.add(criteriaBuilder.equal(root.get("factory"), data.getFactoryid()));
+                          }
+                          criteriaQuery.orderBy(criteriaBuilder.asc(root.get("num")));
+                          predicates.add(criteriaBuilder.equal(root.get("inarhive"), data.isArhivebool()));
+
+                        return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+                    }
+                }
+
+
+
+
+        );
+
+
+
     }
 }

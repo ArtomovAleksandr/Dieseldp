@@ -28,6 +28,7 @@ application\api\GroupsController.class
 application\entity\goods\Category.class
 application\helper\JSONResultOk.class
 application\service\implementation\CategoryService.class
+application\service\implementation\GoodsService$1.class
 application\api\FactoryController.class
 application\entity\goods\Uzel.class
 application\controller\CategoryViewController.class

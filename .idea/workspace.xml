@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-08" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/api/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/api/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-08" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-08" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,7 +39,7 @@
     <favorites_list name="_10Diesel" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6179245">
+    <splitter split-orientation="horizontal" split-proportion="0.23279099">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -103,8 +110,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/api/GoodsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="969">
-                  <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+                <state relative-caret-position="1139">
+                  <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -143,11 +150,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1020">
-                  <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+                <state relative-caret-position="34">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -155,11 +162,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                <state relative-caret-position="238">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -189,8 +208,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="185">
-                  <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+                <state relative-caret-position="471">
+                  <caret line="105" column="79" selection-start-line="105" selection-start-column="79" selection-end-line="105" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
@@ -261,7 +280,6 @@
         <option value="$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/controller/GoodsViewController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/create_price.js" />
-        <option value="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/dto/GoodsDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/dto/GoodsDTOTable.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/services/AJAXService.js" />
@@ -270,9 +288,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/application/dto/GoodsDTOTableAJAX.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_ajax.js" />
-        <option value="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/DTOGoodsTable.js" />
         <option value="$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" />
       </list>
     </option>
   </component>
@@ -306,10 +325,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1002" />
-    <option name="y" value="28" />
-    <option name="width" value="891" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="58" />
+    <option name="y" value="47" />
+    <option name="width" value="954" />
     <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -318,12 +337,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
@@ -640,14 +666,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562318970533" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562619867896" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -838,12 +862,13 @@
       <workItem from="1562310849061" duration="5256000" />
       <workItem from="1562421065037" duration="2915000" />
       <workItem from="1562579235108" duration="1089000" />
-      <workItem from="1562599926633" duration="475000" />
+      <workItem from="1562599926633" duration="9795000" />
+      <workItem from="1562618614925" duration="1843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="403302000" />
+    <option name="totallyTimeSpent" value="414465000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,7 +882,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8345154" visible="true" weight="0.18869936" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8345154" visible="true" weight="0.05010661" />
       <window_info id="Structure" order="1" sideWeight="0.107714705" side_tool="true" weight="0.059168443" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -869,12 +894,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.18526544" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.47020584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.75406283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25568798" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.49404117" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29577464" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329849" />
@@ -958,12 +983,6 @@
           <line>9</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java</url>
-          <line>8</line>
-          <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/application/api/FactoryController.java</url>
           <line>28</line>
@@ -976,7 +995,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/factory/factory_table.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/UselViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1340,8 +1358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/api/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="1139">
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1377,10 +1395,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        <state relative-caret-position="34">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1394,13 +1429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/DTO/DTOGoodsTable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1410,8 +1438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        <state relative-caret-position="471">
+          <caret line="105" column="79" selection-start-line="105" selection-start-column="79" selection-end-line="105" selection-end-column="79" />
         </state>
       </provider>
     </entry>
