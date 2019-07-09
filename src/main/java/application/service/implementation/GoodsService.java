@@ -21,8 +21,13 @@ import java.util.List;
 
 @Service
 public class GoodsService implements EntityService<Goods> {
+    private static final int startindexFactory=0;
+    private static final int startindexGroups=0;
+    private static final int startindexCategory=1;
+    private static final int startindexUsel=0;
     @Autowired
     GoodsRepository goodsRepository;
+
 
     @Autowired
     EntityManagerFactory entityManagerFactory;
@@ -51,33 +56,33 @@ public class GoodsService implements EntityService<Goods> {
         return goodsRepository.mySelect();
     }
 
-    public List<Goods> find(GoodsDTOTableAJAX data) {
-
-//        List<Goods> resultList = entityManagerFactory.createEntityManager()
-//                .createNativeQuery("select * from goods where name like '" + data.getInputstr() + "%' and in_arhive='false'", Goods.class)
-//                .getResultList();
-
-        Specification<Goods> spec1 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
-            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
-               return criteriaBuilder.and(
-                        criteriaBuilder.like(root.get("name"), data.getInputstr() + "%"),
-                        criteriaBuilder.equal(root.get("inarhive"), false));
-            }
-            return criteriaBuilder.and();
-        };
-
-        Specification<Goods> spec2 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
-
-            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
-                return criteriaBuilder.and(
-                        criteriaBuilder.like(root.get("catalog"), data.getInputstr() + "%"),
-                        criteriaBuilder.equal(root.get("inarhive"), false)
-                );
-            }
-            return criteriaBuilder.and();
-        };
-        return goodsRepository.findAll(spec1.or(spec2));
-    }
+//    public List<Goods> find(GoodsDTOTableAJAX data) {
+//
+////        List<Goods> resultList = entityManagerFactory.createEntityManager()
+////                .createNativeQuery("select * from goods where name like '" + data.getInputstr() + "%' and in_arhive='false'", Goods.class)
+////                .getResultList();
+//
+//        Specification<Goods> spec1 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
+//            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
+//               return criteriaBuilder.and(
+//                        criteriaBuilder.like(root.get("name"), data.getInputstr() + "%"),
+//                        criteriaBuilder.equal(root.get("inarhive"), false));
+//            }
+//            return criteriaBuilder.and();
+//        };
+//
+//        Specification<Goods> spec2 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
+//
+//            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
+//                return criteriaBuilder.and(
+//                        criteriaBuilder.like(root.get("catalog"), data.getInputstr() + "%"),
+//                        criteriaBuilder.equal(root.get("inarhive"), false)
+//                );
+//            }
+//            return criteriaBuilder.and();
+//        };
+//        return goodsRepository.findAll(spec1.or(spec2));
+//    }
     public List<Goods> findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
         return goodsRepository.findAll(
                 new Specification<Goods>() {
@@ -92,16 +97,16 @@ public class GoodsService implements EntityService<Goods> {
                                       criteriaBuilder.like(root.get("name"),data.getInputstr()+"%"))
                               );
                           }
-                          if(data.getUzelid()>0) {
+                          if(data.getUzelid()>startindexUsel) {
                             predicates.add(criteriaBuilder.equal(root.get("uzel"), data.getUzelid()));
                           }
-                          if(data.getGroupsid()>0) {
+                          if(data.getGroupsid()>startindexGroups) {
                             predicates.add(criteriaBuilder.equal(root.get("groups"), data.getGroupsid()));
                           }
-                          if(data.getCategoryid()>1) {
+                          if(data.getCategoryid()>startindexCategory) {
                             predicates.add(criteriaBuilder.equal(root.get("category"), data.getCategoryid()));
                           }
-                          if(data.getFactoryid()>0) {
+                          if(data.getFactoryid()>startindexFactory) {
                                predicates.add(criteriaBuilder.equal(root.get("factory"), data.getFactoryid()));
                           }
                           criteriaQuery.orderBy(criteriaBuilder.asc(root.get("num")));
@@ -110,13 +115,6 @@ public class GoodsService implements EntityService<Goods> {
                         return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
                     }
                 }
-
-
-
-
         );
-
-
-
     }
 }
