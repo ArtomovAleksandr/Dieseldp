@@ -10,6 +10,8 @@ import application.helper.JSONResultError;
 import application.helper.JSONResultOk;
 import application.service.implementation.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -67,10 +69,12 @@ public class GoodsController {
 
          List<GoodsDTOTable> goodsDTOTableList=new ArrayList<>();
          List<Goods> goodsList=new ArrayList<>();
+         Pageable firstPageWithTwoElements = PageRequest.of(1, 3);
          try {
-              goodsList= goodsService.findByCriteris(data);
+              goodsList= goodsService.findByCriteris(data,firstPageWithTwoElements);
      //        List<Goods> goods = goodsService.findByCriteris(data);
-     //        System.out.println(goods);
+             System.out.println("goodlist"+goodsList);
+             System.out.println("isUnpaged"+firstPageWithTwoElements.isUnpaged());
          } catch (Exception e) {
              e.printStackTrace();
          }

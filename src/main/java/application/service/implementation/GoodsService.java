@@ -6,6 +6,7 @@ import application.repository.GoodsRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -84,7 +85,7 @@ public class GoodsService implements EntityService<Goods> {
 //        return goodsRepository.findAll(spec1.or(spec2));
 //    }
     public List<Goods> findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
-        return goodsRepository.findAll(
+        Page page=goodsRepository.findAll(
                 new Specification<Goods>() {
                     @Override
                     public Predicate toPredicate(Root<Goods> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
@@ -114,7 +115,10 @@ public class GoodsService implements EntityService<Goods> {
 
                         return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
                     }
-                }
+                },pageable
         );
+        page.getTotalElements();
+        page.getTotalPages();
+        return page.getContent();
     }
 }
