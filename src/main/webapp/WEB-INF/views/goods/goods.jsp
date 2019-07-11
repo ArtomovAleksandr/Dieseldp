@@ -28,7 +28,7 @@
                   <%--<input type="text" id="catalog" class="form-control" name="catalog"--%>
                          <%--placeholder="Введите каталожный номер товара">--%>
               <%--</div>--%>
-              <div class="input-group col-md-3 mt-3">
+              <div class="input-group col-md-2 mt-3">
                   <div class="input-group-prepend">
                       <label class="input-group-text" for="paginator">Кол. элем</label>
                   </div>
