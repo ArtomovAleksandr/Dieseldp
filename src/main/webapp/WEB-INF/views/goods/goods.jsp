@@ -12,27 +12,32 @@
 <% Integer countpagin=(Integer) request.getAttribute("countpagin");%>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid main-div mt-3">
-
-
-
-
-  <%--  <h1>Редактировать товар:${goods.name}</h1>  --%>
-     <%--<form id="form" class="form create-admin-form mt-3 mb-5">--%>
           <div class="row">
               <div class="input-group col-md-6 mt-3">
                   <div class="input-group-prepend">
-                       <label class="input-group-text" for="number">Кассовый номер</label>
+                       <label class="input-group-text" for="number">Поиск товара</label>
                   </div>
 
                       <input type="text" id="number" class="form-control" name="number"
-                          placeholder="Введите кассовый номер товара">
+                          placeholder="Введите критерий поиска ...">
               </div>
-              <div class="input-group col-md-6 mt-3">
+              <%--<div class="input-group col-md-6 mt-3">--%>
+                  <%--<div class="input-group-prepend">--%>
+                      <%--<label class="input-group-text" for="catalog">Каталож. номер</label>--%>
+                  <%--</div>--%>
+                  <%--<input type="text" id="catalog" class="form-control" name="catalog"--%>
+                         <%--placeholder="Введите каталожный номер товара">--%>
+              <%--</div>--%>
+              <div class="input-group col-md-3 mt-3">
                   <div class="input-group-prepend">
-                      <label class="input-group-text" for="catalog">Каталож. номер</label>
+                      <label class="input-group-text" for="paginator">Кол. элем</label>
                   </div>
-                  <input type="text" id="catalog" class="form-control" name="catalog"
-                         placeholder="Введите каталожный номер товара">
+                  <select class="custom-select" id="paginator" name="factory">
+                      <option value="5" >5</option>
+                      <option value="10" >10</option>
+                      <option value="15" >15</option>
+                      <option value="20" selected>20</option>
+                  </select>
               </div>
           </div>
       <div class="row mt-4">
@@ -43,14 +48,7 @@
               <select class="custom-select" id="factory" name="factory">
                   <option value="0" selected>Нет производителя</option>
                   <c:forEach items="${factorys}" var="factory">
-                      <%--<c:choose>--%>
-                         <%-- <c:when test="${goods.factory.id==factory.id}">
-                              <option value="${factory.id}" selected>${factory.name}</option>
-                          </c:when>
-                          <c:otherwise>--%>
                               <option value="${factory.id}">${factory.name}</option>
-                          <%--</c:otherwise>--%>
-                      <%--</c:choose>--%>
                   </c:forEach>
               </select>
           </div>
@@ -60,19 +58,10 @@
               </div>
               <select class="custom-select" id="category">
                   <c:forEach items="${categorys}" var="category">
-                     <%-- <c:choose>
-                          <c:when test="${goods.category.id==category.id}">
-                              <option value="${category.id}"selected>${category.name}</option>
-                          </c:when>
-                          <c:otherwise>--%>
                               <option value="${category.id}">${category.name}</option>
-                          <%--</c:otherwise>--%>
-                      <%--</c:choose>--%>
                   </c:forEach>
               </select>
           </div>
-      <%--</div>--%>
-      <%--<div class="row mt-4">--%>
           <div class="input-group col-md-3">
               <div class="input-group-prepend mb-3">
                   <label class="input-group-text" for="groups">Группы</label>
@@ -80,14 +69,7 @@
               <select class="custom-select" id="groups">
                   <option value="0" selected>Нет группы</option>
                   <c:forEach items="${groups}" var="group">
-                     <%-- <c:choose>
-                          <c:when test="${goods.groups.id==group.id}">
-                              <option value="${group.id}" selected>${group.name}</option>
-                          </c:when>
-                          <c:otherwise>--%>
                               <option value="${group.id}">${group.name}</option>
-                     <%--     </c:otherwise>
-                      </c:choose>--%>
                   </c:forEach>
               </select>
           </div>
@@ -98,14 +80,7 @@
               <select class="custom-select" id="uzels">
                   <option value="0" selected>Нет узла</option>
                   <c:forEach items="${uzels}" var="uzel">
-                     <%-- <c:choose>
-                          <c:when test="${goods.uzel.id==uzel.id}">
-                              <option value="${uzel.id}"selected>${uzel.name}</option>
-                          </c:when>
-                          <c:otherwise>--%>
                               <option value="${uzel.id}">${uzel.name}</option>
-                         <%-- </c:otherwise>
-                      </c:choose>--%>
                   </c:forEach>
               </select>
           </div>
@@ -274,7 +249,56 @@
 
 
       </table>
-
+    <div class="mt-4 row justify-content-center">
+        <%--<div class="row justify-content-center">--%>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination"id="pagination">
+                    <c:choose>
+                        <c:when test="${previous}" >
+                             <li class="page-item">
+                                 <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                  </a>
+                             </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                    <c:forEach varStatus="loop" begin="1" end="${countpagin}"  >
+                        <c:choose>
+                        <c:when test="${loop.count==numberpagin}">
+                                <li class="page-item active"><a class="page-link" href="#">${loop.count}</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li class="page-item"><a class="page-link" href="#">${loop.count}</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:forEach>
+                    <c:choose>
+                        <c:when test="${next}" >
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                </ul>
+            </nav>
+        </div>
+    </div>
       <div class="mt-4 row">
           <div class="col-md-12 text-center">
               <button type="submit" id="create" class="btn btn-outline-danger pl-5 pr-5">

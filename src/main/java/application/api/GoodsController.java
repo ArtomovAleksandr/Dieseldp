@@ -9,6 +9,7 @@ import application.helper.JSONResult;
 import application.helper.JSONResultError;
 import application.helper.JSONResultOk;
 import application.service.implementation.GoodsService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -17,8 +18,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 @RestController
 @RequestMapping(value = "/api/v1.0/goods")
+@Slf4j
 public class GoodsController {
      @Autowired
      private GoodsService goodsService;
@@ -69,12 +73,12 @@ public class GoodsController {
 
          List<GoodsDTOTable> goodsDTOTableList=new ArrayList<>();
          List<Goods> goodsList=new ArrayList<>();
-         Pageable firstPageWithTwoElements = PageRequest.of(1, 3);
+         Pageable pageable = PageRequest.of(1, 2);
          try {
-              goodsList= goodsService.findByCriteris(data,firstPageWithTwoElements);
+              goodsList= goodsService.findByCriteris(data,pageable);
      //        List<Goods> goods = goodsService.findByCriteris(data);
              System.out.println("goodlist"+goodsList);
-             System.out.println("isUnpaged"+firstPageWithTwoElements.isUnpaged());
+             System.out.println("isUnpaged"+pageable.isUnpaged());
          } catch (Exception e) {
              e.printStackTrace();
          }
@@ -91,13 +95,14 @@ public class GoodsController {
             goodsDTO.setName(goods.getName());
             goodsDTO.setUnit(goods.getUnit());
             goodsDTO.setMark(goods.getMark());
-            goodsDTO.setInprice(data.getFactoryid());
-            goodsDTO.setCountprice(data.isArhivebool());
+            goodsDTO.setInprice(pageable.getOffset());
+            goodsDTO.setCountprice(pageable.hasPrevious());
             goodsDTO.setAddition(goods.getAddition());
             goodsDTO.setOutprice(data.getCategoryid());
             goodsDTO.setPrice(countPrice(goods.getInprice(),goods.getCurrent().getRate(),goods.isCountprice(),goods.getAddition(),goods.getOutprice()));
             goodsDTOTableList.add(goodsDTO);
          }
+         log.info("isPaged"+pageable.isPaged()+"getPagesize"+pageable.getPageSize());
          return goodsDTOTableList;
      }
 

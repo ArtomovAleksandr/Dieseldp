@@ -26,4 +26,10 @@ $(function () {
     $('#category').on('change',sendAJAX);
     $('#uzels').on('change',sendAJAX);
     $('#groups').on('change',sendAJAX);
+    $('#pagination').click(
+        function (e) {
+            console.dir(e.target.innerText);
+
+        }
+    );
 });

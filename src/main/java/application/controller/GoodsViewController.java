@@ -86,7 +86,8 @@ public class GoodsViewController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        int countpagin= (int) ((goods.size()/(sizepagin+0.01))+1);
+        int countpagin=10;
+     //   int countpagin= (int) ((goods.size()/(sizepagin+0.01))+1);
         List<Goods> goodssend=paginListGoods(goods,id);
         model.addAttribute("factorys",factoryList);
         model.addAttribute("categorys",categoryList);
@@ -96,6 +97,9 @@ public class GoodsViewController {
         model.addAttribute("goods",goodssend);
         model.addAttribute("units",units);
         model.addAttribute("countpagin",countpagin);
+        model.addAttribute("numberpagin",2);
+        model.addAttribute("previous",false);
+        model.addAttribute("next",true);
        return "goods/goods";
     }
     @GetMapping("/create_goods/{id}")
