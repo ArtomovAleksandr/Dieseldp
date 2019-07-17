@@ -164,7 +164,7 @@
               <td>
                               <div>
                               <c:choose>
-                                  <c:when test="${good.countprice==true}">
+                                  <c:when test="${good.countprice}">
                                       <input type="checkbox" checked disabled>
                                   </c:when>
                                   <c:otherwise>
@@ -250,14 +250,29 @@
 
       </table>
     <div class="mt-4 row justify-content-center">
-        <%--<div class="row justify-content-center">--%>
-            <nav aria-label="Page navigation example">
+              <nav>
                 <ul class="pagination"id="pagination">
+                    <c:choose>
+                        <c:when test="${previous}" >
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">«</span>
+                                </a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">««</span>
+                                </a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
                     <c:choose>
                         <c:when test="${previous}" >
                              <li class="page-item">
                                  <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
+                                    <span aria-hidden="true">««</span>
                                   </a>
                              </li>
                         </c:when>
@@ -280,17 +295,33 @@
                         </c:choose>
                     </c:forEach>
                     <c:choose>
+                    <c:when test="${next}" >
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">»</span>
+                            </a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+                    <c:choose>
                         <c:when test="${next}" >
                             <li class="page-item">
                                 <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">»</span>
+                                    <span aria-hidden="true">»»</span>
                                 </a>
                             </li>
                         </c:when>
                         <c:otherwise>
                             <li class="page-item disabled">
                                 <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">»</span>
+                                    <span aria-hidden="true">»»</span>
                                 </a>
                             </li>
                         </c:otherwise>
@@ -335,6 +366,7 @@
 <script src="../../../resources/js/goods/goods_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_delete.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_create_table.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/goods_create_paginator.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/goods_ajax.js" type="text/javascript"></script>
 
 </body>

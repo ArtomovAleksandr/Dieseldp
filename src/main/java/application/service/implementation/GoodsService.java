@@ -84,8 +84,8 @@ public class GoodsService implements EntityService<Goods> {
 //        };
 //        return goodsRepository.findAll(spec1.or(spec2));
 //    }
-    public List<Goods> findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
-        Page page=goodsRepository.findAll(
+    public Page findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
+        return goodsRepository.findAll(
                 new Specification<Goods>() {
                     @Override
                     public Predicate toPredicate(Root<Goods> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
@@ -117,8 +117,5 @@ public class GoodsService implements EntityService<Goods> {
                     }
                 },pageable
         );
-        page.getTotalElements();
-        page.getTotalPages();
-        return page.getContent();
     }
 }
