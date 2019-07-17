@@ -2,117 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/api/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/api/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-10-31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-11-29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2018-12-31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-01-06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-19" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-23" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-24" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-26" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-29" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-06-30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-09" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-11" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_005fedit_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_005fedit_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/category_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/categorybasket_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/category/categorybasket_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/fabrica/admin_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/fabrica/admin_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_005fedit_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_005fedit_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/factory/factory_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fcreate_005fid_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fcreate_005fid_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fedit_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_005fedit_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/goods/goods_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_005fedit_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_005fedit_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/groups/groups_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/footer_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/footer_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/head_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/head_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/template/header_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_005fcreate_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_005fcreate_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_005fedit_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_005fedit_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzels_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzelsbasket_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/uzels/uzelsbasket_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/api/GoodsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/GoodsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-17" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-07-17" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,6 +45,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="java" value="2" />
           <entry key="js" value="3" />
           <entry key="jsp" value="1" />
           <entry key="properties" value="2" />
@@ -157,6 +54,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JAVA" value="2" />
           <entry key="JSP" value="1" />
           <entry key="JavaScript" value="3" />
           <entry key="Properties" value="2" />
@@ -165,7 +63,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="34" />
+          <entry key="java" value="55" />
           <entry key="js" value="900" />
           <entry key="jsp" value="53" />
           <entry key="properties" value="5" />
@@ -174,7 +72,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="55" />
           <entry key="JSP" value="53" />
           <entry key="JavaScript" value="900" />
           <entry key="Properties" value="5" />
@@ -187,19 +85,55 @@
     <favorites_list name="_10Diesel" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.77002287">
+    <splitter split-orientation="horizontal" split-proportion="0.8834661">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/DTO/DTOUzel.js">
-              <provider selected="true" editor-type-id="text-editor" />
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTOTable.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-748">
+                  <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#661#662#0" expanded="true" />
+                    <element signature="e#699#700#0" expanded="true" />
+                    <element signature="e#747#748#0" expanded="true" />
+                    <element signature="e#787#788#0" expanded="true" />
+                    <element signature="e#833#834#0" expanded="true" />
+                    <element signature="e#871#872#0" expanded="true" />
+                    <element signature="e#915#916#0" expanded="true" />
+                    <element signature="e#951#952#0" expanded="true" />
+                    <element signature="e#991#992#0" expanded="true" />
+                    <element signature="e#1023#1024#0" expanded="true" />
+                    <element signature="e#1061#1062#0" expanded="true" />
+                    <element signature="e#1091#1092#0" expanded="true" />
+                    <element signature="e#1137#1138#0" expanded="true" />
+                    <element signature="e#1175#1176#0" expanded="true" />
+                    <element signature="e#1215#1216#0" expanded="true" />
+                    <element signature="e#1247#1248#0" expanded="true" />
+                    <element signature="e#1287#1288#0" expanded="true" />
+                    <element signature="e#1319#1320#0" expanded="true" />
+                    <element signature="e#1359#1360#0" expanded="true" />
+                    <element signature="e#1391#1392#0" expanded="true" />
+                    <element signature="e#1437#1438#0" expanded="true" />
+                    <element signature="e#1475#1476#0" expanded="true" />
+                    <element signature="e#1528#1529#0" expanded="true" />
+                    <element signature="e#1572#1573#0" expanded="true" />
+                    <element signature="e#1617#1618#0" expanded="true" />
+                    <element signature="e#1657#1658#0" expanded="true" />
+                    <element signature="e#1705#1706#0" expanded="true" />
+                    <element signature="e#1745#1746#0" expanded="true" />
+                    <element signature="e#1787#1788#0" expanded="true" />
+                    <element signature="e#1821#1822#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/GoodsViewController.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1241">
-                  <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+                <state relative-caret-position="425">
+                  <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -213,10 +147,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1278">
+                <state relative-caret-position="1788">
                   <caret line="357" lean-forward="true" selection-start-line="357" selection-end-line="357" />
                 </state>
               </provider>
@@ -225,8 +159,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/api/GoodsController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+                <state relative-caret-position="144">
+                  <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -338,16 +272,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+                <state relative-caret-position="292">
+                  <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_create_paginator.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="34">
@@ -437,12 +371,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_ajax.js" />
-        <option value="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/create_paginator.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/goods_create_paginator.js" />
+        <option value="$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/api/GoodsController.java" />
       </list>
     </option>
   </component>
@@ -544,6 +478,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
@@ -654,7 +606,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563374304727" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563375801758" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -854,12 +806,12 @@
       <workItem from="1562833470314" duration="891000" />
       <workItem from="1562837156073" duration="5256000" />
       <workItem from="1562919790438" duration="351000" />
-      <workItem from="1563265461724" duration="11762000" />
+      <workItem from="1563265461724" duration="13352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="447891000" />
+    <option name="totallyTimeSpent" value="449481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -872,9 +824,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8345154" visible="true" weight="0.19894099" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8345154" visible="true" weight="0.2397882" />
       <window_info id="Structure" order="1" sideWeight="0.107714705" side_tool="true" weight="0.059168443" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -886,12 +837,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.14869282" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32352942" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.66993463" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25568798" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32827735" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.25816995" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.25816995" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329849" />
@@ -1145,13 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/helper/JSONResultError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1220,45 +1164,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTOTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-            <element signature="e#1023#1024#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1391#1392#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
-            <element signature="e#1787#1788#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/DTO/DTOCategory.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1364,29 +1269,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/config/spring.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding>
             <element signature="e#1801#1812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/api/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1407,8 +1295,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
+        <state relative-caret-position="1788">
           <caret line="357" lean-forward="true" selection-start-line="357" selection-end-line="357" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/api/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="74" column="19" lean-forward="true" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/dto/GoodsDTOTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1437#1438#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

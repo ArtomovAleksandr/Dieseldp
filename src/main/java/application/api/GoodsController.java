@@ -76,15 +76,16 @@ public class GoodsController {
 
         List<GoodsDTOTable> goodsDTOTableList = new ArrayList<>();
         List<Goods> goodsList = new ArrayList<>();
-        Pageable pageable = PageRequest.of(0, 2);
+        Pageable pageable = PageRequest.of(0, 5);
 
-        Page page = goodsService.findByCriteris(data, pageable);
-        int totalPages = page.getTotalPages();
+        Page page = null;
+   //     int totalPages = page.getTotalPages();
         try {
+            page = goodsService.findByCriteris(data, pageable);
             goodsList = page.getContent();
             //        List<Goods> goods = goodsService.findByCriteris(data);
-            System.out.println("goodlist" + goodsList);
-            System.out.println("isUnpaged" + pageable.isUnpaged());
+       //     System.out.println("goodlist" + goodsList);
+     //       System.out.println("isUnpaged" + pageable.isUnpaged());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -114,7 +115,6 @@ public class GoodsController {
 
     private double countPrice(double inprice, double current, boolean countprice, int addition, double outprice) {
         if (countprice == true) {
-            float c = addition / 100.0f;
             return (double) inprice * current * ((addition / 100.0f) + 1);
         } else {
             return outprice * current;

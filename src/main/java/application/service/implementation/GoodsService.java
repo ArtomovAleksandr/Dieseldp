@@ -57,33 +57,7 @@ public class GoodsService implements EntityService<Goods> {
         return goodsRepository.mySelect();
     }
 
-//    public List<Goods> find(GoodsDTOTableAJAX data) {
-//
-////        List<Goods> resultList = entityManagerFactory.createEntityManager()
-////                .createNativeQuery("select * from goods where name like '" + data.getInputstr() + "%' and in_arhive='false'", Goods.class)
-////                .getResultList();
-//
-//        Specification<Goods> spec1 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
-//            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
-//               return criteriaBuilder.and(
-//                        criteriaBuilder.like(root.get("name"), data.getInputstr() + "%"),
-//                        criteriaBuilder.equal(root.get("inarhive"), false));
-//            }
-//            return criteriaBuilder.and();
-//        };
-//
-//        Specification<Goods> spec2 = (Specification<Goods>) (root, criteriaQuery, criteriaBuilder) -> {
-//
-//            if (data.getInputstr() != null && data.getInputstr().trim().length() > 0) {
-//                return criteriaBuilder.and(
-//                        criteriaBuilder.like(root.get("catalog"), data.getInputstr() + "%"),
-//                        criteriaBuilder.equal(root.get("inarhive"), false)
-//                );
-//            }
-//            return criteriaBuilder.and();
-//        };
-//        return goodsRepository.findAll(spec1.or(spec2));
-//    }
+
     public Page findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
         return goodsRepository.findAll(
                 new Specification<Goods>() {
