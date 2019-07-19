@@ -1,4 +1,5 @@
-function cretepaginator(isPrevious,numberelement,countelement,isLast) {
+function cretepaginator(isPrevious,numberelement,countelement,isNext) {
+    sevenumberpagetolocalstorage(numberelement);
    var paginul=$("#pagination");
    paginul.children().remove();
    if(isPrevious) {
@@ -9,13 +10,13 @@ function cretepaginator(isPrevious,numberelement,countelement,isLast) {
        paginul.append($('<li class="page-item disabled"></li>').append($('<a class="page-link" href="#" aria-label="Previous"></a>').append('<span aria-hidden="true">«</span>')));
    }
     for(var i=1;i<=countelement;i++){
-       if(numberelement==i){
+       if((numberelement+1)==i){
          paginul.append($('<li class="page-item active"></li>').append($('<a class="page-link" href="#">'+i+'</a>')));
        }else{
            paginul.append($('<li class="page-item"></li>').append($('<a class="page-link" href="#">'+i+'</a>')));
        }
    }
-    if(isLast) {
+    if(isNext) {
         paginul.append($('<li class="page-item"></li>').append($('<a class="page-link" href="#" aria-label="Previous"></a>').append('<span aria-hidden="true">»»</span>')));
         paginul.append($('<li class="page-item"></li>').append($('<a class="page-link" href="#" aria-label="Previous"></a>').append('<span aria-hidden="true">»</span>')));
     }else {
@@ -23,4 +24,7 @@ function cretepaginator(isPrevious,numberelement,countelement,isLast) {
         paginul.append($('<li class="page-item disabled"></li>').append($('<a class="page-link" href="#" aria-label="Previous"></a>').append('<span aria-hidden="true">»</span>')));
     }
 }
-cretepaginator(false,2,6,true);
+function sevenumberpagetolocalstorage(e) {
+    localStorage.setItem('numberpage',e.toString());
+}
+//cretepaginator(false,2,6,true);

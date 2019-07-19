@@ -26,6 +26,7 @@ application\entity\currency\HistoryCurrent.class
 application\dto\GoodsDTO.class
 application\api\GroupsController.class
 application\entity\goods\Category.class
+application\dto\GoodsPageDTO.class
 application\helper\JSONResultOk.class
 application\service\implementation\CategoryService.class
 application\service\implementation\GoodsService$1.class

@@ -3,6 +3,7 @@ package application.api;
 import application.dto.GoodsDTO;
 import application.dto.GoodsDTOTable;
 import application.dto.GoodsDTOTableAJAX;
+import application.dto.GoodsPageDTO;
 import application.entity.currency.Current;
 import application.entity.goods.*;
 import application.helper.JSONResult;
@@ -72,16 +73,18 @@ public class GoodsController {
     }
 
     @PostMapping("/rest")
-    public List<GoodsDTOTable> rest(@RequestBody GoodsDTOTableAJAX data) {
-
+    public GoodsPageDTO rest(@RequestBody GoodsDTOTableAJAX data) {
+        GoodsPageDTO goodsPageDTO=new GoodsPageDTO();
         List<GoodsDTOTable> goodsDTOTableList = new ArrayList<>();
         List<Goods> goodsList = new ArrayList<>();
-        Pageable pageable = PageRequest.of(0, 5);
+ //       int datapagin=data.getPaginator();
+        Pageable pageable = PageRequest.of(0, data.getPaginator());
 
         Page page = null;
    //     int totalPages = page.getTotalPages();
         try {
             page = goodsService.findByCriteris(data, pageable);
+
             goodsList = page.getContent();
             //        List<Goods> goods = goodsService.findByCriteris(data);
        //     System.out.println("goodlist" + goodsList);
@@ -109,8 +112,15 @@ public class GoodsController {
             goodsDTO.setPrice(countPrice(goods.getInprice(), goods.getCurrent().getRate(), goods.isCountprice(), goods.getAddition(), goods.getOutprice()));
             goodsDTOTableList.add(goodsDTO);
         }
-        log.info("isPaged" + pageable.isPaged() + "getPagesize" + pageable.getPageSize());
-        return goodsDTOTableList;
+        goodsPageDTO.setGoodsDTOTableList(goodsDTOTableList);
+        if(page!=null) {
+            goodsPageDTO.setNumberpage(page.getNumber());
+            goodsPageDTO.setTotalpages(page.getTotalPages());
+            goodsPageDTO.setHasPrevious(page.hasPrevious());
+            goodsPageDTO.setHasNext(page.hasNext());
+        }
+  //      log.info("isPaged" + pageable.isPaged() + "getPagesize" + pageable.getPageSize());
+        return goodsPageDTO;
     }
 
     private double countPrice(double inprice, double current, boolean countprice, int addition, double outprice) {

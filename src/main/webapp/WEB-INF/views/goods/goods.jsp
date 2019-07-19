@@ -21,22 +21,15 @@
                       <input type="text" id="number" class="form-control" name="number"
                           placeholder="Введите критерий поиска ...">
               </div>
-              <%--<div class="input-group col-md-6 mt-3">--%>
-                  <%--<div class="input-group-prepend">--%>
-                      <%--<label class="input-group-text" for="catalog">Каталож. номер</label>--%>
-                  <%--</div>--%>
-                  <%--<input type="text" id="catalog" class="form-control" name="catalog"--%>
-                         <%--placeholder="Введите каталожный номер товара">--%>
-              <%--</div>--%>
               <div class="input-group col-md-2 mt-3">
                   <div class="input-group-prepend">
                       <label class="input-group-text" for="paginator">Кол. элем</label>
                   </div>
-                  <select class="custom-select" id="paginator" name="factory">
-                      <option value="5" >5</option>
+                  <select class="custom-select" id="paginator">
+                      <option value="5" selected>5</option>
                       <option value="10" >10</option>
                       <option value="15" >15</option>
-                      <option value="20" selected>20</option>
+                      <option value="20" >20</option>
                   </select>
               </div>
           </div>
@@ -187,8 +180,6 @@
                                 <div>
                                     <c:choose>
                                         <c:when test="${good.countprice==true}">
-
-
                                             ${good.inprice*(1+(good.addition/100))*cur}
 
                                         </c:when>
@@ -197,7 +188,7 @@
                                         </c:otherwise>
                                     </c:choose>
                                 </div>
-              </td>
+                            </td>
               <td>
               <div>
                   <c:forEach items="${factorys}" var="factory">

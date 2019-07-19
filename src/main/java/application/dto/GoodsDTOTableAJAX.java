@@ -10,7 +10,8 @@ public class GoodsDTOTableAJAX {
     private int categoryid;
     private int groupsid;
     private int uzelid;
-
+    private int paginator;
+    private int numberpage;
     public GoodsDTOTableAJAX() {
     }
 
@@ -60,5 +61,21 @@ public class GoodsDTOTableAJAX {
 
     public void setUzelid(int uzelid) {
         this.uzelid = uzelid;
+    }
+
+    public void setPaginator(int paginator) {
+        this.paginator = paginator;
+    }
+
+    public int getPaginator() {
+        return paginator;
+    }
+
+    public void setNumberpage(int numberpage) {
+        this.numberpage = numberpage;
+    }
+
+    public int getNumberpage() {
+        return numberpage;
     }
 }

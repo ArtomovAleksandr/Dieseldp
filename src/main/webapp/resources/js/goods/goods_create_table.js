@@ -1,5 +1,6 @@
 
-function createtable(data) {
+function createtable(datadto) {
+        var data=datadto.goodsDTOTableList;
         var countdigit = 1;//количество знаков после запятой
         var tbody = $("tbody");
         tbody.children().remove();

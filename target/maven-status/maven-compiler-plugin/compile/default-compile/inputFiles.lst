@@ -16,6 +16,7 @@ D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\repository\UnitRep
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\controller\UselViewController.java
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\helper\JSONResultError.java
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\service\implementation\GroupsService.java
+D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\dto\GoodsPageDTO.java
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\repository\GroupsRepository.java
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\api\GoodsController.java
 D:\java\48_diplom_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOTableAJAX.java

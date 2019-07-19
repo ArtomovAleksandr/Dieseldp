@@ -6,7 +6,9 @@ $(function () {
         var categoryid=$('#category').val();
         var groupsid=$('#groups').val();
         var uzelid=$('#uzels').val();
-        var goods=new DTOGoodsTable(inputstr,arhivebool,factoryid,categoryid,groupsid,uzelid);
+        var paginator=$('#paginator').val();
+        var numberpage=0;
+        var goods=new DTOGoodsTable(inputstr,arhivebool,factoryid,categoryid,groupsid,uzelid,paginator,numberpage);
         return goods;
     }
     var servise=new AJAXService();
@@ -14,6 +16,8 @@ $(function () {
         function success(data) {
             console.log(data);
             createtable(data);
+            cretepaginator(data.hasPrevious,data.numberpage,data.totalpages,data.hasNext);
+
         }
         function fail() {
             console.log("error! goods");
@@ -26,6 +30,7 @@ $(function () {
     $('#category').on('change',sendAJAX);
     $('#uzels').on('change',sendAJAX);
     $('#groups').on('change',sendAJAX);
+    $('#paginator').on('change',sendAJAX);
     function choiceFromLocalStorageCurentElement(e) {
         if(localStorage.getItem('page')===null) {
             return JSON.parse(localStorage.getItem('page')).current;
@@ -75,8 +80,12 @@ $(function () {
     $('#pagination').click(
         function (e) {
             e.preventDefault();
-            console.dir(e.target.innerText);
 
+            console.dir(e.target.innerText);
+             var page= e.target.innerText;
+             var goods=goodsdata();
+             goods.setNumberPage(page-1);
+             sendAJAX();
         }
     );
 });
