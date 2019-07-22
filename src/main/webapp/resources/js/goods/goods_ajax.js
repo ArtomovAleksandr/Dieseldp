@@ -12,7 +12,7 @@ $(function () {
         return goods;
     }
     var servise=new AJAXService();
-    function sendAJAX(){
+    function sendAJAX(page){
         function success(data) {
             console.log(data);
             createtable(data);
@@ -23,19 +23,21 @@ $(function () {
             console.log("error! goods");
             window.location.href="/category/show/1";
         }
-        servise.post("/api/v1.0/goods/rest",goodsdata(),success,fail);
+        var goods=goodsdata();
+        goods.setNumberPage(page);
+        servise.post("/api/v1.0/goods/rest",goods,success,fail);
     }
-    $('#number').bind('input',sendAJAX);
-    $('#factory').on('change',sendAJAX);
-    $('#category').on('change',sendAJAX);
-    $('#uzels').on('change',sendAJAX);
-    $('#groups').on('change',sendAJAX);
-    $('#paginator').on('change',sendAJAX);
+    $('#number').bind('input',function (){sendAJAX(0)});
+    $('#factory').on('change',function (){sendAJAX(0)});
+    $('#category').on('change',function (){sendAJAX(0)});
+    $('#uzels').on('change',function (){sendAJAX(0)});
+    $('#groups').on('change',function (){sendAJAX(0)});
+    $('#paginator').on('change',function (){sendAJAX(0)});
     function choiceFromLocalStorageCurentElement(e) {
-        if(localStorage.getItem('page')===null) {
-            return JSON.parse(localStorage.getItem('page')).current;
+        if(localStorage.getItem('numberpage')===null) {
+            return JSON.parse(localStorage.getItem('numberpage'));
         }else{
-            return -1;
+            return 0;
         }
     }
     function choiceFromLocalStorageLastElement(e) {
@@ -48,44 +50,52 @@ $(function () {
 
 
     function choiseNumberPaginator(e){
-        if(Number.isInteger(e)){
-            return e;
+        if(e.match(/^[0-9]+$/) != null){
+            return (parseInt(e)-1);
         }else if(e=='««'){
             return 0;//первый елемент
         }else if(e=='«'){//предыдущий елемент
-              var elem=choiceFromLocalStorageCurentElement(e);
-              if(elem==-1){
-                  return 1;
-              }else {
-                  return elem;
-              }
-        }else if(e=='»»'){//последний элемент
-            var elem=choiceFromLocalStorageLastElement(e);
-            if(elem==-1){
-                return -1;
-            }else {
-                return elem;
-            }
-        }else if(e=='»'){//следущий элемент
-            var elem=choiceFromLocalStorageCurentElement(e);
-            if(elem==-1){
-                return -1;
-            }else {
-                return elem;
-            }
+             var elem=choiceFromLocalStorageCurentElement(e);
+        //     if(elem==-1){
+        //         return 1;
+        //     }else {
+        //         return elem;
+        //     }
+        // }else if(e=='»»'){//последний элемент
+        //     var elem=choiceFromLocalStorageLastElement(e);
+        //     if(elem==-1){
+        //         return -1;
+        //     }else {
+        //         return elem;
+        //     }
+        // }else if(e=='»'){//следущий элемент
+        //     var elem=choiceFromLocalStorageCurentElement(e);
+        //     if(elem==-1){
+        //         return -1;
+        //     }else {
+        //         return elem;
+        //     }
         }
-        return 0;
+       // return 0;
     }
 
-    $('#pagination').click(
-        function (e) {
-            e.preventDefault();
+    $('#pagination').on('click',function (e) {
+       // console.log($(this).text());
+    //    }
+   //     sendAJAX(1)
+     //   function f(e) {
+       //     e.preventDefault();
 
-            console.dir(e.target.innerText);
-             var page= e.target.innerText;
-             var goods=goodsdata();
-             goods.setNumberPage(page-1);
-             sendAJAX();
+         //   console.log(e);
+            if(e.target.classList.value.match('disabled')==null)
+            {
+                var out = choiseNumberPaginator(e.target.innerText);
+                sendAJAX(out);
+            }
+         //    var page= e.target.innerText;
+             //var goods=goodsdata();
+            // goods.setNumberPage(page-1);
+
         }
     );
 });

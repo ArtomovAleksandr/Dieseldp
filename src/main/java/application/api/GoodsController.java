@@ -78,7 +78,7 @@ public class GoodsController {
         List<GoodsDTOTable> goodsDTOTableList = new ArrayList<>();
         List<Goods> goodsList = new ArrayList<>();
  //       int datapagin=data.getPaginator();
-        Pageable pageable = PageRequest.of(0, data.getPaginator());
+        Pageable pageable = PageRequest.of(data.getNumberpage(), data.getPaginator());
 
         Page page = null;
    //     int totalPages = page.getTotalPages();
