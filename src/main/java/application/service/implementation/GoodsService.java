@@ -65,7 +65,7 @@ public class GoodsService implements EntityService<Goods> {
                     public Predicate toPredicate(Root<Goods> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
                       List<Predicate> predicates=new ArrayList<>();
 
-                          if(data.getInputstr()!=null && data.getInputstr().trim().length()>0){
+                          if(data.getInputstr()!=null ){//&& data.getInputstr().trim().length()>0
                               predicates.add(criteriaBuilder.or(
                                       criteriaBuilder.like(root.get("catalog"),data.getInputstr()+"%"),
                                       criteriaBuilder.like(root.get("num"),data.getInputstr()+"%"),

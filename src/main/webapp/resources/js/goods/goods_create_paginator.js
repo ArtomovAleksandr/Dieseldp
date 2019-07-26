@@ -1,5 +1,6 @@
 function cretepaginator(isPrevious,numberelement,countelement,isNext) {
     sevenumberpagetolocalstorage(numberelement);
+    sevecountpage(countelement);
    var paginul=$("#pagination");
    paginul.children().remove();
    if(isPrevious) {
@@ -27,4 +28,6 @@ function cretepaginator(isPrevious,numberelement,countelement,isNext) {
 function sevenumberpagetolocalstorage(e) {
     localStorage.setItem('numberpage',e.toString());
 }
-//cretepaginator(false,2,6,true);
+function sevecountpage(e) {
+    localStorage.setItem('countpage',e.toString());
+}

@@ -42,9 +42,9 @@ $(function () {
     }
     function choiceFromLocalStorageLastElement(e) {
         if(localStorage.getItem('page')===null) {
-            return JSON.parse(localStorage.getItem('page')).last;
+            return JSON.parse(localStorage.getItem('countpage'));
         }else{
-            return -1;
+            return 0;
         }
     }
 
@@ -56,45 +56,32 @@ $(function () {
             return 0;//первый елемент
         }else if(e=='«'){//предыдущий елемент
              var elem=choiceFromLocalStorageCurentElement(e);
-        //     if(elem==-1){
-        //         return 1;
-        //     }else {
-        //         return elem;
-        //     }
-        // }else if(e=='»»'){//последний элемент
-        //     var elem=choiceFromLocalStorageLastElement(e);
-        //     if(elem==-1){
-        //         return -1;
-        //     }else {
-        //         return elem;
-        //     }
-        // }else if(e=='»'){//следущий элемент
-        //     var elem=choiceFromLocalStorageCurentElement(e);
-        //     if(elem==-1){
-        //         return -1;
-        //     }else {
-        //         return elem;
-        //     }
+             if(elem>0) {
+                 return elem - 1;
+             }else {
+                 return 0;
+             }
+        }else if(e=='»»'){//последний элемент
+            var elem=choiceFromLocalStorageLastElement(e);
+            if(elem>0) {
+                return elem - 1;
+            }else {
+                return 0;
+            }
+         }else if(e=='»'){//следущий элемент
+            var elem=choiceFromLocalStorageCurentElement(e);
+            return elem+1;
+        }else {
+             return 0;
         }
-       // return 0;
     }
 
     $('#pagination').on('click',function (e) {
-       // console.log($(this).text());
-    //    }
-   //     sendAJAX(1)
-     //   function f(e) {
-       //     e.preventDefault();
-
-         //   console.log(e);
-            if(e.target.classList.value.match('disabled')==null)
+             if(e.target.classList.value.match('disabled')==null)
             {
                 var out = choiseNumberPaginator(e.target.innerText);
                 sendAJAX(out);
             }
-         //    var page= e.target.innerText;
-             //var goods=goodsdata();
-            // goods.setNumberPage(page-1);
 
         }
     );
