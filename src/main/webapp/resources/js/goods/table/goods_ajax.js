@@ -25,6 +25,7 @@ $(function () {
         }
         var goods=goodsdata();
         goods.setNumberPage(page);
+        saveElementsGoods(goods);
         servise.post("/api/v1.0/goods/rest",goods,success,fail);
     }
     $('#number').bind('input',function (){sendAJAX(0)});
@@ -33,6 +34,16 @@ $(function () {
     $('#uzels').on('change',function (){sendAJAX(0)});
     $('#groups').on('change',function (){sendAJAX(0)});
     $('#paginator').on('change',function (){sendAJAX(0)});
+    function saveElementsGoods(goods) {
+        var elements={
+            factory:goods.factoryid,
+            category:goods.categoryid,
+            uzels:goods.uzelid,
+            groups:goods.groupsid,
+            paginator:goods.paginator
+        }
+        localStorage.setItem('elementspage',JSON.stringify(elements));
+    }
     function choiceFromLocalStorageCurentElement(e) {
         if(localStorage.getItem('numberpage')===null) {
             return JSON.parse(localStorage.getItem('numberpage'));
