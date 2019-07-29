@@ -17,8 +17,7 @@
                   <div class="input-group-prepend">
                        <label class="input-group-text" for="number">Поиск товара</label>
                   </div>
-
-                      <input type="text" id="number" class="form-control" name="number"
+                  <input type="text" id="number" class="form-control" name="number"
                           placeholder="Введите критерий поиска ...">
               </div>
               <div class="input-group col-md-2 mt-3">
@@ -356,6 +355,7 @@
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/table/goods_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/table/goods_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/goods/table/goods_create_elementspage.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/table/goods_create_table.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/table/goods_create_paginator.js" type="text/javascript"></script>
 <script src="../../../resources/js/goods/table/goods_ajax.js" type="text/javascript"></script>
