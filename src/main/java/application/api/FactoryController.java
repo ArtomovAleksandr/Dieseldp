@@ -1,5 +1,6 @@
 package application.api;
 
+import application.dto.GoodsDTOFactory;
 import application.entity.goods.Factory;
 import application.helper.JSONResult;
 import application.helper.JSONResultError;
@@ -7,6 +8,9 @@ import application.helper.JSONResultOk;
 import application.service.implementation.FactoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1.0/factory")
@@ -51,4 +55,5 @@ public class FactoryController {
         }
         return new JSONResultOk<>(newFactory);
     }
+
 }

@@ -1,9 +1,6 @@
 package application.api;
 
-import application.dto.GoodsDTO;
-import application.dto.GoodsDTOTable;
-import application.dto.GoodsDTOTableAJAX;
-import application.dto.GoodsPageDTO;
+import application.dto.*;
 import application.entity.currency.Current;
 import application.entity.goods.*;
 import application.helper.JSONResult;
@@ -71,31 +68,29 @@ public class GoodsController {
         }
         return new JSONResultOk<>(newGoods);
     }
-
+//    @GetMapping("/elementspage")
+//    public List<GoodsDTOFactory> elementspage()(
+//            List<GoodsDTOFactory> goodsDTOFactoryList=
+//            )
     @PostMapping("/rest")
     public GoodsPageDTO rest(@RequestBody GoodsDTOTableAJAX data) {
         GoodsPageDTO goodsPageDTO=new GoodsPageDTO();
         List<GoodsDTOTable> goodsDTOTableList = new ArrayList<>();
         List<Goods> goodsList = new ArrayList<>();
- //       int datapagin=data.getPaginator();
         Pageable pageable = PageRequest.of(data.getNumberpage(), data.getPaginator());
 
         Page page = null;
    //     int totalPages = page.getTotalPages();
         try {
             page = goodsService.findByCriteris(data, pageable);
-
             goodsList = page.getContent();
-            //        List<Goods> goods = goodsService.findByCriteris(data);
-       //     System.out.println("goodlist" + goodsList);
-     //       System.out.println("isUnpaged" + pageable.isUnpaged());
         } catch (Exception e) {
             e.printStackTrace();
         }
         for (Goods goods : goodsList) {
             GoodsDTOTable goodsDTO = new GoodsDTOTable();
             goodsDTO.setId(goods.getId());
-            goodsDTO.setCurrent(data.getInputstr());
+            goodsDTO.setCurrent(goods.getCurrent().getName());
             goodsDTO.setCategory(goods.getCategory().getName());
             goodsDTO.setFactory(goods.getFactory().getName());
             goodsDTO.setGroups(goods.getGroups().getName());
@@ -105,10 +100,10 @@ public class GoodsController {
             goodsDTO.setName(goods.getName());
             goodsDTO.setUnit(goods.getUnit());
             goodsDTO.setMark(goods.getMark());
-            goodsDTO.setInprice(pageable.getOffset());
-            goodsDTO.setCountprice(pageable.hasPrevious());
+            goodsDTO.setInprice(goods.getInprice());
+            goodsDTO.setCountprice(goods.isCountprice());
             goodsDTO.setAddition(goods.getAddition());
-            goodsDTO.setOutprice(data.getCategoryid());
+            goodsDTO.setOutprice(goods.getOutprice());
             goodsDTO.setPrice(countPrice(goods.getInprice(), goods.getCurrent().getRate(), goods.isCountprice(), goods.getAddition(), goods.getOutprice()));
             goodsDTOTableList.add(goodsDTO);
         }

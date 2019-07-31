@@ -1,4 +1,5 @@
 $(function () {
+
     function goodsdata(){
         var inputstr=$('#number').val();
         var arhivebool=false;
@@ -28,6 +29,18 @@ $(function () {
         saveElementsGoods(goods);
         servise.post("/api/v1.0/goods/rest",goods,success,fail);
     }
+    function sendAJAXElements(storage){
+        function success(data) {
+         //   console.log(data);
+            createElementsPage(storage,data);
+
+        }
+        function fail() {
+           console.log("error AJAXElements");
+        }
+        servise.get('/api/v1.0/elementspage/all',null,success,fail);
+    }
+
     $('#number').bind('input',function (){sendAJAX(0)});
     $('#factory').on('change',function (){sendAJAX(0)});
     $('#category').on('change',function (){sendAJAX(0)});
@@ -36,10 +49,10 @@ $(function () {
     $('#paginator').on('change',function (){sendAJAX(0)});
     function saveElementsGoods(goods) {
         var elements={
-            factory:goods.factoryid,
-            category:goods.categoryid,
-            uzels:goods.uzelid,
-            groups:goods.groupsid,
+            factoryid:goods.factoryid,
+            categoryid:goods.categoryid,
+            uzelsid:goods.uzelid,
+            groupsid:goods.groupsid,
             paginator:goods.paginator
         }
         localStorage.setItem('elementspage',JSON.stringify(elements));
@@ -96,5 +109,22 @@ $(function () {
 
         }
     );
-    createElementsPage();
+    function getElementtsFromLocalStorage() {
+        var elemetspage = JSON.parse(localStorage.getItem('elementspage'));
+        if(elemetspage===null) {
+            elemetspage={
+                factoryid:0,
+                categoryid:1,
+                uzelsid:0,
+                groupsid:0,
+                paginator:5
+            }
+        }
+        return elemetspage;
+     //   sendAJAXElements();
+    }
+    //var page=
+    sendAJAXElements(getElementtsFromLocalStorage());
+ //   sendAJAX(0);
+ //   createElementsPage();
 });
