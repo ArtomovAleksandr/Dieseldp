@@ -13,8 +13,9 @@ $(function () {
         return goods;
     }
     var servise=new AJAXService();
-    function sendAJAX(page){
-        function success(data) {
+    //page- номер страницы
+    function sendAJAX(goods){
+        function success(data) {//данные страницы
             console.log(data);
             createtable(data);
             cretepaginator(data.hasPrevious,data.numberpage,data.totalpages,data.hasNext);
@@ -24,14 +25,24 @@ $(function () {
             console.log("error! goods");
             window.location.href="/category/show/1";
         }
-        var goods=goodsdata();
-        goods.setNumberPage(page);
-        saveElementsGoods(goods);
+      //  var goods=goodsdata();//опрашиваем данные страницы
+     //   goods.setNumberPage(page);//устанавливаем номер страныцы
+     //   saveElementsGoodsToLocalStorage(goods);//сохраняем в LocalStorage
         servise.post("/api/v1.0/goods/rest",goods,success,fail);
     }
-    function sendAJAXElements(storage){
+    function readGoods(page) {
+        let goodspage=goodsdata();//опрашиваем данные страницы
+        saveElementsGoodsToLocalStorage(goodspage);//сохраняем в LocalStorage
+        createGoods(goodspage,page);
+    }
+    function createGoods(goods,page) {
+        goods.setNumberPage(page);
+        sendAJAX(goods);
+    }
+    function sendAJAXandCreateElements(storage){
         function success(data) {
          //   console.log(data);
+            //
             createElementsPage(storage,data);
 
         }
@@ -41,13 +52,14 @@ $(function () {
         servise.get('/api/v1.0/elementspage/all',null,success,fail);
     }
 
-    $('#number').bind('input',function (){sendAJAX(0)});
-    $('#factory').on('change',function (){sendAJAX(0)});
-    $('#category').on('change',function (){sendAJAX(0)});
-    $('#uzels').on('change',function (){sendAJAX(0)});
-    $('#groups').on('change',function (){sendAJAX(0)});
-    $('#paginator').on('change',function (){sendAJAX(0)});
-    function saveElementsGoods(goods) {
+    $('#number').bind('input',function (){readGoods(0)});
+    $('#factory').on('change',function (){readGoods(0)});
+    $('#category').on('change',function (){readGoods(0)});
+    $('#uzels').on('change',function (){readGoods(0)});
+    $('#groups').on('change',function (){readGoods(0)});
+    $('#paginator').on('change',function (){readGoods(0)});
+    //сохраняем в LocalStorage
+    function saveElementsGoodsToLocalStorage(goods) {
         var elements={
             factoryid:goods.factoryid,
             categoryid:goods.categoryid,
@@ -104,13 +116,13 @@ $(function () {
              if(e.target.classList.value.match('disabled')==null)
             {
                 var out = choiseNumberPaginator(e.target.innerText);
-                sendAJAX(out);
+                readGoods(out);
             }
 
         }
     );
-    function getElementtsFromLocalStorage() {
-        var elemetspage = JSON.parse(localStorage.getItem('elementspage'));
+    function getElementsGoodsFromLocalStorage() {
+        let elemetspage = JSON.parse(localStorage.getItem('elementspage'));
         if(elemetspage===null) {
             elemetspage={
                 factoryid:0,
@@ -121,10 +133,24 @@ $(function () {
             }
         }
         return elemetspage;
-     //   sendAJAXElements();
     }
-    //var page=
-    sendAJAXElements(getElementtsFromLocalStorage());
+    function createTableLoadPage(page,pageelements) {
+        let elmentpage={
+            archivebool:false,
+            categoryid:pageelements.categoryid,
+            factoryid:pageelements.factoryid,
+            groupsid:pageelements.groupsid,
+            inputstr:"",
+            numberpage:page,
+            paginator:pageelements.paginator,
+            uzelid:pageelements.uzelsid
+        }
+        sendAJAX(elmentpage);
+    }
+    //получаем данные елементов страницы
+    var pageelements=getElementsGoodsFromLocalStorage();
+    sendAJAXandCreateElements(pageelements);
+    createTableLoadPage(0,pageelements);
  //   sendAJAX(0);
  //   createElementsPage();
 });
