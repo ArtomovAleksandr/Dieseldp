@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<% Integer countpagin=(Integer) request.getAttribute("countpagin");%>
+<%--<% Integer countpagin=(Integer) request.getAttribute("countpagin");%>--%>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container-fluid main-div mt-3">
           <div class="row">
@@ -101,221 +101,221 @@
           </tr>
           </thead>
           <tbody>
-          <c:forEach var="good" items="${goods}">
-          <tr>
-              <td>
-                      <input type="checkbox" class="mycheckbox" data-id="${good.id}">
+          <%--<c:forEach var="good" items="${goods}">--%>
+          <%--<tr>--%>
+              <%--<td>--%>
+                      <%--<input type="checkbox" class="mycheckbox" data-id="${good.id}">--%>
 
-              </td>
-              <td>
-                  <div>
-                      ${good.num}
-                  </div>
-              </td>
-              <td>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--${good.num}--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+              <%--<td>--%>
 
-                  <div>
-                      ${good.name}
-                  </div>
+                  <%--<div>--%>
+                      <%--${good.name}--%>
+                  <%--</div>--%>
 
-              </td>
-              <td>
-                  <div>
-                      ${good.catalog}
-                  </div>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--${good.catalog}--%>
+                  <%--</div>--%>
 
-              </td>
-              <td>
-                  <div>
-                      ${good.unit}
-                  </div>
-              </td>
-              <td>
-                  <div>
-                      ${good.mark}
-                  </div>
-              </td>
-              <td>
-                  <div>
-                      ${good.inprice}
-                  </div>
-              </td>
-              <td>
-                  <div>
-                      <c:forEach items="${currents}" var="current">
-                          <c:choose>
-                          <c:when test="${good.current.id==current.id}">
-                              ${current.name}
-                              <c:set var="cur" value="${current.rate}"/>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--${good.unit}--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--${good.mark}--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--${good.inprice}--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--<c:forEach items="${currents}" var="current">--%>
+                          <%--<c:choose>--%>
+                          <%--<c:when test="${good.current.id==current.id}">--%>
+                              <%--${current.name}--%>
+                              <%--<c:set var="cur" value="${current.rate}"/>--%>
 
-                          </c:when>
-                          </c:choose>
-                      </c:forEach>
-                  </div>
-              </td>
-              <td>
-                              <div>
-                              <c:choose>
-                                  <c:when test="${good.countprice}">
-                                      <input type="checkbox" checked disabled>
-                                  </c:when>
-                                  <c:otherwise>
-                                      <input type="checkbox" disabled>
-                                  </c:otherwise>
-                              </c:choose>
-                              </div>
-              </td>
-                            <td>
-                                <div>
-                                    ${good.addition}
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    ${good.outprice}
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <c:choose>
-                                        <c:when test="${good.countprice==true}">
-                                            ${good.inprice*(1+(good.addition/100))*cur}
+                          <%--</c:when>--%>
+                          <%--</c:choose>--%>
+                      <%--</c:forEach>--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+              <%--<td>--%>
+                              <%--<div>--%>
+                              <%--<c:choose>--%>
+                                  <%--<c:when test="${good.countprice}">--%>
+                                      <%--<input type="checkbox" checked disabled>--%>
+                                  <%--</c:when>--%>
+                                  <%--<c:otherwise>--%>
+                                      <%--<input type="checkbox" disabled>--%>
+                                  <%--</c:otherwise>--%>
+                              <%--</c:choose>--%>
+                              <%--</div>--%>
+              <%--</td>--%>
+                            <%--<td>--%>
+                                <%--<div>--%>
+                                    <%--${good.addition}--%>
+                                <%--</div>--%>
+                            <%--</td>--%>
+                            <%--<td>--%>
+                                <%--<div>--%>
+                                    <%--${good.outprice}--%>
+                                <%--</div>--%>
+                            <%--</td>--%>
+                            <%--<td>--%>
+                                <%--<div>--%>
+                                    <%--<c:choose>--%>
+                                        <%--<c:when test="${good.countprice==true}">--%>
+                                            <%--${good.inprice*(1+(good.addition/100))*cur}--%>
 
-                                        </c:when>
-                                        <c:otherwise>
-                                            ${good.outprice*cur}
-                                        </c:otherwise>
-                                    </c:choose>
-                                </div>
-                            </td>
-              <td>
-              <div>
-                  <c:forEach items="${factorys}" var="factory">
-                      <c:choose>
-                          <c:when test="${good.factory.id==factory.id}">
-                              ${factory.name}
-                          </c:when>
-                      </c:choose>
-                  </c:forEach>
-              </div>
-          </td>
-              <td>
-                  <div>
-                      <c:forEach items="${categorys}" var="category">
-                          <c:choose>
-                              <c:when test="${good.category.id==category.id}">
-                                  ${category.name}
-                              </c:when>
-                          </c:choose>
-                      </c:forEach>
-                  </div>
-              </td>
+                                        <%--</c:when>--%>
+                                        <%--<c:otherwise>--%>
+                                            <%--${good.outprice*cur}--%>
+                                        <%--</c:otherwise>--%>
+                                    <%--</c:choose>--%>
+                                <%--</div>--%>
+                            <%--</td>--%>
+              <%--<td>--%>
+              <%--<div>--%>
+                  <%--<c:forEach items="${factorys}" var="factory">--%>
+                      <%--<c:choose>--%>
+                          <%--<c:when test="${good.factory.id==factory.id}">--%>
+                              <%--${factory.name}--%>
+                          <%--</c:when>--%>
+                      <%--</c:choose>--%>
+                  <%--</c:forEach>--%>
+              <%--</div>--%>
+          <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--<c:forEach items="${categorys}" var="category">--%>
+                          <%--<c:choose>--%>
+                              <%--<c:when test="${good.category.id==category.id}">--%>
+                                  <%--${category.name}--%>
+                              <%--</c:when>--%>
+                          <%--</c:choose>--%>
+                      <%--</c:forEach>--%>
+                  <%--</div>--%>
+              <%--</td>--%>
 
-          </td>
-          <td>
-              <div>
-                  <c:forEach items="${groups}" var="group">
-                      <c:choose>
-                          <c:when test="${good.groups.id==group.id}">
-                              ${group.name}
-                          </c:when>
-                      </c:choose>
-                  </c:forEach>
-              </div>
-          </td>
-              <td>
-                  <div>
-                      <c:forEach items="${uzels}" var="uzel">
-                          <c:choose>
-                              <c:when test="${good.uzel.id==uzel.id}">
-                                  ${uzel.name}
-                              </c:when>
-                          </c:choose>
-                      </c:forEach>
-                  </div>
-              </td>
-          </tr>
-          </c:forEach>
+          <%--</td>--%>
+          <%--<td>--%>
+              <%--<div>--%>
+                  <%--<c:forEach items="${groups}" var="group">--%>
+                      <%--<c:choose>--%>
+                          <%--<c:when test="${good.groups.id==group.id}">--%>
+                              <%--${group.name}--%>
+                          <%--</c:when>--%>
+                      <%--</c:choose>--%>
+                  <%--</c:forEach>--%>
+              <%--</div>--%>
+          <%--</td>--%>
+              <%--<td>--%>
+                  <%--<div>--%>
+                      <%--<c:forEach items="${uzels}" var="uzel">--%>
+                          <%--<c:choose>--%>
+                              <%--<c:when test="${good.uzel.id==uzel.id}">--%>
+                                  <%--${uzel.name}--%>
+                              <%--</c:when>--%>
+                          <%--</c:choose>--%>
+                      <%--</c:forEach>--%>
+                  <%--</div>--%>
+              <%--</td>--%>
+          <%--</tr>--%>
+          <%--</c:forEach>--%>
 
-
+          </tbody>
       </table>
     <div class="mt-4 row justify-content-center">
               <nav>
                 <ul class="pagination"id="pagination">
-                    <c:choose>
-                        <c:when test="${previous}" >
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
-                                </a>
-                            </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">««</span>
-                                </a>
-                            </li>
-                        </c:otherwise>
-                    </c:choose>
-                    <c:choose>
-                        <c:when test="${previous}" >
-                             <li class="page-item">
-                                 <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">««</span>
-                                  </a>
-                             </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">«</span>
-                                </a>
-                            </li>
-                        </c:otherwise>
-                    </c:choose>
-                    <c:forEach varStatus="loop" begin="1" end="${countpagin}"  >
-                        <c:choose>
-                        <c:when test="${loop.count==numberpagin}">
-                                <li class="page-item active"><a class="page-link" href="#">${loop.count}</a></li>
-                            </c:when>
-                            <c:otherwise>
-                                <li class="page-item"><a class="page-link" href="#">${loop.count}</a></li>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
-                    <c:choose>
-                    <c:when test="${next}" >
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                            </a>
-                        </li>
-                    </c:when>
-                    <c:otherwise>
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">»</span>
-                            </a>
-                        </li>
-                    </c:otherwise>
-                </c:choose>
-                    <c:choose>
-                        <c:when test="${next}" >
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">»»</span>
-                                </a>
-                            </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">»»</span>
-                                </a>
-                            </li>
-                        </c:otherwise>
-                    </c:choose>
+                    <%--<c:choose>--%>
+                        <%--<c:when test="${previous}" >--%>
+                            <%--<li class="page-item">--%>
+                                <%--<a class="page-link" href="#" aria-label="Previous">--%>
+                                    <%--<span aria-hidden="true">«</span>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</c:when>--%>
+                        <%--<c:otherwise>--%>
+                            <%--<li class="page-item disabled">--%>
+                                <%--<a class="page-link" href="#" aria-label="Previous">--%>
+                                    <%--<span aria-hidden="true">««</span>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</c:otherwise>--%>
+                    <%--</c:choose>--%>
+                    <%--<c:choose>--%>
+                        <%--<c:when test="${previous}" >--%>
+                             <%--<li class="page-item">--%>
+                                 <%--<a class="page-link" href="#" aria-label="Previous">--%>
+                                    <%--<span aria-hidden="true">««</span>--%>
+                                  <%--</a>--%>
+                             <%--</li>--%>
+                        <%--</c:when>--%>
+                        <%--<c:otherwise>--%>
+                            <%--<li class="page-item disabled">--%>
+                                <%--<a class="page-link" href="#" aria-label="Previous">--%>
+                                    <%--<span aria-hidden="true">«</span>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</c:otherwise>--%>
+                    <%--</c:choose>--%>
+                    <%--<c:forEach varStatus="loop" begin="1" end="${countpagin}"  >--%>
+                        <%--<c:choose>--%>
+                        <%--<c:when test="${loop.count==numberpagin}">--%>
+                                <%--<li class="page-item active"><a class="page-link" href="#">${loop.count}</a></li>--%>
+                            <%--</c:when>--%>
+                            <%--<c:otherwise>--%>
+                                <%--<li class="page-item"><a class="page-link" href="#">${loop.count}</a></li>--%>
+                            <%--</c:otherwise>--%>
+                        <%--</c:choose>--%>
+                    <%--</c:forEach>--%>
+                    <%--<c:choose>--%>
+                    <%--<c:when test="${next}" >--%>
+                        <%--<li class="page-item">--%>
+                            <%--<a class="page-link" href="#" aria-label="Next">--%>
+                                <%--<span aria-hidden="true">»</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</c:when>--%>
+                    <%--<c:otherwise>--%>
+                        <%--<li class="page-item disabled">--%>
+                            <%--<a class="page-link" href="#" aria-label="Next">--%>
+                                <%--<span aria-hidden="true">»</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                    <%--</c:otherwise>--%>
+                <%--</c:choose>--%>
+                    <%--<c:choose>--%>
+                        <%--<c:when test="${next}" >--%>
+                            <%--<li class="page-item">--%>
+                                <%--<a class="page-link" href="#" aria-label="Next">--%>
+                                    <%--<span aria-hidden="true">»»</span>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</c:when>--%>
+                        <%--<c:otherwise>--%>
+                            <%--<li class="page-item disabled">--%>
+                                <%--<a class="page-link" href="#" aria-label="Next">--%>
+                                    <%--<span aria-hidden="true">»»</span>--%>
+                                <%--</a>--%>
+                            <%--</li>--%>
+                        <%--</c:otherwise>--%>
+                    <%--</c:choose>--%>
                 </ul>
             </nav>
         </div>

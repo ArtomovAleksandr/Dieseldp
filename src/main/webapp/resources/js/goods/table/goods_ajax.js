@@ -70,15 +70,15 @@ $(function () {
         localStorage.setItem('elementspage',JSON.stringify(elements));
     }
     function choiceFromLocalStorageCurentElement(e) {
-        if(localStorage.getItem('numberpage')===null) {
-            return JSON.parse(localStorage.getItem('numberpage'));
+        if(localStorage.getItem('numberpage')!==null) {
+            return parseInt(localStorage.getItem('numberpage'));
         }else{
             return 0;
         }
     }
     function choiceFromLocalStorageLastElement(e) {
-        if(localStorage.getItem('page')===null) {
-            return JSON.parse(localStorage.getItem('countpage'));
+        if(localStorage.getItem('countpage')!==null) {
+            return parseInt(localStorage.getItem('countpage'));
         }else{
             return 0;
         }
@@ -91,21 +91,21 @@ $(function () {
         }else if(e=='««'){
             return 0;//первый елемент
         }else if(e=='«'){//предыдущий елемент
-             var elem=choiceFromLocalStorageCurentElement(e);
+             let elem=choiceFromLocalStorageCurentElement(e);
              if(elem>0) {
                  return elem - 1;
              }else {
                  return 0;
              }
         }else if(e=='»»'){//последний элемент
-            var elem=choiceFromLocalStorageLastElement(e);
+            let elem=choiceFromLocalStorageLastElement(e);
             if(elem>0) {
                 return elem - 1;
             }else {
                 return 0;
             }
          }else if(e=='»'){//следущий элемент
-            var elem=choiceFromLocalStorageCurentElement(e);
+            let elem=choiceFromLocalStorageCurentElement(e);
             return elem+1;
         }else {
              return 0;
@@ -115,7 +115,7 @@ $(function () {
     $('#pagination').on('click',function (e) {
              if(e.target.classList.value.match('disabled')==null)
             {
-                var out = choiseNumberPaginator(e.target.innerText);
+                let out = choiseNumberPaginator(e.target.innerText);
                 readGoods(out);
             }
 
@@ -150,7 +150,7 @@ $(function () {
     //получаем данные елементов страницы
     var pageelements=getElementsGoodsFromLocalStorage();
     sendAJAXandCreateElements(pageelements);
-    createTableLoadPage(0,pageelements);
+    createTableLoadPage(choiceFromLocalStorageCurentElement(),pageelements);
  //   sendAJAX(0);
  //   createElementsPage();
 });
