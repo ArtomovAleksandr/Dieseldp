@@ -25,10 +25,6 @@
                       <label class="input-group-text" for="paginator">Кол. элем</label>
                   </div>
                   <select class="custom-select" id="paginator">
-                      <%--<option value="5" selected>5</option>--%>
-                      <%--<option value="10" >10</option>--%>
-                      <%--<option value="15" >15</option>--%>
-                      <%--<option value="20" >20</option>--%>
                   </select>
               </div>
           </div>
@@ -38,10 +34,6 @@
                   <label class="input-group-text" for="factory">Производитель</label>
               </div>
               <select class="custom-select" id="factory" name="factory">
-                  <%--<option value="0" selected>Нет производителя</option>--%>
-                  <%--<c:forEach items="${factorys}" var="factory">--%>
-                              <%--<option value="${factory.id}">${factory.name}</option>--%>
-                  <%--</c:forEach>--%>
               </select>
           </div>
           <div class="input-group col-md-3">
@@ -49,9 +41,6 @@
                   <label class="input-group-text" for="category" name="category">Категории</label>
               </div>
               <select class="custom-select" id="category">
-                  <%--<c:forEach items="${categorys}" var="category">--%>
-                              <%--<option value="${category.id}">${category.name}</option>--%>
-                  <%--</c:forEach>--%>
               </select>
           </div>
           <div class="input-group col-md-3">
@@ -59,10 +48,6 @@
                   <label class="input-group-text" for="groups">Группы</label>
               </div>
               <select class="custom-select" id="groups">
-                  <%--<option value="0" selected>Нет группы</option>--%>
-                  <%--<c:forEach items="${groups}" var="group">--%>
-                              <%--<option value="${group.id}">${group.name}</option>--%>
-                  <%--</c:forEach>--%>
               </select>
           </div>
           <div class="input-group col-md-3">
@@ -70,10 +55,6 @@
                   <label class="input-group-text" for="uzels">Узлы</label>
               </div>
               <select class="custom-select" id="uzels">
-                  <%--<option value="0" selected>Нет узла</option>--%>
-                  <%--<c:forEach items="${uzels}" var="uzel">--%>
-                              <%--<option value="${uzel.id}">${uzel.name}</option>--%>
-                  <%--</c:forEach>--%>
               </select>
           </div>
       </div>

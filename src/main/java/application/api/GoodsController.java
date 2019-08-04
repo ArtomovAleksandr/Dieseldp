@@ -86,6 +86,7 @@ public class GoodsController {
             goodsList = page.getContent();
         } catch (Exception e) {
             e.printStackTrace();
+
         }
         for (Goods goods : goodsList) {
             GoodsDTOTable goodsDTO = new GoodsDTOTable();
