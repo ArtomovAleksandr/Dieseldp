@@ -5,6 +5,7 @@ application\api\GoodsController.class
 application\entity\goods\Factory.class
 application\entity\currency\Current.class
 application\dto\GoodsDTOUzel.class
+application\entity\orders\Basket.class
 application\dto\GoodsDTOElementsTable.class
 application\service\implementation\CurrentService.class
 application\service\implementation\GroupsService.class
@@ -12,6 +13,7 @@ application\helper\JSONResult.class
 application\api\UzelController.class
 application\repository\UnitRepository.class
 application\dto\GoodsDTOCategory.class
+application\entity\orders\Order.class
 application\entity\currency\HistoryCurrent.class
 application\api\GroupsController.class
 application\entity\goods\Category.class
@@ -19,6 +21,7 @@ application\helper\JSONResultOk.class
 application\service\implementation\GoodsService$1.class
 application\api\FactoryController.class
 application\entity\goods\Uzel.class
+application\entity\users\User.class
 application\controller\UselViewController.class
 application\entity\goods\Unit.class
 application\repository\GoodsRepository.class

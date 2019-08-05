@@ -1,10 +1,13 @@
 package application.entity.goods;
 
 import application.entity.currency.Current;
+import application.entity.orders.Order;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -27,6 +30,10 @@ public class Goods {
     @ManyToOne(targetEntity = Uzel.class,fetch = FetchType.EAGER)
     @JoinColumn(name="uzel_id")
     Uzel uzel;//id узел
+    //-------------------------
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Order> orders=new ArrayList<>();
+    //-------------------------
     @Column(length = 12)
     String num;//кассовый номер
     @Column(length = 20)

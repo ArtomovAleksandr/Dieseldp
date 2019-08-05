@@ -19,7 +19,6 @@ public class GoodsDTOTable {
     private int addition;
     private double outprice;
     private double price;//вычисл цена
-
     public GoodsDTOTable() {
     }
 
