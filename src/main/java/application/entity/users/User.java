@@ -2,17 +2,23 @@ package application.entity.users;
 
 import application.entity.orders.Order;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.*;
 
+import static application.entity.users.RoleUser.USER;
+
 @Data
+@NoArgsConstructor
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    //TypeUsers----------------------
+    @Column(name="role",nullable = false,length = 20)
+    @Enumerated(EnumType.STRING)
+    RoleUser roleUser=RoleUser.USER;
     @Column(length = 30)
     String email;
     @Column(length = 30)
@@ -32,9 +38,8 @@ public class User {
     Date dateregirter;
     String postarrival;//почта получения
     @OneToMany(mappedBy = "user",targetEntity = Order.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private Set<Order> order=new HashSet<>();
-    public User() {
-    }
+    private List<Order> order=new ArrayList<>();
+
 
 
 }

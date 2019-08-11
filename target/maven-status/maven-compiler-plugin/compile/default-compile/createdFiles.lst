@@ -8,6 +8,7 @@ application\dto\GoodsDTOUzel.class
 application\entity\orders\Basket.class
 application\dto\GoodsDTOElementsTable.class
 application\service\implementation\CurrentService.class
+application\entity\users\RoleUser.class
 application\service\implementation\GroupsService.class
 application\helper\JSONResult.class
 application\api\UzelController.class
