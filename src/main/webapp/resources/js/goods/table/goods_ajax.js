@@ -25,9 +25,6 @@ $(function () {
             console.log("error! goods");
             window.location.href="/category/show/1";
         }
-      //  var goods=goodsdata();//опрашиваем данные страницы
-     //   goods.setNumberPage(page);//устанавливаем номер страныцы
-     //   saveElementsGoodsToLocalStorage(goods);//сохраняем в LocalStorage
         servise.post("/api/v1.0/goods/rest",goods,success,fail);
     }
     function readGoods(page) {
@@ -151,6 +148,5 @@ $(function () {
     var pageelements=getElementsGoodsFromLocalStorage();
     sendAJAXandCreateElements(pageelements);
     createTableLoadPage(choiceFromLocalStorageCurentElement(),pageelements);
- //   sendAJAX(0);
- //   createElementsPage();
+
 });

@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:28 +0300] "GET / HTTP/1.1" 302 - http-bio-8080-exec-1 62
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:28 +0300] "GET /goods/show/1 HTTP/1.1" 404 949 http-bio-8080-exec-3 6
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:28 +0300] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /goods/show HTTP/1.1" 200 13070 http-bio-8080-exec-5 558
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/css/style.css HTTP/1.1" 200 45 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_create_elementspage.js HTTP/1.1" 200 4992 http-bio-8080-exec-8 4
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/DTO/DTOGoods.js HTTP/1.1" 200 539 http-bio-8080-exec-6 11
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_create_table.js HTTP/1.1" 200 2057 http-bio-8080-exec-8 2
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_table.js HTTP/1.1" 200 692 http-bio-8080-exec-1 9
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_create_paginator.js HTTP/1.1" 200 2257 http-bio-8080-exec-6 2
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_ajax.js HTTP/1.1" 200 5303 http-bio-8080-exec-8 2
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/DTO/DTOGoodsTable.js HTTP/1.1" 200 480 http-bio-8080-exec-9 1
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/goods/table/goods_delete.js HTTP/1.1" 200 573 http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /resources/js/services/AJAXService.js HTTP/1.1" 200 1307 http-bio-8080-exec-10 5
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "POST /api/v1.0/goods/rest HTTP/1.1" 200 100 http-bio-8080-exec-3 266
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:12:42:54 +0300] "GET /api/v1.0/elementspage/all?null HTTP/1.1" 200 121 http-bio-8080-exec-10 270
