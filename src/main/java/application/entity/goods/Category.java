@@ -13,7 +13,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private boolean visible;
+    private Boolean visible;
     @Column(columnDefinition = "TINYINT")
     private int metric;
     private String name;
@@ -45,11 +45,15 @@ public class Category {
         this.name = name;
     }
 
-    public boolean isVisible() {
+    public Boolean isVisible() {
         return visible;
     }
 
-    public void setVisible(boolean visible) {
+    public void setVisible(Boolean visible) {
         this.visible = visible;
+    }
+
+    public int getMetric() {
+        return metric;
     }
 }

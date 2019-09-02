@@ -2,6 +2,7 @@ application\dto\GoodsDTOTableAJAX.class
 application\entity\goods\Groups.class
 application\repository\UzelRepository.class
 application\api\GoodsController.class
+application\controller\UserViewController.class
 application\entity\goods\Factory.class
 application\entity\currency\Current.class
 application\dto\GoodsDTOUzel.class

@@ -11,13 +11,9 @@ import java.util.List;
 
 @Controller
 public class MainViewController {
-    @Autowired
-    private CategoryService categoryService;
+
     @GetMapping("/")
     public  String index(){
-
-        List<Category> categoryList=new ArrayList<>();
-
-        return "redirect:/goods/show";
+        return "redirect:/user/allcategory/1";
     }
 }

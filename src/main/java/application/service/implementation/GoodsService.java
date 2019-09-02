@@ -53,9 +53,6 @@ public class GoodsService implements EntityService<Goods> {
         goodsRepository.deleteById(id);
     }
 
-    public List<Goods> getAllfromIdstepSize() throws Exception {
-        return goodsRepository.mySelect();
-    }
 
 
     public Page findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
