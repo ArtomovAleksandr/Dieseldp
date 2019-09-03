@@ -55,6 +55,9 @@ public class UserViewController {
         }catch (Exception ex){
             ex.printStackTrace();
         }
+        for (Goods g:goodsList) {
+             g.countPiceForUser();
+        }
         model.addAttribute("goods", goodsList );
         model.addAttribute("totalpage", page.getTotalPages());
         model.addAttribute("namberpage",page.getNumber());

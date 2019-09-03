@@ -50,7 +50,6 @@ public class Goods {
 
 
     @Column(name="in_arhive",nullable = false)
-    //@JoinColumn(name="in_arhive")
     boolean inarhive=false;
 
     boolean countprice;//вычисляемая цена
@@ -60,14 +59,26 @@ public class Goods {
 
 
 
+
+
     /*   @Column(precision = 8,scale = 2)
             @Type(type="big_decimal")*/
     @Column(columnDefinition = "Decimal(10,2) default '0.00'")
     double outprice;//выходная цена
+    @Transient
+    double priceouttable;
   //  int mincount;//минимальное количество
   //  int maxcount;//максимальное количество
   //  String urlfoto;
     public Goods() {
+    }
+
+    public void countPiceForUser (){
+      if(this.countprice){
+          this.priceouttable=(((double)this.addition/100)+1)*this.inprice;
+      }else {
+          this.priceouttable=this.outprice;
+      }
     }
     public int getId() { return id; }
     public Current getCurrent() {
@@ -168,4 +179,12 @@ public class Goods {
         this.addition = addition;
     }
     public void setOutprice(double outprice) { this.outprice = outprice; }
+
+    public double getPriceouttable() {
+        return priceouttable;
+    }
+
+    public void setPriceouttable(double priceouttable) {
+        this.priceouttable = priceouttable;
+    }
 }
