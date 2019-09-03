@@ -53,7 +53,12 @@ public class GoodsService implements EntityService<Goods> {
         goodsRepository.deleteById(id);
     }
 
+    public Page<Goods> findByCategoryIdAndInarhiveOrderByNum(int id,Pageable pageable){
+        Integer integer=new Integer(id);
 
+        return goodsRepository.findByCategoryIdAndInarhiveOrderByNum(integer.toString(),pageable);
+
+    }
 
     public Page findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){
         return goodsRepository.findAll(

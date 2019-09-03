@@ -39,7 +39,7 @@
         </div>
     </div>
         <nav id="menu" class="navbar navbar-expand-lg navbar-light mt-2">
-            <a class="navbar-brand color_white" href="#">Меню</a>
+            <a class="navbar-brand color_white" href="/user/allcategory/1">Меню</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,7 +69,7 @@
     <div class="row mb-2">
         <c:forEach items="${categorys}" var="category">
         <div class="product col-lg-3 col-md-3 col-sm-6">
-            <a href="#">
+            <a href="/user/category/${category.id}/1">
                 <div class="product-border">
                     <div class="product-show">
                         <div class="image">
@@ -91,23 +91,53 @@
     <div class="mt-4 row justify-content-center">
         <nav>
             <ul class="pagination"id="pagination">
+                <c:choose>
+                    <c:when test="${hasprevios}">
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
+                    <a class="page-link" href="/user/allcategory/${namberpage}" aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                         <span class="sr-only">Previous</span>
                     </a>
                 </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="page-item disabled">
+                            <a class="page-link" href="/user/allcategory/${namberpage}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+                <c:forEach varStatus="loop" begin="1" end="${totalpage}">
+                    <c:choose>
+                        <c:when test="${loop.count==namberpage+1}" >
+                            <li class="page-item active"><a class="page-link" href="/user/allcategory/${loop.count}">${loop.count}</a></li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item"><a class="page-link" href="/user/allcategory/${loop.count}">${loop.count}</a></li>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+                <c:choose>
+                <c:when test="${hasnext}">
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
+                    <a class="page-link" href="/user/allcategory/${namberpage+2}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                         <span class="sr-only">Next</span>
                     </a>
                 </li>
+                </c:when>
+                <c:otherwise>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="/user/allcategory/${namberpage+2}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
 
-
+                </c:otherwise>
+                </c:choose>
             </ul>
         </nav>
     </div>
