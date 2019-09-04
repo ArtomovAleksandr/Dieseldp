@@ -4,7 +4,6 @@
 <html lang="ru">
 <head>
     <c:import url="../template/userhead.jsp"></c:import>
-    <%--<link  href="../../../resources/css/style.css" rel="stylesheet">--%>
 </head>
 <body>
 <div class="container">
@@ -17,7 +16,7 @@
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span class="d-none d-lg-inline style-fa">Мой профиль</span>
                 </a>
-                <a href="#">
+                <a href="/user/bascket">
                     <div class="fa fa-shopping-cart  basket" aria-hidden="true">
                         <div id="goods-basket" class="display-off">2</div>
                     </div>
@@ -32,7 +31,6 @@
 
     <div class="row mt-2 mr-1 ml-1" id="logo" >
         <div  style="width: 181px" >
-            <%--<img src="images/logo2.png" alt="diselexpert.com.ua">--%>
             <img src="../../../resources/images/logo2.png" alt="diselexpert.com.ua">
         </div>
             <div class="col" id="repead-images">

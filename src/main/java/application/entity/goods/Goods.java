@@ -75,9 +75,9 @@ public class Goods {
 
     public void countPiceForUser (){
       if(this.countprice){
-          this.priceouttable=(((double)this.addition/100)+1)*this.inprice;
+          this.priceouttable=(((double)this.addition/100)+1)*this.inprice*this.current.getRate();
       }else {
-          this.priceouttable=this.outprice;
+          this.priceouttable=this.outprice*this.current.getRate();
       }
     }
     public int getId() { return id; }

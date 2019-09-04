@@ -17,7 +17,7 @@
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span class="d-none d-lg-inline style-fa">Мой профиль</span>
             </a>
-            <a href="#">
+            <a href="/user/bascket">
                 <div class="fa fa-shopping-cart  basket" aria-hidden="true">
                     <div id="goods-basket" class="display-off">2</div>
                 </div>

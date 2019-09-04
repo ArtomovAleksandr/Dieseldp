@@ -66,4 +66,8 @@ public class UserViewController {
         model.addAttribute("idcategory",idcategory);
         return "user/category";
     }
+    @GetMapping("/bascket")
+    public String showBascketUser(){
+       return "user/basket";
+    }
 }
