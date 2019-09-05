@@ -148,10 +148,6 @@
        if(e.goods.length>0){
        $('#goods-basket').removeClass('display-off').text(e.goods.length);
         }
-            //{
-       //     $('#goods-basket').addClass('display-off');
-       // }
-
      }
      function readStorageForBasketShow()
      {

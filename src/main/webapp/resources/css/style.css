@@ -274,7 +274,6 @@
 
 }
 .header{
-    /*justify-content: space-between;*/
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -352,10 +351,6 @@
     display: flex;
     /*float: left;*/
     justify-content: left;
-    /*position: absolute;*/
-    /*justify-content: center;*/
-    /*align-items: baseline;*/
-    /*right: 0;*/
 }
 .price-hur{
     font-weight: 600;
@@ -377,7 +372,7 @@
     display: flex;
     justify-content: left;
     flex-direction: row;
-    /*align-content: baseline;*/
+    align-items: center;
 }
 .total-paiment-title, .total-paiment-price, .price-unit{
     display: flex;
@@ -385,8 +380,38 @@
     color: black;
     padding: 8px;
 }
+.total-paiment-title{
+    margin-left: 8px;
+}
 .total-paiment-price{
     font-size: 30px;
     font-weight: 700;
     padding-top: 0;
+}
+.buy-totalpaiment-infoclient{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info-client{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info-client-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-client-name, .info-client-fone{
+    margin-right: auto;
+    margin-left: auto;
+}
+.client-name, .client-fone{
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.client-fone-data, .client-name-data{
+    padding: 0 5px 5px 5px;
 }

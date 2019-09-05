@@ -11,7 +11,7 @@
         <div class="row mt-2 ml-1 mr-1" id="top">
             <div class="col text-right">
                 <i class="fa fa-phone"></i>
-                <span class="d-none d-inline style-fa">+038 067 564-66-42</span>
+                <span class="d-none d-inline style-fa">+038 067 564-88-88</span>
                 <a href="#">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span class="d-none d-lg-inline style-fa">Мой профиль</span>

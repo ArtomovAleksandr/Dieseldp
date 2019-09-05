@@ -91,7 +91,7 @@
                 <select class="form-control" id="current" name="current">
                     <c:forEach items="${currents}" var="current">
                         <c:choose>
-                            <c:when test="${goods.current==current}">
+                            <c:when test="${goods.current.id==current.id}">
                                 <option value="${current.id}" data-cur="${current.rate}" selected >${current.name}</option>
                             </c:when>
                             <c:otherwise>

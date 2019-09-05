@@ -12,7 +12,7 @@
         <div class="row mt-2 ml-1 mr-1" id="top">
             <div class="col text-right">
                 <i class="fa fa-phone"></i>
-                <span class="d-none d-inline style-fa">+038 067 564-66-42</span>
+                <span class="d-none d-inline style-fa">+038 067 564-88-88</span>
                 <a href="#">
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span class="d-none d-lg-inline style-fa">Мой профиль</span>
@@ -88,12 +88,28 @@
 
             </div>
             <div class="buy product-border">
-                <div class="total-paiment">
-                    <div class="total-paiment-title">К оплате</div>
-                    <div class="total-paiment-price">00</div>
-                    <div class="price-unit">гр.</div>
+                <div class="buy-totalpaiment-infoclient">
+                    <div class="total-paiment">
+                        <div class="total-paiment-title">К оплате</div>
+                        <div class="total-paiment-price">00</div>
+                        <div class="price-unit">гр.</div>
+                    </div>
+                    <div class="info-client">
+                        <div class="info-client-fone">
+                            <div class="client-fone">Введите номер телефона</div>
+                            <div class="client-fone-data">
+                                <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="050-567-88-88">
+                            </div>
+                        </div>
+                        <div class="info-client-name">
+                            <div class="client-name">Введите свое имя</div>
+                            <div class="client-name-data">
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button>Оформить заказ</button>
+                <button id="create-order">Оформить заказ</button>
             </div>
 
         </div>
@@ -104,5 +120,6 @@
 </div>
 
 <script src="../../../resources/js/user/user_basket.js" type="text/javascript"></script>
+<script src="../../../resources/js/user/user_bascket_create_order.js" type="text/javascript"></script>
 </body>
 </html>

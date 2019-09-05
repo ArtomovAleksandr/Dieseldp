@@ -23,7 +23,7 @@ $(function () {
       var goods=new Goods(current,category,factory,groups,uzel,number,catalog,name,unit,mark,inprice,countprice,addition,outprice);
       function success() {
          console.log("done! goods");
-         location.replace("/");
+         location.replace("/goods/show");
       }
       function fail() {
          console.log("error! goods");
