@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,6 +22,7 @@ public class Order {
     int id;
 
     Date createorder;
+
     private String name;
     private String fone;
     @Column(nullable = false)
@@ -38,5 +40,51 @@ public class Order {
     public Order() {
     }
 
+    public Date getCreateorder() {
+        return createorder;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getFone() {
+        return this.fone;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<QuantityGoodsInOrder> getQuantityGoodsInOrders() {
+        return quantityGoodsInOrders;
+    }
+
+    public void setCreateorder(Date createorder) {
+        this.createorder = createorder;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFone(String fone) {
+        this.fone = fone;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setQuantityGoodsInOrders(List<QuantityGoodsInOrder> quantityGoodsInOrders) {
+        this.quantityGoodsInOrders = quantityGoodsInOrders;
+    }
 }

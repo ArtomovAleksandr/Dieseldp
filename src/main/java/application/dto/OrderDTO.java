@@ -6,7 +6,7 @@ import java.util.List;
 public class OrderDTO {
     String fone;
     String name;
-//   private List<OrderStorageGoodsDTO> goods=new ArrayList<>();
+    private List<OrderStorageGoodsDTO> goods=new ArrayList<>();
 
     public OrderDTO() {
     }
@@ -29,5 +29,11 @@ public class OrderDTO {
         this.name = name;
     }
 
+    public List<OrderStorageGoodsDTO> getGoods() {
+        return goods;
+    }
 
+    public void setGoods(List<OrderStorageGoodsDTO> goods) {
+        this.goods = goods;
+    }
 }
