@@ -54,10 +54,7 @@ public class GoodsService implements EntityService<Goods> {
     }
 
     public Page<Goods> findByCategoryIdAndInarhiveOrderByNum(int id,Pageable pageable){
-        Integer integer=new Integer(id);
-
-        return goodsRepository.findByCategoryIdAndInarhiveOrderByNum(integer.toString(),pageable);
-
+        return goodsRepository.findByCategoryIdEqualsAndInarhiveIsFalseOrderByNum (id,pageable);
     }
 
     public Page findByCriteris(GoodsDTOTableAJAX data, Pageable pageable){

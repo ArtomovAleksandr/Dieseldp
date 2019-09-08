@@ -39,4 +39,12 @@ public class Groups {
     public String getName() {
         return name;
     }
+
+    public void setShow_namber(int show_namber) {
+        this.show_namber = show_namber;
+    }
+
+    public void setGroups(List<Groups> groups) {
+        this.groups = groups;
+    }
 }

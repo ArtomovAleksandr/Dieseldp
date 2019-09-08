@@ -76,7 +76,7 @@
              time:timenow,
              goods: [
                  {id: e.id,name:e.name,factory:e.factory,catalog:e.catalog,unit:e.unit,price:e.price,quantity:e.quantity},
-         //        {id: "10",name:e.name,factory:e.factory,catalog:e.catalog,unit:e.unit,price:e.price,quantity:e.quantity}
+
              ]
 
          }

@@ -14,7 +14,10 @@ import java.util.List;
 
 
 public interface GoodsRepository extends JpaRepository<Goods, Integer>, JpaSpecificationExecutor<Goods> {
-    @Query(value = "select * from goods where in_arhive='false' and category_id = ?1  order by num",nativeQuery = true)
-    Page<Goods> findByCategoryIdAndInarhiveOrderByNum(String category_id, Pageable pageable);
+//    @Query(value = "select * from goods where in_arhive='false' and category_id = ?1  order by num",nativeQuery = true)
+//    Page<Goods> findByCategoryIdAndInarhiveOrderByNum(String category_id, Pageable pageable);
+    Page<Goods> findByCategoryIdEqualsAndInarhiveIsFalseOrderByNum (int id, Pageable pageable);
+
+
 
 }

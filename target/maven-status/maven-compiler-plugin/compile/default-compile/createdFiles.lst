@@ -1,4 +1,5 @@
 application\dto\GoodsDTOTableAJAX.class
+application\dto\OrderDTO.class
 application\entity\goods\Groups.class
 application\repository\UzelRepository.class
 application\api\GoodsController.class
@@ -6,7 +7,6 @@ application\controller\UserViewController.class
 application\entity\goods\Factory.class
 application\entity\currency\Current.class
 application\dto\GoodsDTOUzel.class
-application\entity\orders\Basket.class
 application\dto\GoodsDTOElementsTable.class
 application\service\implementation\CurrentService.class
 application\entity\users\RoleUser.class
@@ -23,6 +23,7 @@ application\helper\JSONResultOk.class
 application\service\implementation\GoodsService$1.class
 application\api\FactoryController.class
 application\entity\goods\Uzel.class
+application\dto\OrderStorageGoodsDTO.class
 application\entity\users\User.class
 application\controller\UselViewController.class
 application\entity\goods\Unit.class
@@ -30,8 +31,10 @@ application\repository\GoodsRepository.class
 application\controller\MainViewController.class
 application\api\ElementsPageController.class
 application\dto\GoodsDTOFactory.class
+application\api\OrderController.class
 application\dto\GoodsDTOGroups.class
 application\service\implementation\FactoryService.class
+application\entity\orders\QuantityGoodsInOrder.class
 application\helper\JSONResultError.class
 application\service\implementation\GoodsService.class
 application\controller\FactoryViewController.class

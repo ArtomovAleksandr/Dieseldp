@@ -68,38 +68,7 @@ public class GoodsViewController {
 
     @GetMapping("/show")
     public String index(){
-//        List<Factory> factoryList=new ArrayList<>();
-//        List<Category> categoryList=new ArrayList<>();
-//        List<Groups> groupsList=new ArrayList<>();
-//        List<Uzel> uzelList=new ArrayList<>();
-//        List<Current> currentList=new ArrayList<>();
-//        List<Unit> units=new ArrayList<>();
-//        List<Goods> goods=new ArrayList<>();
-//        try {
-//            factoryList=factoryService.getAll();
-//            categoryList=categoryService.getAll();
-//            groupsList=groupsService.getAll();
-//            uzelList=uzelServise.getAll();
-//            currentList=currentService.getAll();
-//            units=unitServise.getAll();
-//            goods=goodsService.getAll();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        int countpagin=10;
-//     //   int countpagin= (int) ((goods.size()/(sizepagin+0.01))+1);
-//        List<Goods> goodssend=paginListGoods(goods,id);
-//        model.addAttribute("factorys",factoryList);
-//        model.addAttribute("categorys",categoryList);
-//        model.addAttribute("groups",groupsList);
-//        model.addAttribute("uzels",uzelList);
-//        model.addAttribute("currents",currentList);
-//        model.addAttribute("goods",goodssend);
-//        model.addAttribute("units",units);
-//        model.addAttribute("countpagin",countpagin);
-//        model.addAttribute("numberpagin",2);
-//        model.addAttribute("previous",false);
-//        model.addAttribute("next",true);
+
        return "goods/goods";
     }
     @GetMapping("/create_goods/{id}")

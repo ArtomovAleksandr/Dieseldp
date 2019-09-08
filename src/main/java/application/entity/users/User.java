@@ -37,8 +37,8 @@ public class User {
     Date lastvisit;
     Date dateregirter;
     String postarrival;//почта получения
-    @OneToMany(mappedBy = "user",targetEntity = Order.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<Order> order=new ArrayList<>();
+//    @OneToMany(mappedBy = "user",targetEntity = Order.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+//    private List<Order> order=new ArrayList<>();
 
 
 

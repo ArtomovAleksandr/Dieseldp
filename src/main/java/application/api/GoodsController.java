@@ -68,10 +68,7 @@ public class GoodsController {
         }
         return new JSONResultOk<>(newGoods);
     }
-//    @GetMapping("/elementspage")
-//    public List<GoodsDTOFactory> elementspage()(
-//            List<GoodsDTOFactory> goodsDTOFactoryList=
-//            )
+
     @PostMapping("/rest")
     public GoodsPageDTO rest(@RequestBody GoodsDTOTableAJAX data) {
         GoodsPageDTO goodsPageDTO=new GoodsPageDTO();
@@ -115,7 +112,6 @@ public class GoodsController {
             goodsPageDTO.setHasPrevious(page.hasPrevious());
             goodsPageDTO.setHasNext(page.hasNext());
         }
-  //      log.info("isPaged" + pageable.isPaged() + "getPagesize" + pageable.getPageSize());
         return goodsPageDTO;
     }
 

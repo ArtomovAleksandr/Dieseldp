@@ -19,20 +19,24 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    public Order() {
-    }
+
     Date createorder;
-    private String descriptionuser;
+    private String name;
+    private String fone;
     @Column(nullable = false)
     private boolean done=false;
-    private String descriptionmenedger;
-      @ManyToOne
-      @JoinColumn(name = "user_id", nullable = false)
-      private User user;
-      @ManyToMany(mappedBy = "orders",targetEntity = Goods.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-      private List<Goods> goods=new ArrayList<>();
-    //добавить id исполнителя
+    @Column(columnDefinition = "TEXT")
+    private String description;
+//      @ManyToOne
+//      @JoinColumn(name = "user_id", nullable = false)
+//      private User user;
+      @OneToMany(targetEntity = QuantityGoodsInOrder.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+      @JoinColumn(name="orderid")
+      @JsonIgnore
+      private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
 
+    public Order() {
+    }
 
 
 }

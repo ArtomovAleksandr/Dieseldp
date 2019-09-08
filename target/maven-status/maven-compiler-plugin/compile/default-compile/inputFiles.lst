@@ -1,6 +1,5 @@
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\api\UzelController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\UnitRepository.java
-D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\orders\Basket.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\api\GoodsController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\helper\JSONResultError.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\users\RoleUser.java
@@ -10,6 +9,7 @@ D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\appli
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOUzel.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOElementsTable.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\GoodsRepository.java
+D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\api\OrderController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\implementation\CurrentService.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\controller\MainViewController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\FactoryRepository.java
@@ -20,6 +20,7 @@ D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\appli
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\controller\FactoryViewController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsPageDTO.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOGroups.java
+D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\OrderDTO.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\goods\Unit.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\controller\GroupsViewController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\GroupsRepository.java
@@ -36,6 +37,7 @@ D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\appli
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\UzelRepository.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\goods\Goods.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTO.java
+D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\OrderStorageGoodsDTO.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\api\ElementsPageController.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\goods\Groups.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\currency\HistoryCurrent.java
@@ -47,6 +49,7 @@ D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\appli
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\users\User.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\implementation\GroupsService.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\implementation\UzelServise.java
+D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\orders\QuantityGoodsInOrder.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOTableAJAX.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\helper\JSONResultOk.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\implementation\GoodsService.java

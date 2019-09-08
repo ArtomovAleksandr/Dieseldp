@@ -118,8 +118,9 @@
 
 
 </div>
-
+<script src="../../../resources/js/DTO/DTOUzel.js" type="text/javascript"></script>
+<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/user/user_basket.js" type="text/javascript"></script>
-<script src="../../../resources/js/user/user_bascket_create_order.js" type="text/javascript"></script>
+<script src="../../../resources/js/user/user_create_order.js" type="text/javascript"></script>
 </body>
 </html>
