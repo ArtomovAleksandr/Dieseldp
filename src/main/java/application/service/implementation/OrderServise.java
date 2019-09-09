@@ -10,6 +10,8 @@ import application.repository.OrderRepository;
 import application.repository.QuantityGoodsInOrderRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
@@ -32,7 +34,6 @@ public class OrderServise implements EntityService<Order> {
          order.setName(orderDTO.getName());
          Date now = new Date();
          Date date= Calendar.getInstance().getTime();
-     //    order.setCreateorder(now);
          List<OrderStorageGoodsDTO> goods=orderDTO.getGoods();
          List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
          for (OrderStorageGoodsDTO go:goods) {
@@ -47,10 +48,16 @@ public class OrderServise implements EntityService<Order> {
          orderRepository.save(order);
          return order;
      }
-    @Override
-     public List<Order> getAll() throws Exception{
-            return  orderRepository.findAll();
+     public Page<Order> findByDoneFalse(Pageable pageable) throws Exception{
+         return orderRepository.findByDoneFalse(pageable);
      }
+
+
+
+    @Override
+    public List<Order> getAll() throws Exception {
+        return orderRepository.findAll();
+    }
 
     @Override
     public Order getById(int id) throws Exception {

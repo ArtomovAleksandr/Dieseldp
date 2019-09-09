@@ -111,29 +111,14 @@ public class GoodsViewController {
         List<Current> currentList=new ArrayList<>();
         try {
             factoryList=factoryService.getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             categoryList=categoryService.getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             groupsList=groupsService.getAll();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
             uzelList=uzelServise.getAll();
+            currentList=currentService.getAll();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try{
-           currentList=currentService.getAll();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
         model.addAttribute("factorys",factoryList);
         model.addAttribute("categorys",categoryList);
         model.addAttribute("groups",groupsList);

@@ -29,17 +29,21 @@ public class Order {
     private boolean done=false;
     @Column(columnDefinition = "TEXT")
     private String description;
+    @Transient
+    private int countgoods;
 //      @ManyToOne
 //      @JoinColumn(name = "user_id", nullable = false)
 //      private User user;
-      @OneToMany(targetEntity = QuantityGoodsInOrder.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-      @JoinColumn(name="orderid")
-      @JsonIgnore
-      private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
+    @OneToMany(targetEntity = QuantityGoodsInOrder.class, fetch = FetchType.EAGER)
+    @JoinColumn(name="order_id")
+    @JsonIgnore
+    private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
 
     public Order() {
     }
-
+    public void setCountGoods(){
+        this.countgoods=quantityGoodsInOrders.size();
+    }
     public Date getCreateorder() {
         return createorder;
     }
@@ -86,5 +90,13 @@ public class Order {
 
     public void setQuantityGoodsInOrders(List<QuantityGoodsInOrder> quantityGoodsInOrders) {
         this.quantityGoodsInOrders = quantityGoodsInOrders;
+    }
+
+    public int getCountgoods() {
+        return countgoods;
+    }
+
+    public void setCountgoods(int countgoods) {
+        this.countgoods = countgoods;
     }
 }

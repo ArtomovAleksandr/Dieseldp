@@ -25,12 +25,15 @@ application\api\FactoryController.class
 application\entity\goods\Uzel.class
 application\dto\OrderStorageGoodsDTO.class
 application\entity\users\User.class
+application\controller\OrdersViewController.class
 application\controller\UselViewController.class
 application\entity\goods\Unit.class
 application\repository\GoodsRepository.class
 application\controller\MainViewController.class
 application\api\ElementsPageController.class
+application\repository\OrderRepository.class
 application\dto\GoodsDTOFactory.class
+application\repository\QuantityGoodsInOrderRepository.class
 application\api\OrderController.class
 application\dto\GoodsDTOGroups.class
 application\service\implementation\FactoryService.class
@@ -38,6 +41,7 @@ application\entity\orders\QuantityGoodsInOrder.class
 application\helper\JSONResultError.class
 application\service\implementation\GoodsService.class
 application\controller\FactoryViewController.class
+application\service\implementation\OrderServise.class
 application\service\interfaces\EntityService.class
 application\repository\FactoryRepository.class
 application\repository\CurrentRepositry.class

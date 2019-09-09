@@ -3,6 +3,7 @@ package application.entity.goods;
 import application.entity.currency.Current;
 import application.entity.orders.Order;
 import application.entity.orders.QuantityGoodsInOrder;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
@@ -32,9 +33,10 @@ public class Goods {
     @JoinColumn(name="uzel_id")
     Uzel uzel;//id узел
     //-------------------------
-    @OneToOne(cascade = CascadeType.ALL,targetEntity = QuantityGoodsInOrder.class,fetch = FetchType.LAZY)
-    @JoinColumn(name="id")
-    private QuantityGoodsInOrder quantityGoodsInOrder;
+//    @OneToOne(cascade = CascadeType.ALL,targetEntity = QuantityGoodsInOrder.class,fetch = FetchType.LAZY)
+//    @JoinColumn(name="id")
+//    @JsonIgnore
+//    private QuantityGoodsInOrder quantityGoodsInOrder;
     //-------------------------
     @Column(length = 12)
     String num;//кассовый номер

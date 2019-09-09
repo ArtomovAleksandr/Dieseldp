@@ -9,9 +9,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/userorder/showfalsedone/1">Заказы</a>
+            </li>
         <li class="nav-item">
             <a class="nav-link" href="/goods/show">Товар</a>
         </li>
+
         <li class="nav-item">
             <a class="nav-link" href="/category/show/1">Категории</a>
         </li>
