@@ -33,10 +33,10 @@ public class Goods {
     @JoinColumn(name="uzel_id")
     Uzel uzel;//id узел
     //-------------------------
-//    @OneToOne(cascade = CascadeType.ALL,targetEntity = QuantityGoodsInOrder.class,fetch = FetchType.LAZY)
-//    @JoinColumn(name="id")
-//    @JsonIgnore
-//    private QuantityGoodsInOrder quantityGoodsInOrder;
+    //    @JoinColumn(name="id")
+    @OneToOne(targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private QuantityGoodsInOrder quantityGoodsInOrder;
     //-------------------------
     @Column(length = 12)
     String num;//кассовый номер

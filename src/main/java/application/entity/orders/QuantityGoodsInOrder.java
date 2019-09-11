@@ -1,6 +1,7 @@
 package application.entity.orders;
 
 import application.entity.goods.Goods;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,10 +19,13 @@ public class QuantityGoodsInOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     int quantity;
-    @ManyToOne(targetEntity = Order.class, fetch = FetchType.LAZY)
-  //  @JoinColumn(name="orderid")
+    @ManyToOne(targetEntity = Order.class,fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_id")
     private Order order;
+
     @OneToOne(targetEntity = Goods.class )
+    @JoinColumn(name="goods_id")
+    @JsonIgnore
     private Goods goods;
 
     public void setQuantity(int quantity) {
@@ -40,4 +44,22 @@ public class QuantityGoodsInOrder {
         this.quantity = quantity;
         this.goods = goods;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public Goods getGoods() {
+        return goods;
+    }
+
+
 }

@@ -7,18 +7,15 @@ import application.entity.orders.Order;
 import application.entity.orders.QuantityGoodsInOrder;
 import application.repository.GoodsRepository;
 import application.repository.OrderRepository;
-import application.repository.QuantityGoodsInOrderRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 @Service
@@ -52,7 +49,9 @@ public class OrderServise implements EntityService<Order> {
          return orderRepository.findByDoneFalse(pageable);
      }
 
-
+     public Order getByIdDoneIsFalse(int id) throws Exception{
+         return orderRepository.getByIdAndDoneIsFalse(id);
+     }
 
     @Override
     public List<Order> getAll() throws Exception {

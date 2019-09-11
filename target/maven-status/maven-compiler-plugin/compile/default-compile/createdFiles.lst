@@ -33,7 +33,6 @@ application\controller\MainViewController.class
 application\api\ElementsPageController.class
 application\repository\OrderRepository.class
 application\dto\GoodsDTOFactory.class
-application\repository\QuantityGoodsInOrderRepository.class
 application\api\OrderController.class
 application\dto\GoodsDTOGroups.class
 application\service\implementation\FactoryService.class

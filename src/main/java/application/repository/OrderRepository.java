@@ -10,5 +10,6 @@ import java.awt.*;
 public interface OrderRepository extends JpaRepository<Order,Integer> {
     Page<Order> findByDoneFalse(Pageable pageable);
     Page<Order> findByDoneTrue(Pageable pageable);
+    Order getByIdAndDoneIsFalse(int id);
 
 }

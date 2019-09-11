@@ -19,9 +19,9 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
 
-    Date createorder;
+    private Date createorder;
 
     private String name;
     private String fone;
@@ -31,16 +31,25 @@ public class Order {
     private String description;
     @Transient
     private int countgoods;
+    @Transient
+    private int idorder;
 //      @ManyToOne
 //      @JoinColumn(name = "user_id", nullable = false)
 //      private User user;
-    @OneToMany(targetEntity = QuantityGoodsInOrder.class, fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER,targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
     @JoinColumn(name="order_id")
-    @JsonIgnore
     private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
 
     public Order() {
     }
+
+    public Order(String name, String fone, String description, int idorder) {
+        this.name = name;
+        this.fone = fone;
+        this.description = description;
+        this.idorder = idorder;
+    }
+
     public void setCountGoods(){
         this.countgoods=quantityGoodsInOrders.size();
     }
@@ -98,5 +107,21 @@ public class Order {
 
     public void setCountgoods(int countgoods) {
         this.countgoods = countgoods;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getIdorder() {
+        return idorder;
+    }
+
+    public void setIdorder(int idorder) {
+        this.idorder = idorder;
     }
 }

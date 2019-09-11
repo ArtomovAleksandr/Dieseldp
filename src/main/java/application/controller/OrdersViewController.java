@@ -1,6 +1,8 @@
 package application.controller;
 
+import application.entity.goods.Goods;
 import application.entity.orders.Order;
+import application.entity.orders.QuantityGoodsInOrder;
 import application.service.implementation.OrderServise;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -40,5 +42,27 @@ public class OrdersViewController {
         model.addAttribute("totalpage", page.getTotalPages());
         model.addAttribute("namberpage",page.getNumber());
         return "orders/orders";
+    }
+    @GetMapping("/orderbyid/{id}")
+    public  String showOrderById(@PathVariable int id,Model model){
+        Order order=new Order();
+        try{
+            order=orderServise.getById(id);
+        }catch (Exception ex){
+            ex.getMessage();
+        }
+        order.setCountGoods();
+//        Order newOrder= new Order(order.getName(),order.getFone(),order.getDescription(),order.getId());
+//        List<QuantityGoodsInOrder> list=order.getQuantityGoodsInOrders();
+//        List<QuantityGoodsInOrder> newList=new ArrayList<>();
+//        QuantityGoodsInOrder quantityGoodsInOrder=new QuantityGoodsInOrder();
+//        for (QuantityGoodsInOrder goodsInOrder:list) {
+//            quantityGoodsInOrder.setQuantity(goodsInOrder.getQuantity());
+//            Goods oldGoods = goodsInOrder.getGoods();
+//            oldGoods.getFactory().getName();
+//            quantityGoodsInOrder.setGoods(new Goods());
+//        }
+        model.addAttribute("order",order);
+        return "orders/orderbyid";
     }
 }

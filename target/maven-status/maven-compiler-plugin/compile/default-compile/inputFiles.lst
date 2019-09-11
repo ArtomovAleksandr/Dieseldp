@@ -5,7 +5,6 @@ D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\appli
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\users\RoleUser.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\entity\goods\Category.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\interfaces\EntityService.java
-D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\repository\QuantityGoodsInOrderRepository.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\service\implementation\CategoryService.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOUzel.java
 D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\java\application\dto\GoodsDTOElementsTable.java

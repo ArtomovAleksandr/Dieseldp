@@ -10,7 +10,7 @@
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container main-div">
-    <h3>Заказы</h3>
+    <h3>Заказ</h3>
     <div>
         <table class="table table-bordered mt-2">
             <thead>
@@ -19,30 +19,39 @@
                 <th scope="col">Телефон</th>
                 <th scope="col">Кол. позиций</th>
 
-                <th colspan="3"></th>
+                <th colspan="2"></th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach items="${orders}" var="order">
+            <tr>
+                <td>${order.name}</td>
+                <td>${order.fone}</td>
+                <td>${order.countgoods}</td>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+
+            <c:forEach items="${order.quantityGoodsInOrders}" var="orders">
                 <tr>
-                    <th scope="row">${order.name}</th>
-                    <td scope="row">${order.fone}</td>
-                    <td scope="row">${order.countgoods}</td>
-                    <td colspan="3">
-                                <button class="btn btn-outline-danger  del"  value="${categor.id}">
+                    <th scope="row">${orders.goods.name}</th>
+                    <td scope="row">${orders.goods.catalog}</td>
+                    <td scope="row">${orders.goods.factory.name}</td>
+                    <td scope="row">${orders.quantity}</td>
+                    <td colspan="2">
+                                <button class="btn btn-outline-danger  del"  value="${orders.goods.id}">
                                     Удалить
                                 </button>
-                                   <a href="/userorder/orderbyid/${order.id}">
-                                <button class="btn btn-outline-info">
-                                      Смотреть
-                                </button>
-                                 </a>
-                                <a href="/category/${order.id}">
-                                    <button class="btn btn-outline-success " name="id"
-                                            value="${order.id}">
-                                        Выполнено
-                                    </button>
-                                </a>
+                                   <%--<a href="/userorder/orderbyid/${order.id}">--%>
+                                <%--<button class="btn btn-outline-info">--%>
+                                      <%--Смотреть--%>
+                                <%--</button>--%>
+                                 <%--</a>--%>
+                                <%--<a href="/category/${order.id}">--%>
+                                    <%--<button class="btn btn-outline-success " name="id"--%>
+                                            <%--value="${order.id}">--%>
+                                        <%--Выполнено--%>
+                                    <%--</button>--%>
+                                <%--</a>--%>
                     </td>
                 </tr>
             </c:forEach>
