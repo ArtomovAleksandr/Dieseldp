@@ -52,16 +52,12 @@ public class OrdersViewController {
             ex.getMessage();
         }
         order.setCountGoods();
-//        Order newOrder= new Order(order.getName(),order.getFone(),order.getDescription(),order.getId());
-//        List<QuantityGoodsInOrder> list=order.getQuantityGoodsInOrders();
-//        List<QuantityGoodsInOrder> newList=new ArrayList<>();
-//        QuantityGoodsInOrder quantityGoodsInOrder=new QuantityGoodsInOrder();
-//        for (QuantityGoodsInOrder goodsInOrder:list) {
-//            quantityGoodsInOrder.setQuantity(goodsInOrder.getQuantity());
-//            Goods oldGoods = goodsInOrder.getGoods();
-//            oldGoods.getFactory().getName();
-//            quantityGoodsInOrder.setGoods(new Goods());
-//        }
+        order.totalOrderSetZero();
+        for (QuantityGoodsInOrder quwontity:order.getQuantityGoodsInOrders()) {
+            quwontity.getGoods().countPiceForUser();
+            quwontity.totalGoodsSumm(quwontity.getGoods().getPriceouttable());
+            order.totalOrderSumm(quwontity.getGoods().getPriceouttable());
+        }
         model.addAttribute("order",order);
         return "orders/orderbyid";
     }

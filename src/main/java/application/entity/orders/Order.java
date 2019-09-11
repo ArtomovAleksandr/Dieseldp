@@ -32,7 +32,9 @@ public class Order {
     @Transient
     private int countgoods;
     @Transient
-    private int idorder;
+    private double totalorder;
+//    @Transient
+//    private int idorder;
 //      @ManyToOne
 //      @JoinColumn(name = "user_id", nullable = false)
 //      private User user;
@@ -43,13 +45,12 @@ public class Order {
     public Order() {
     }
 
-    public Order(String name, String fone, String description, int idorder) {
-        this.name = name;
-        this.fone = fone;
-        this.description = description;
-        this.idorder = idorder;
+    public void totalOrderSetZero(){
+       this.totalorder=0;
     }
-
+    public void totalOrderSumm(double summ){
+        this.totalorder+=summ;
+    }
     public void setCountGoods(){
         this.countgoods=quantityGoodsInOrders.size();
     }
@@ -117,11 +118,14 @@ public class Order {
         this.id = id;
     }
 
-    public int getIdorder() {
-        return idorder;
+    public double getTotalorder() {
+        return totalorder;
     }
+    //    public int getIdorder() {
+//        return idorder;
+//    }
 
-    public void setIdorder(int idorder) {
-        this.idorder = idorder;
-    }
+//    public void setIdorder(int idorder) {
+//        this.idorder = idorder;
+//    }
 }

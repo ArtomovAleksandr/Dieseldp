@@ -8,8 +8,7 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@Entity
+
 public class HistoryCurrent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

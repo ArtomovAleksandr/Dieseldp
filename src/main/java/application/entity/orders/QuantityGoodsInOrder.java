@@ -28,6 +28,15 @@ public class QuantityGoodsInOrder {
     @JsonIgnore
     private Goods goods;
 
+    @Transient
+    private double totalgoods;
+
+
+    public void totalGoodsSumm(double summ){
+        this.totalgoods=quantity*summ;
+    }
+  //  private Goods goods;
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }

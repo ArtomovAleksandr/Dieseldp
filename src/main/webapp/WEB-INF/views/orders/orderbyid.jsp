@@ -19,7 +19,7 @@
                 <th scope="col">Телефон</th>
                 <th scope="col">Кол. позиций</th>
 
-                <th colspan="2"></th>
+                <th colspan="4"></th>
             </tr>
             </thead>
             <tbody>
@@ -27,16 +27,26 @@
                 <td>${order.name}</td>
                 <td>${order.fone}</td>
                 <td>${order.countgoods}</td>
-                <td></td>
-                <td colspan="2"></td>
+                <%--<td></td>--%>
+                <td colspan="4"></td>
             </tr>
-
+            <tr>
+                <th>Наименование</th>
+                <th>Каталожный ном.</th>
+                <th>Произвадитель</th>
+                <th>Цена</th>
+                <th>Кол.</th>
+                <th>Сумма</th>
+                <th></th>
+            </tr>
             <c:forEach items="${order.quantityGoodsInOrders}" var="orders">
                 <tr>
-                    <th scope="row">${orders.goods.name}</th>
+                    <td scope="row">${orders.goods.name}</td>
                     <td scope="row">${orders.goods.catalog}</td>
                     <td scope="row">${orders.goods.factory.name}</td>
+                    <td scope="row">${orders.goods.priceouttable}</td>
                     <td scope="row">${orders.quantity}</td>
+                    <td scope="row">${orders.totalgoods}</td>
                     <td colspan="2">
                                 <button class="btn btn-outline-danger  del"  value="${orders.goods.id}">
                                     Удалить
@@ -55,6 +65,12 @@
                     </td>
                 </tr>
             </c:forEach>
+            <tr>
+                <td colspan="4"></td>
+                <td>Итого</td>
+                <td>${order.totalorder}</td>
+                <td></td>
+            </tr>
             </tbody>
         </table>
     </div>
