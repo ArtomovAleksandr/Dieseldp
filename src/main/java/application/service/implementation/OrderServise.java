@@ -52,7 +52,14 @@ public class OrderServise implements EntityService<Order> {
      public Order getByIdDoneIsFalse(int id) throws Exception{
          return orderRepository.getByIdAndDoneIsFalse(id);
      }
-
+     public int setOrderDoneTrue(int id) throws Exception{
+         int col=  orderRepository.updateOrderByDoneTrue(id);
+         System.out.println("col ="+col);
+//         Order order=getById(id);
+//         order.setDone(true);
+//         save(order);
+         return 1;
+     }
     @Override
     public List<Order> getAll() throws Exception {
         return orderRepository.findAll();

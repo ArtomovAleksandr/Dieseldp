@@ -33,11 +33,6 @@ public class Order {
     private int countgoods;
     @Transient
     private double totalorder;
-//    @Transient
-//    private int idorder;
-//      @ManyToOne
-//      @JoinColumn(name = "user_id", nullable = false)
-//      private User user;
     @OneToMany(fetch = FetchType.EAGER,targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
     @JoinColumn(name="order_id")
     private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();

@@ -37,12 +37,12 @@
                                       Смотреть
                                 </button>
                                  </a>
-                                <a href="#">
-                                    <button class="btn btn-outline-success " name="id"
+
+                                    <button class="btn btn-outline-success order-done "
                                             value="${order.id}">
                                         Выполнено
                                     </button>
-                                </a>
+
                     </td>
                 </tr>
             </c:forEach>
@@ -55,7 +55,6 @@
         <div class="mt-4 row justify-content-center">
             <nav>
                 <ul class="pagination" id="pagination">
-
                     <c:forEach varStatus="loop" begin="1" end="${totalpage}">
                         <c:choose>
                             <c:when test="${loop.count==namberpage+1}">
@@ -79,6 +78,7 @@
 
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/orders/orders_delete.js" type="text/javascript"></script>
+<script src="../../../resources/js/orders/orders_done_true.js" type="text/javascript"></script>
 
 </body>
 </html>

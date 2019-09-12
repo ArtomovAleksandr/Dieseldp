@@ -36,14 +36,23 @@ public class OrderController {
         return new JSONResultOk<>(newOrder);
     }
     @DeleteMapping("/delete/{id}")
-    public boolean deleteFactory(@PathVariable int id) {
-        Order newOrder = new Order();
+    public boolean deleteOrder(@PathVariable int id) {
+    //    Order newOrder = new Order();
         try {
-            newOrder = orderServise.getById(id);
+      //      newOrder = orderServise.getById(id);
             orderServise.delete(id);
         } catch (Exception ex) {
             ex.printStackTrace();
             return false;
+        }
+        return true;
+    }
+    @PutMapping("/setdonetrue/{id}")
+    public boolean setDoneTrue(@PathVariable int id){
+        try{
+             int abc= orderServise.setOrderDoneTrue(id);
+        }catch (Exception ex){
+            return  false;
         }
         return true;
     }
