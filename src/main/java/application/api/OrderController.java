@@ -37,9 +37,7 @@ public class OrderController {
     }
     @DeleteMapping("/delete/{id}")
     public boolean deleteOrder(@PathVariable int id) {
-    //    Order newOrder = new Order();
         try {
-      //      newOrder = orderServise.getById(id);
             orderServise.delete(id);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -50,10 +48,21 @@ public class OrderController {
     @PutMapping("/setdonetrue/{id}")
     public boolean setDoneTrue(@PathVariable int id){
         try{
-             int abc= orderServise.setOrderDoneTrue(id);
+             orderServise.setOrderDoneTrue(id);
         }catch (Exception ex){
             return  false;
         }
         return true;
     }
+    @DeleteMapping("/delete/{idorder}/{idgoods}")
+    public boolean deleteGoodsInOrder(@PathVariable int idorder,@PathVariable int idgoods) {
+        try {
+            orderServise.deleteGoodsInOrder(idorder,idgoods);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
 }

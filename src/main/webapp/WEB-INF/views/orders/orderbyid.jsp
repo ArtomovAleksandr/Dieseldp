@@ -48,20 +48,10 @@
                     <td scope="row">${orders.quantity}</td>
                     <td scope="row">${orders.totalgoods}</td>
                     <td colspan="2">
-                                <button class="btn btn-outline-danger  del"  value="${orders.goods.id}">
+                                <button class="btn btn-outline-danger  del" data-order="${order.id}"  value="${orders.goods.id}">
                                     Удалить
                                 </button>
-                                   <%--<a href="/userorder/orderbyid/${order.id}">--%>
-                                <%--<button class="btn btn-outline-info">--%>
-                                      <%--Смотреть--%>
-                                <%--</button>--%>
-                                 <%--</a>--%>
-                                <%--<a href="/category/${order.id}">--%>
-                                    <%--<button class="btn btn-outline-success " name="id"--%>
-                                            <%--value="${order.id}">--%>
-                                        <%--Выполнено--%>
-                                    <%--</button>--%>
-                                <%--</a>--%>
+
                     </td>
                 </tr>
             </c:forEach>
@@ -94,25 +84,6 @@
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
-                    <%--<c:choose>--%>
-                        <%--<c:when test="${hasnext}">--%>
-                            <%--<li class="page-item">--%>
-                                <%--<a class="page-link" href="/user/category/${idcategory}/${namberpage+2}" aria-label="Next">--%>
-                                    <%--<span aria-hidden="true">&raquo;</span>--%>
-                                    <%--<span class="sr-only">Next</span>--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</c:when>--%>
-                        <%--<c:otherwise>--%>
-                            <%--<li class="page-item disabled">--%>
-                                <%--<a class="page-link" href="/user/category/${idcategory}/${namberpage+2}" aria-label="Next">--%>
-                                    <%--<span aria-hidden="true">&raquo;</span>--%>
-                                    <%--<span class="sr-only">Next</span>--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-
-                        <%--</c:otherwise>--%>
-                    <%--</c:choose>--%>
                 </ul>
             </nav>
         </div>
@@ -120,9 +91,9 @@
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
-<%--<script src="../../../resources/js/DTO/DTOCategory.js" type="text/javascript"></script>--%>
-<%--<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>--%>
-<%--<script src="../../../resources/js/category/category_move_basket.js" type="text/javascript"></script>--%>
+
+<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
+<script src="../../../resources/js/orders/orders_goods_delete.js" type="text/javascript"></script>
 
 </body>
 </html>

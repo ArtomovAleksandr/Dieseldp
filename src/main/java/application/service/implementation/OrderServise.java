@@ -7,6 +7,7 @@ import application.entity.orders.Order;
 import application.entity.orders.QuantityGoodsInOrder;
 import application.repository.GoodsRepository;
 import application.repository.OrderRepository;
+import application.repository.QuantityGoodsInOrderRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,13 +25,13 @@ public class OrderServise implements EntityService<Order> {
      OrderRepository orderRepository;
      @Autowired
      GoodsRepository goodsRepository;
+     @Autowired
+     QuantityGoodsInOrderRepository quantityGoodsInOrderRepository;
 
      public Order saveOrder(OrderDTO orderDTO) throws Exception{
          Order order=new Order();
          order.setFone(orderDTO.getFone());
          order.setName(orderDTO.getName());
-         Date now = new Date();
-         Date date= Calendar.getInstance().getTime();
          List<OrderStorageGoodsDTO> goods=orderDTO.getGoods();
          List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
          for (OrderStorageGoodsDTO go:goods) {
@@ -52,14 +53,29 @@ public class OrderServise implements EntityService<Order> {
      public Order getByIdDoneIsFalse(int id) throws Exception{
          return orderRepository.getByIdAndDoneIsFalse(id);
      }
-     public int setOrderDoneTrue(int id) throws Exception{
-         int col=  orderRepository.updateOrderByDoneTrue(id);
-         System.out.println("col ="+col);
-//         Order order=getById(id);
-//         order.setDone(true);
-//         save(order);
-         return 1;
+     public void setOrderDoneTrue(int id) throws Exception{
+         Order order=getById(id);
+     //    List<QuantityGoodsInOrder> quantityGoodsInOrderList= order.getQuantityGoodsInOrders();
+         order.setDone(true);
+         save(order);
+       //  return 1;
      }
+    public void deleteGoodsInOrder (int idorder, int idgoods) throws Exception {
+        List<QuantityGoodsInOrder> quantityGoodsInOrderList=new ArrayList<>();
+        Order order=new Order();
+         order=getById(idorder);
+         quantityGoodsInOrderList= order.getQuantityGoodsInOrders();
+         if(quantityGoodsInOrderList.size()==1){
+             order.setQuantityGoodsInOrders(null);
+         }else {
+             for (QuantityGoodsInOrder inorder : quantityGoodsInOrderList) {
+                 if (inorder.getGoods().getId() == idgoods) {
+                     quantityGoodsInOrderList.remove(inorder);
+                 }
+             }
+         }
+        save(order);
+    }
     @Override
     public List<Order> getAll() throws Exception {
         return orderRepository.findAll();
@@ -79,4 +95,6 @@ public class OrderServise implements EntityService<Order> {
     public void delete(int id) throws Exception {
          orderRepository.deleteById(id);
     }
+
+
 }

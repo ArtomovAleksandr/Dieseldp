@@ -192,4 +192,8 @@ public class Goods {
     public void setPriceouttable(double priceouttable) {
         this.priceouttable = priceouttable;
     }
+
+    public void setQuantityGoodsInOrder(QuantityGoodsInOrder quantityGoodsInOrder) {
+        this.quantityGoodsInOrder = quantityGoodsInOrder;
+    }
 }
