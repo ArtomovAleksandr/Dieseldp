@@ -29,7 +29,7 @@
                     <td scope="row">${order.fone}</td>
                     <td scope="row">${order.countgoods}</td>
                     <td colspan="3">
-                                <button class="btn btn-outline-danger  del"  value="${categor.id}">
+                                <button class="btn btn-outline-danger  del"  value="${order.id}">
                                     Удалить
                                 </button>
                                    <a href="/userorder/orderbyid/${order.id}">
@@ -37,7 +37,7 @@
                                       Смотреть
                                 </button>
                                  </a>
-                                <a href="/category/${order.id}">
+                                <a href="#">
                                     <button class="btn btn-outline-success " name="id"
                                             value="${order.id}">
                                         Выполнено
@@ -69,25 +69,6 @@
                             </c:otherwise>
                         </c:choose>
                     </c:forEach>
-                    <%--<c:choose>--%>
-                        <%--<c:when test="${hasnext}">--%>
-                            <%--<li class="page-item">--%>
-                                <%--<a class="page-link" href="/user/category/${idcategory}/${namberpage+2}" aria-label="Next">--%>
-                                    <%--<span aria-hidden="true">&raquo;</span>--%>
-                                    <%--<span class="sr-only">Next</span>--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                        <%--</c:when>--%>
-                        <%--<c:otherwise>--%>
-                            <%--<li class="page-item disabled">--%>
-                                <%--<a class="page-link" href="/user/category/${idcategory}/${namberpage+2}" aria-label="Next">--%>
-                                    <%--<span aria-hidden="true">&raquo;</span>--%>
-                                    <%--<span class="sr-only">Next</span>--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-
-                        <%--</c:otherwise>--%>
-                    <%--</c:choose>--%>
                 </ul>
             </nav>
         </div>
@@ -95,9 +76,9 @@
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
-<%--<script src="../../../resources/js/DTO/DTOCategory.js" type="text/javascript"></script>--%>
-<%--<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>--%>
-<%--<script src="../../../resources/js/category/category_move_basket.js" type="text/javascript"></script>--%>
+
+<script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
+<script src="../../../resources/js/orders/orders_delete.js" type="text/javascript"></script>
 
 </body>
 </html>

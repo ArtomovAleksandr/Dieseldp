@@ -65,7 +65,7 @@ public class OrderServise implements EntityService<Order> {
 
     @Override
     public Order save(Order order) throws Exception {
-        return null;
+        return orderRepository.save(order);
     }
 
     @Override

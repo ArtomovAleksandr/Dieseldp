@@ -19,13 +19,13 @@ public class QuantityGoodsInOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     int quantity;
-    @ManyToOne(targetEntity = Order.class,fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = Order.class,fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
     @JoinColumn(name = "order_id")
+    @JsonIgnore
     private Order order;
 
     @OneToOne(targetEntity = Goods.class )
     @JoinColumn(name="goods_id")
-    @JsonIgnore
     private Goods goods;
 
     @Transient
@@ -70,5 +70,7 @@ public class QuantityGoodsInOrder {
         return goods;
     }
 
-
+    public double getTotalgoods() {
+        return totalgoods;
+    }
 }

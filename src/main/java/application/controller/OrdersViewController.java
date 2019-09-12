@@ -56,7 +56,7 @@ public class OrdersViewController {
         for (QuantityGoodsInOrder quwontity:order.getQuantityGoodsInOrders()) {
             quwontity.getGoods().countPiceForUser();
             quwontity.totalGoodsSumm(quwontity.getGoods().getPriceouttable());
-            order.totalOrderSumm(quwontity.getGoods().getPriceouttable());
+            order.totalOrderSumm(quwontity.getTotalgoods());
         }
         model.addAttribute("order",order);
         return "orders/orderbyid";

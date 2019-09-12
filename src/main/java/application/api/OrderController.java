@@ -24,6 +24,7 @@ public class OrderController {
 
     @Autowired
     OrderServise orderServise;
+
     @PostMapping (value = "/create")
     public JSONResult<Order> createOrder(@RequestBody OrderDTO orderDTO){
         Order newOrder=new Order();
@@ -33,20 +34,17 @@ public class OrderController {
             return new JSONResultError<>(newOrder,ex.getMessage());
         }
         return new JSONResultOk<>(newOrder);
-//        OrderDTO newOrderDTO=new OrderDTO();
-//          String hallo=orderDTO.getFone();
-//          String foo=orderDTO.getName();
-//          List<OrderStorageGoodsDTO> orderStorageGoodsDTOS=new ArrayList<>();
-//          orderStorageGoodsDTOS=orderDTO.getGoods();
-//          Uzel newUzel = new Uzel();
-//          newUzel.setId(34);
-//          newUzel.setName("doo");
-   //    List<OrderStorageGoodsDTO> list=new ArrayList<>();
-      //  String fone=order.getFone();
-       // String name=order.getName();
-       // List<> goodsDTOList=order.getGoods();
-    //   return new JSONResultOk<>(newOrderDTO);
-
     }
-
+    @DeleteMapping("/delete/{id}")
+    public boolean deleteFactory(@PathVariable int id) {
+        Order newOrder = new Order();
+        try {
+            newOrder = orderServise.getById(id);
+            orderServise.delete(id);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return false;
+        }
+        return true;
+    }
 }

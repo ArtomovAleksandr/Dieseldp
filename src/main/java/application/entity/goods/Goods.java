@@ -36,6 +36,7 @@ public class Goods {
     //    @JoinColumn(name="id")
     @OneToOne(targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
+    @JsonIgnore
     private QuantityGoodsInOrder quantityGoodsInOrder;
     //-------------------------
     @Column(length = 12)
