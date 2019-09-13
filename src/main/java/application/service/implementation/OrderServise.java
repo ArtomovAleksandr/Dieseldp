@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -25,8 +26,6 @@ public class OrderServise implements EntityService<Order> {
      OrderRepository orderRepository;
      @Autowired
      GoodsRepository goodsRepository;
-     @Autowired
-     QuantityGoodsInOrderRepository quantityGoodsInOrderRepository;
 
      public Order saveOrder(OrderDTO orderDTO) throws Exception{
          Order order=new Order();
@@ -49,17 +48,25 @@ public class OrderServise implements EntityService<Order> {
      public Page<Order> findByDoneFalse(Pageable pageable) throws Exception{
          return orderRepository.findByDoneFalse(pageable);
      }
+    public Page<Order> findByDoneTrue(Pageable pageable) throws Exception{
+        return orderRepository.findByDoneTrue(pageable);
+    }
 
      public Order getByIdDoneIsFalse(int id) throws Exception{
          return orderRepository.getByIdAndDoneIsFalse(id);
      }
+  //   @Transactional
      public void setOrderDoneTrue(int id) throws Exception{
-         Order order=getById(id);
-     //    List<QuantityGoodsInOrder> quantityGoodsInOrderList= order.getQuantityGoodsInOrders();
+         Order order=orderRepository.findById(id).orElse(null);
          order.setDone(true);
          save(order);
-       //  return 1;
      }
+    public void setOrderDoneFalse(int id) throws Exception{
+        Order order=orderRepository.findById(id).orElse(null);
+        order.setDone(false);
+        save(order);
+    }
+//     @Transactional
     public void deleteGoodsInOrder (int idorder, int idgoods) throws Exception {
         List<QuantityGoodsInOrder> quantityGoodsInOrderList=new ArrayList<>();
         Order order=new Order();

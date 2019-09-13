@@ -54,6 +54,15 @@ public class OrderController {
         }
         return true;
     }
+    @PutMapping("/setdonefalse/{id}")
+    public boolean setDoneFalse(@PathVariable int id){
+        try{
+            orderServise.setOrderDoneFalse(id);
+        }catch (Exception ex){
+            return  false;
+        }
+        return true;
+    }
     @DeleteMapping("/delete/{idorder}/{idgoods}")
     public boolean deleteGoodsInOrder(@PathVariable int idorder,@PathVariable int idgoods) {
         try {

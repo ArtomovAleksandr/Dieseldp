@@ -1,6 +1,5 @@
 package application.controller;
 
-import application.entity.goods.Goods;
 import application.entity.orders.Order;
 import application.entity.orders.QuantityGoodsInOrder;
 import application.service.implementation.OrderServise;
@@ -41,7 +40,27 @@ public class OrdersViewController {
         model.addAttribute("orders",orderList);
         model.addAttribute("totalpage", page.getTotalPages());
         model.addAttribute("namberpage",page.getNumber());
-        return "orders/orders";
+        return "orders/ordersfalse";
+    }
+    @GetMapping("/showtruedone/{id}")
+    public String showOrdersDoneIsTrue(@PathVariable int id,Model model){
+        List<Order> orderList=new ArrayList<>();
+        Pageable pageable = PageRequest.of(id-1, sizepagin);
+        Page page = null;
+        try{
+            page=orderServise.findByDoneTrue(pageable);
+            orderList=page.getContent();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        for (Order order:orderList) {
+            order.setCountGoods();
+            order.setQuantityGoodsInOrders(null);
+        }
+        model.addAttribute("orders",orderList);
+        model.addAttribute("totalpage", page.getTotalPages());
+        model.addAttribute("namberpage",page.getNumber());
+        return "orders/orderstrue";
     }
     @GetMapping("/orderbyid/{id}")
     public  String showOrderById(@PathVariable int id,Model model){

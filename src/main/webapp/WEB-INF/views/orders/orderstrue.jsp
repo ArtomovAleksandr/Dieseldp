@@ -10,7 +10,7 @@
 <body>
 <c:import url="../template/header.jsp"></c:import>
 <div class="container main-div">
-    <h3>Заказы</h3>
+    <h3>Выполненные заказы</h3>
     <div>
         <table class="table table-bordered mt-2">
             <thead>
@@ -19,7 +19,13 @@
                 <th scope="col">Телефон</th>
                 <th scope="col">Кол. позиций</th>
 
-                <th colspan="3"></th>
+                <th colspan="3">
+                    <a href="/userorder/showfalsedone/1">
+                        <button class="btn btn-outline-info">
+                            Смотреть Заказы
+                        </button>
+                    </a>
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -32,15 +38,10 @@
                                 <button class="btn btn-outline-danger  del"  value="${order.id}">
                                     Удалить
                                 </button>
-                                   <a href="/userorder/orderbyid/${order.id}">
-                                <button class="btn btn-outline-info">
-                                      Смотреть
-                                </button>
-                                 </a>
 
-                                    <button class="btn btn-outline-success order-done "
+                                    <button class="btn btn-outline-success order-restore "
                                             value="${order.id}">
-                                        Выполнено
+                                        Восстановить
                                     </button>
 
                     </td>
@@ -78,7 +79,7 @@
 
 <script src="../../../resources/js/services/AJAXService.js" type="text/javascript"></script>
 <script src="../../../resources/js/orders/orders_delete.js" type="text/javascript"></script>
-<script src="../../../resources/js/orders/orders_done_true.js" type="text/javascript"></script>
+<script src="../../../resources/js/orders/orders_done_false.js" type="text/javascript"></script>
 
 </body>
 </html>

@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/repository/QuantityGoodsInOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_goods_delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderstrue.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_false.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/api/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/api/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/entity/goods/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/entity/goods/Goods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/repository/OrderRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orders.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/ordersfalse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/controller/OrdersViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/controller/OrdersViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application/service/implementation/OrderServise.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/service/implementation/OrderServise.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-09-12" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2019-09-12" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,14 +38,14 @@
     <favorites_list name="_10Diesel" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4924338">
+    <splitter split-orientation="horizontal" split-proportion="0.26666668">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2040">
-                  <caret line="195" column="84" lean-forward="true" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
+                <state relative-caret-position="2346">
+                  <caret line="195" column="84" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -60,7 +56,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
+                <state relative-caret-position="1751">
                   <caret line="121" selection-start-line="121" selection-end-line="121" />
                 </state>
               </provider>
@@ -69,20 +65,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/OrderRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="413">
-                  <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+                <state relative-caret-position="272">
+                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -102,8 +86,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/goods/create_price.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
                 </state>
               </provider>
             </entry>
@@ -116,6 +100,15 @@
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_false.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -138,11 +131,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orders.jsp">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/ordersfalse.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="952">
-                  <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+                <state relative-caret-position="136">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
                 </state>
               </provider>
             </entry>
@@ -152,28 +145,10 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_true.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="203">
-                  <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/api/OrderController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="254">
-                  <caret line="61" selection-start-line="61" selection-end-line="61" />
+                <state relative-caret-position="421">
+                  <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -182,33 +157,60 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_bascket_create_order.js">
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/CategoryService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="73" selection-start-line="73" selection-end-line="73" />
+                <state relative-caret-position="289">
+                  <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_basket.js">
-              <provider selected="true" editor-type-id="text-editor" />
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="185">
+                  <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_category.js">
-              <provider selected="true" editor-type-id="text-editor" />
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_create_order.js">
-              <provider selected="true" editor-type-id="text-editor" />
+            <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="149">
+                  <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderstrue.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/orders/QuantityGoodsInOrder.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
+                <state relative-caret-position="153">
                   <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -222,7 +224,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
+                <state relative-caret-position="238">
                   <caret line="23" selection-start-line="23" selection-end-line="23" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -270,9 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/goods/table/goods_ajax.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/DTOGoodsStorage.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/template/userhead.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/goods/goods.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/user/user_allcategory.js" />
         <option value="$PROJECT_DIR$/src/main/java/application/entity/goods/Category.java" />
@@ -310,17 +309,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/addsql.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_delete.js" />
         <option value="$PROJECT_DIR$/src/main/java/application/entity/orders/QuantityGoodsInOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/entity/orders/Order.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orders.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_true.js" />
         <option value="$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repository/QuantityGoodsInOrderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/application/repository/OrderRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/application/api/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_goods_delete.js" />
+        <option value="$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_false.js" />
         <option value="$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java" />
+        <option value="$PROJECT_DIR$/src/main/java/application/api/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/ordersfalse.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderstrue.jsp" />
       </list>
     </option>
   </component>
@@ -355,10 +357,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1027" />
-    <option name="y" value="15" />
-    <option name="width" value="828" />
-    <option name="height" value="1042" />
+    <option name="x" value="52" />
+    <option name="y" value="32" />
+    <option name="width" value="1461" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -366,8 +368,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -484,6 +486,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -536,6 +547,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
@@ -716,6 +736,16 @@
               <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="uzels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="_10Diesel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dieseldp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -735,17 +765,20 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568310810028" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../40_sportclub/Sport_App" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568364609250" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../49_diplom_exempl_paginator/diplom" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\goods\table" />
-      <recent name="D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\webapp\WEB-INF\views" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\orders" />
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\WEB-INF\views\orders" />
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\WEB-INF\views\user" />
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\user" />
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\DTO" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="application.dto" />
@@ -754,12 +787,9 @@
       <recent name="application.controller" />
       <recent name="application.helper" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\WEB-INF\views\orders" />
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\WEB-INF\views\user" />
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\user" />
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\DTO" />
-      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\images" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ITSTEP_08.03.19\java\48_diploma_project_08.06.19\Dieseldp\src\main\webapp\resources\js\goods\table" />
+      <recent name="D:\ITSTEP_27.08.18\java\44_Diesel_dp_22.10.18\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -991,12 +1021,13 @@
       <workItem from="1568189414490" duration="6210000" />
       <workItem from="1568232613253" duration="5574000" />
       <workItem from="1568274092339" duration="6672000" />
-      <workItem from="1568304502648" duration="5981000" />
+      <workItem from="1568304502648" duration="6410000" />
+      <workItem from="1568359121133" duration="5887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="731407000" />
+    <option name="totallyTimeSpent" value="737723000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1009,21 +1040,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46197718" visible="true" weight="0.13859275" />
-      <window_info id="Structure" order="1" sideWeight="0.5380228" side_tool="true" visible="true" weight="0.13859275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.92416036" visible="true" weight="0.1684435" />
+      <window_info id="Structure" order="1" sideWeight="0.1178344" side_tool="true" weight="0.18230277" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.16548464" side_tool="true" weight="0.41098082" />
+      <window_info id="Favorites" order="5" sideWeight="0.07583965" side_tool="true" visible="true" weight="0.1684435" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Azure Explorer" order="7" />
       <window_info id="Web" order="8" sideWeight="0.08785047" side_tool="true" weight="0.19296375" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31960997" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4301192" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1191766" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4301192" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25490198" />
@@ -1158,12 +1188,6 @@
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/application/api/OrderController.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -1177,34 +1201,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/template/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/template/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/basket.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="58" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/allcategory.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -1379,64 +1375,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/api/FactoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orders.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_delete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_basket.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_category.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/FactoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1454,10 +1396,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="195" column="84" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_goods_delete.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/goods/create_price.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.0.8.RELEASE/spring-data-jpa-2.0.8.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="15" column="91" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_true.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1445">
+          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_bascket_create_order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_basket.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_category.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_create_order.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/orders/QuantityGoodsInOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/GoodsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/FactoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1471,80 +1503,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/orders/QuantityGoodsInOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1583#1584#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/repository/OrderRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_create_order.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_true.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/controller/OrdersViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/user/user_bascket_create_order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/entity/goods/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="195" column="84" lean-forward="true" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
+        <state relative-caret-position="149">
+          <caret line="50" column="55" lean-forward="true" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/goods/create_price.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/api/FactoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderbyid.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_goods_delete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="527">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/OrderServise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+        <state relative-caret-position="185">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1553,11 +1549,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/application/api/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="421">
+          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/orders/orders_done_false.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/ordersfalse.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/service/implementation/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders/orderstrue.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
