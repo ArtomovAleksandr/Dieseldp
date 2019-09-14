@@ -11,4 +11,5 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<Category,Integer> {
     @Query(value = "select * from category where visible=true order by metric",nativeQuery = true)
     Page<Category> findByVisibleAndOrderByMetric(Pageable pageable);
+    Page<Category> findByVisibleIsFalseOrderByMetric(Pageable pageable);
 }

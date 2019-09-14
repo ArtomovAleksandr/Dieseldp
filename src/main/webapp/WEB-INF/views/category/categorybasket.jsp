@@ -9,7 +9,7 @@
 
 <body>
 <c:import url="../template/header.jsp"></c:import>
-<% Integer countpagin=(Integer) request.getAttribute("countpagin");%>
+<% Integer startnumber=(Integer) request.getAttribute("startnumber");%>
 <div class="container main-div">
     <h3>Корзина Категорий</h3>
     <div class="tools-div form-control text-right">
@@ -29,7 +29,7 @@
             <tbody>
             <c:forEach items="${category}" var="categor">
                 <tr>
-                    <th scope="row">${categor.show_namber}</th>
+                    <th scope="row"><%= ++startnumber %></th>
                     <td scope="row">${categor.name}</td>
                     <td colspan="2">
                                 <button class="btn btn-outline-danger  del"  value="${categor.id}">
@@ -49,14 +49,14 @@
     </div>
 
 
-    <nav aria-label="...">
-        <ul class="pagination pagination-lg">
-           <% for(int i=1;i<=countpagin;i++){ %>
-            <li class="page-item"><a class="page-link" href="/category/basket/show/<%=i%>" ><%= i %></a></li>
+    <%--<nav aria-label="...">--%>
+        <%--<ul class="pagination pagination-lg">--%>
+           <%--<% for(int i=1;i<=countpagin;i++){ %>--%>
+            <%--<li class="page-item"><a class="page-link" href="/category/basket/show/<%=i%>" ><%= i %></a></li>--%>
 
-            <%}%>
+            <%--<%}%>--%>
 
-    </nav>
+    <%--</nav>--%>
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->

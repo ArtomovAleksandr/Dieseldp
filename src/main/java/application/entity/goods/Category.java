@@ -17,9 +17,6 @@ public class Category {
     @Column(columnDefinition = "TINYINT")
     private int metric;
     private String name;
-    @Transient
-    private int show_namber;
-
     @OneToMany(fetch = FetchType.LAZY,targetEntity = Goods.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id")
     @JsonIgnore
@@ -31,10 +28,6 @@ public class Category {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setShow_namber(int show_namber) {
-        this.show_namber = show_namber;
     }
 
     public String getName() {

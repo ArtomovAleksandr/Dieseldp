@@ -41,5 +41,11 @@ public class CategoryService implements EntityService<Category> {
     public Page<Category> findByVisibleOrderByMetric(Pageable pageable)throws Exception{
         return categoryRepository.findByVisibleAndOrderByMetric(pageable);
     }
+    public Page<Category> findByVisibleIsFalseOrderByMetric(Pageable pageable){
+        return categoryRepository.findByVisibleIsFalseOrderByMetric(pageable);
+    }
+    public Page<Category> findByVisibleIsTrueOrderByMetric(Pageable pageable){
+        return categoryRepository.findByVisibleAndOrderByMetric(pageable);
+    }
 
 }

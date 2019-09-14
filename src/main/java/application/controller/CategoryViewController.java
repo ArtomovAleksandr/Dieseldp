@@ -3,6 +3,9 @@ package application.controller;
 import application.entity.goods.Category;
 import application.service.implementation.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,38 +17,43 @@ import java.util.*;
 @Controller
 @RequestMapping("/category")
 public class CategoryViewController {
-    private static int sizepagin=5;
+    private static int sizepagin=8;
     @Autowired
     private CategoryService categoryService;
     @GetMapping("/show/{id}")
     public String index(@PathVariable int id, Model model){
         List<Category> categoryList=new ArrayList<>();
+        Pageable pageable = PageRequest.of(id-1, sizepagin);
+        Page page = null;
         try{
-            categoryList= categoryService.getAll();
-
+            page= categoryService.findByVisibleIsTrueOrderByMetric(pageable);
+            categoryList= page.getContent();
         }catch (Exception ex){
             ex.printStackTrace();
         }
-         categoryList=setNumberShowNumber(categoryList,true);
-        List<Category> category = paginListCategiry(categoryList,id);
-        int countpagin= (int) ((categoryList.size()/(sizepagin+0.01))+1);
-        model.addAttribute("category", category );
-        model.addAttribute("countpagin",countpagin);
+        int statrnumber= (int) ((page.getNumber()*sizepagin));
+        model.addAttribute("category", categoryList );
+        model.addAttribute("totalpage", page.getTotalPages());
+        model.addAttribute("namberpage",page.getNumber());
+        model.addAttribute("startnumber",statrnumber);
         return "category/category";
     }
     @GetMapping("/basket/show/{id}")
     public String indexBasket(@PathVariable int id, Model model){
         List<Category> categoryList=new ArrayList<>();
+        Pageable pageable = PageRequest.of(id-1, sizepagin);
+        Page page = null;
         try{
-            categoryList= categoryService.getAll();
+            page= categoryService.findByVisibleIsFalseOrderByMetric(pageable);
+            categoryList=page.getContent();
         }catch (Exception ex){
             ex.printStackTrace();
         }
-        categoryList=setNumberShowNumber(categoryList,false);
-        List<Category> category = paginListCategiry(categoryList,id);
-        int countpagin= (int) ((categoryList.size()/(sizepagin+0.01))+1);
-        model.addAttribute("category", category );
-        model.addAttribute("countpagin",countpagin);
+        int statrnumber= (int) ((page.getNumber()*sizepagin));
+        model.addAttribute("category", categoryList );
+        model.addAttribute("totalpage", page.getTotalPages());
+        model.addAttribute("namberpage",page.getNumber());
+        model.addAttribute("startnumber",statrnumber);
         return "category/categorybasket";
     }
     @GetMapping("/{id}")
@@ -64,24 +72,4 @@ public class CategoryViewController {
         return "category/category_create";
     }
 
-     private List setNumberShowNumber(List<Category> categories,boolean isVisible){
-        List<Category> list=new ArrayList<>();
-        int j=1;
-         for (int i=0;i<categories.size();i++){
-             if(isVisible==categories.get(i).isVisible()) {
-                 categories.get(i).setShow_namber(j);
-                 list.add(categories.get(i));
-                 j++;
-             }
-         }
-
-      return list;
-     }
-     private List<Category> paginListCategiry(List<Category>list,int id){
-         List<Category> category = new ArrayList<>();
-         for(int i=(id-1)*sizepagin;i<id*sizepagin && i<list.size();i++){
-             category.add(list.get(i));
-         }
-         return category;
-     }
 }
