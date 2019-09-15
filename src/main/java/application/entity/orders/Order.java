@@ -33,7 +33,7 @@ public class Order {
     private int countgoods;
     @Transient
     private double totalorder;
-    @OneToMany(fetch = FetchType.EAGER,targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY  ,targetEntity = QuantityGoodsInOrder.class,cascade = CascadeType.ALL)
     @JoinColumn(name="order_id")
     private List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
 
@@ -116,11 +116,5 @@ public class Order {
     public double getTotalorder() {
         return totalorder;
     }
-    //    public int getIdorder() {
-//        return idorder;
-//    }
 
-//    public void setIdorder(int idorder) {
-//        this.idorder = idorder;
-//    }
 }

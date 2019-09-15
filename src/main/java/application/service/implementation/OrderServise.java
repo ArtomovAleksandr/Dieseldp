@@ -25,6 +25,8 @@ public class OrderServise implements EntityService<Order> {
      @Autowired
      OrderRepository orderRepository;
      @Autowired
+     QuantityGoodsInOrderRepository quantityGoodsInOrderRepository;
+     @Autowired
      GoodsRepository goodsRepository;
 
      public Order saveOrder(OrderDTO orderDTO) throws Exception{
@@ -46,12 +48,29 @@ public class OrderServise implements EntityService<Order> {
          return order;
      }
      public Page<Order> findByDoneFalse(Pageable pageable) throws Exception{
-         return orderRepository.findByDoneFalse(pageable);
+         Page<Order> page= orderRepository.findByDoneFalse(pageable);
+         List<Order> orderList=page.getContent();
+         for (Order order:orderList) {
+             List<QuantityGoodsInOrder> list=quantityGoodsInOrderRepository.findAllByOrder(order);
+             order.setQuantityGoodsInOrders(list);
+         }
+         return page;
      }
     public Page<Order> findByDoneTrue(Pageable pageable) throws Exception{
-        return orderRepository.findByDoneTrue(pageable);
+        Page<Order> page= orderRepository.findByDoneTrue(pageable);
+        List<Order> orderList=page.getContent();
+        for (Order order:orderList) {
+            List<QuantityGoodsInOrder> list=quantityGoodsInOrderRepository.findAllByOrder(order);
+            order.setQuantityGoodsInOrders(list);
+        }
+        return page;
     }
-
+     public Order shouById(int id) throws Exception{
+         Order order=getById(id);
+         List<QuantityGoodsInOrder> list=quantityGoodsInOrderRepository.findAllByOrder(order);
+         order.setQuantityGoodsInOrders(list);
+         return order;
+     }
      public Order getByIdDoneIsFalse(int id) throws Exception{
          return orderRepository.getByIdAndDoneIsFalse(id);
      }
@@ -66,12 +85,12 @@ public class OrderServise implements EntityService<Order> {
         order.setDone(false);
         save(order);
     }
-//     @Transactional
+  //  @Transactional
     public void deleteGoodsInOrder (int idorder, int idgoods) throws Exception {
         List<QuantityGoodsInOrder> quantityGoodsInOrderList=new ArrayList<>();
         Order order=new Order();
          order=getById(idorder);
-         quantityGoodsInOrderList= order.getQuantityGoodsInOrders();
+         quantityGoodsInOrderList= quantityGoodsInOrderRepository.findAllByOrder(order);
          if(quantityGoodsInOrderList.size()==1){
              order.setQuantityGoodsInOrders(null);
          }else {
@@ -80,6 +99,7 @@ public class OrderServise implements EntityService<Order> {
                      quantityGoodsInOrderList.remove(inorder);
                  }
              }
+             order.setQuantityGoodsInOrders(quantityGoodsInOrderList);
          }
         save(order);
     }

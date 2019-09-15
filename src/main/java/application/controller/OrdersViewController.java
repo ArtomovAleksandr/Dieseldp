@@ -66,7 +66,7 @@ public class OrdersViewController {
     public  String showOrderById(@PathVariable int id,Model model){
         Order order=new Order();
         try{
-            order=orderServise.getById(id);
+            order=orderServise.shouById(id);
         }catch (Exception ex){
             ex.getMessage();
         }

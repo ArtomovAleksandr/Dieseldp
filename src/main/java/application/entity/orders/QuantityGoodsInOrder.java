@@ -19,7 +19,7 @@ public class QuantityGoodsInOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     int quantity;
-    @ManyToOne(targetEntity = Order.class,fetch = FetchType.LAZY,cascade = CascadeType.REMOVE)
+    @ManyToOne(targetEntity = Order.class,fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
     @JsonIgnore
     private Order order;
@@ -35,7 +35,6 @@ public class QuantityGoodsInOrder {
     public void totalGoodsSumm(double summ){
         this.totalgoods=quantity*summ;
     }
-  //  private Goods goods;
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;

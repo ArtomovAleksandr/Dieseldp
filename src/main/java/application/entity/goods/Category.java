@@ -2,6 +2,8 @@ package application.entity.goods;
 
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.List;
 //категория
 @Data
 @Entity
+@NoArgsConstructor
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +24,6 @@ public class Category {
     @JoinColumn(name = "category_id")
     @JsonIgnore
     List<Goods> goods=new ArrayList<>();
-
-    public Category(){}
 
     public int getId() { return id;}
 
