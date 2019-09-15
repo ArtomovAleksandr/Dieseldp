@@ -5,6 +5,7 @@ import application.entity.orders.Order;
 import application.entity.orders.QuantityGoodsInOrder;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Goods {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,9 +67,6 @@ public class Goods {
     @Transient
     double priceouttable;
 
-    public Goods() {
-    }
-
     public void countPiceForUser (){
       if(this.countprice){
           this.priceouttable=(((double)this.addition/100)+1)*this.inprice*this.current.getRate();
@@ -75,115 +74,5 @@ public class Goods {
           this.priceouttable=this.outprice*this.current.getRate();
       }
     }
-    public int getId() { return id; }
-    public Current getCurrent() {
-        return current;
-    }
 
-    public Factory getFactory() {
-        return factory;
-    }
-
-    public Groups getGroups() {
-        return groups;
-    }
-
-    public Uzel getUzel() {
-        return uzel;
-    }
-
-    public String getCatalog() {
-        return catalog;
-    }
-
-    public String getNum() {
-        return num;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getUnit() {
-        return unit;
-    }
-
-    public String getMark() {
-        return mark;
-    }
-
-    public double getInprice() {
-        return inprice;
-    }
-
-    public boolean isInarhive() { return inarhive; }
-
-    public boolean isCountprice() { return countprice; }
-    public int getAddition() {
-        return addition;
-    }
-
-    public Category getCategory() { return category; }
-    public double getOutprice() { return outprice; }
-
-    public void setNum(String num) {
-        this.num = num;
-    }
-
-    public void setCurrent(Current current) {
-        this.current = current;
-    }
-
-    public void setFactory(Factory factory) {
-        this.factory = factory;
-    }
-
-    public void setGroups(Groups groups) {
-        this.groups = groups;
-    }
-
-    public void setUzel(Uzel uzel) {
-        this.uzel = uzel;
-    }
-
-    public void setCatalog(String catalog) {
-        this.catalog = catalog;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public void setMark(String mark) {
-        this.mark = mark;
-    }
-
-    public void setInprice(double inprice) { this.inprice = inprice; }
-
-    public void setCountprice(boolean countprice) { this.countprice = countprice; }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public void setAddition(int addition) {
-        this.addition = addition;
-    }
-    public void setOutprice(double outprice) { this.outprice = outprice; }
-
-    public double getPriceouttable() {
-        return priceouttable;
-    }
-
-    public void setPriceouttable(double priceouttable) {
-        this.priceouttable = priceouttable;
-    }
-
-    public void setQuantityGoodsInOrder(QuantityGoodsInOrder quantityGoodsInOrder) {
-        this.quantityGoodsInOrder = quantityGoodsInOrder;
-    }
 }

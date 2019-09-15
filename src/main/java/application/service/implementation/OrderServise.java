@@ -10,6 +10,7 @@ import application.repository.OrderRepository;
 import application.repository.QuantityGoodsInOrderRepository;
 import application.service.interfaces.EntityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class OrderServise implements EntityService<Order> {
      @Autowired
      OrderRepository orderRepository;
@@ -28,7 +30,7 @@ public class OrderServise implements EntityService<Order> {
      QuantityGoodsInOrderRepository quantityGoodsInOrderRepository;
      @Autowired
      GoodsRepository goodsRepository;
-
+     @Transactional
      public Order saveOrder(OrderDTO orderDTO) throws Exception{
          Order order=new Order();
          order.setFone(orderDTO.getFone());
@@ -47,6 +49,7 @@ public class OrderServise implements EntityService<Order> {
          orderRepository.save(order);
          return order;
      }
+     @Transactional(readOnly = true)
      public Page<Order> findByDoneFalse(Pageable pageable) throws Exception{
          Page<Order> page= orderRepository.findByDoneFalse(pageable);
          List<Order> orderList=page.getContent();
@@ -56,6 +59,7 @@ public class OrderServise implements EntityService<Order> {
          }
          return page;
      }
+    @Transactional(readOnly = true)
     public Page<Order> findByDoneTrue(Pageable pageable) throws Exception{
         Page<Order> page= orderRepository.findByDoneTrue(pageable);
         List<Order> orderList=page.getContent();
@@ -65,27 +69,30 @@ public class OrderServise implements EntityService<Order> {
         }
         return page;
     }
-     public Order shouById(int id) throws Exception{
+    @Transactional(readOnly = true)
+     public Order showById(int id) throws Exception{
          Order order=getById(id);
          List<QuantityGoodsInOrder> list=quantityGoodsInOrderRepository.findAllByOrder(order);
          order.setQuantityGoodsInOrders(list);
          return order;
      }
+    @Transactional(readOnly = true)
      public Order getByIdDoneIsFalse(int id) throws Exception{
          return orderRepository.getByIdAndDoneIsFalse(id);
      }
-  //   @Transactional
+     @Transactional
      public void setOrderDoneTrue(int id) throws Exception{
          Order order=orderRepository.findById(id).orElse(null);
          order.setDone(true);
          save(order);
      }
+     @Transactional
     public void setOrderDoneFalse(int id) throws Exception{
         Order order=orderRepository.findById(id).orElse(null);
         order.setDone(false);
         save(order);
     }
-  //  @Transactional
+    @Transactional
     public void deleteGoodsInOrder (int idorder, int idgoods) throws Exception {
         List<QuantityGoodsInOrder> quantityGoodsInOrderList=new ArrayList<>();
         Order order=new Order();

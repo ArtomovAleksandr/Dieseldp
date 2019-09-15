@@ -36,40 +36,11 @@ public class QuantityGoodsInOrder {
         this.totalgoods=quantity*summ;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }
-
-    public void setGoods(Goods goods) {
-        this.goods = goods;
-    }
 
     public QuantityGoodsInOrder(int quantity, Goods goods) {
         this.quantity = quantity;
         this.goods = goods;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public Goods getGoods() {
-        return goods;
-    }
-
-    public double getTotalgoods() {
-        return totalgoods;
-    }
 }

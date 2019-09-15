@@ -18,7 +18,7 @@ public class CategoryController {
         Category newCategory=new Category();
         try {
             newCategory.setName(category.getName());
-            newCategory.setVisible(category.isVisible());
+            newCategory.setVisible(category.getVisible());
             newCategory= categoryService.save(newCategory);
         }catch (Exception e){
             e.printStackTrace();

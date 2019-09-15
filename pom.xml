@@ -130,6 +130,13 @@
       <artifactId>jackson-datatype-hibernate5</artifactId>
       <version>${jackson-version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+
 
   </dependencies>
 
