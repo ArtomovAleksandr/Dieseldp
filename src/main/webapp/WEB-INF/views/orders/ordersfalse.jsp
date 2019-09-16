@@ -15,6 +15,7 @@
         <table class="table table-bordered mt-2">
             <thead>
             <tr>
+                <th scope="col">#</th>
                 <th scope="col">Имя</th>
                 <th scope="col">Телефон</th>
                 <th scope="col">Кол. позиций</th>
@@ -31,7 +32,8 @@
             <tbody>
             <c:forEach items="${orders}" var="order">
                 <tr>
-                    <th scope="row">${order.name}</th>
+                    <th scope="row">${order.id}</th>
+                    <td scope="row">${order.name}</td>
                     <td scope="row">${order.fone}</td>
                     <td scope="row">${order.countgoods}</td>
                     <td colspan="3">
