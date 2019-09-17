@@ -21,7 +21,6 @@ import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 @RestController
 @RequestMapping(value = "/api/v1.0/goods")
-@Slf4j
 public class GoodsController {
     @Autowired
     private GoodsService goodsService;

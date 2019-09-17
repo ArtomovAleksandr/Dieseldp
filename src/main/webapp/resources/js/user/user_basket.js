@@ -88,9 +88,9 @@
              summ=summ+parseInt(elemdata)*parseFloat(priceelem);
 
         });
-        //summ.toFixed(digital);
+
         $('.total-paiment-price').text(summ);
-   //     let abc= $('.price-hur');
+
 
     }
     $('#customCheck').change(function () {

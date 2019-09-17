@@ -6,17 +6,7 @@ $(function () {
             this.quantity=quantity;
         }
     }
-    function ishaveStorahe() {
-        if (localStorage.getItem(namestorage) !== null) {
-            return true;
-        }
-        return false;
-    }
-    function readStorage() {
-        if (ishaveStorahe()) {
-            return JSON.parse(localStorage.getItem(namestorage));
-        }
-    }
+
     function createNewGoods(oldgoods) {
         let goods=new Array();
         oldgoods.forEach(function (e) {
@@ -32,10 +22,23 @@ $(function () {
             name:name,
             goods:goods
         }
-      //  newdata:'hello'
         return newdata;
     }
 
+    $('.client-fone-data input').bind('input',function (e) {
+        let value=e.target.value;
+        if(value.length>5){
+           if(value.match(/[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/)==null){
+               $(this).css('color','red');
+            }else {
+               $(this).css('color','green');
+           }
+        }else{
+            $(this).css('color','black');
+        }
+
+       console.log(e.target.value);
+    });
 
    $('#create-order').click(function (e) {
 
@@ -43,6 +46,7 @@ $(function () {
        function success() {
            console.log("done!");
            alert("Запчасти заказаны");
+           removeStorage(namestorage);
            location.replace("/user/allcategory/1");
            //удалить LocalStorage
        }
@@ -59,7 +63,8 @@ $(function () {
 
 
 
-      if(!ishaveStorahe()){
+      if(!ishaveStorahe(namestorage)){
+          alert("Ошибка, запчастeй не в корзине")
           return;
       }
       let fone=  $('.client-fone-data input').val();
@@ -74,7 +79,7 @@ $(function () {
 
       //  return;
       // }
-      let storage=readStorage();
+      let storage=readStorage(namestorage);
       var orderDto=createNewData(fone,name,storage.goods);
       ////////let servise=new AJAXService();
        let servise=new AJAXService();
