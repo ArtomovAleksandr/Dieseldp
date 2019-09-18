@@ -26,11 +26,18 @@
         if (ishaveStorahe()) {
             return JSON.parse(localStorage.getItem(namestorage));
         }
+        return false;
     }
 
     function createItems() {
         let conteinerproduct = $('.conteiner-product');
-        let Arraygoodsdata = readStorage().goods;
+    //    conteinerproduct.empty();
+        let Arraygoods = readStorage();
+        console.log('Arraygoods ='+Arraygoods)
+        if(Arraygoods==false){
+            return;
+        }
+        let Arraygoodsdata=Arraygoods.goods;
         Arraygoodsdata.forEach(function (elem) {
             let flagdisabledbutton=true;
             if(parseInt(elem.quantity)>1){
@@ -174,18 +181,25 @@
      //   console.log("allcheckboxchecked ="+allcheckboxchecked);
     });
     $('.delete-position button').click(function () {
+        let conteinerproduct = $('.conteiner-product');
          if($('#customCheck').prop('checked')&&ishaveStorahe()){
              localStorage.removeItem(namestorage);
              window.location.reload(true);
+         //    readStorageForBasketShow();
          }else {
              let allcheckboxchecked = $('.conteiner-product').find("input[type=checkbox]:checked");
              if (allcheckboxchecked.length > 0) {
                  allcheckboxchecked.get().forEach(function (e) {
                      let selectquantity=$(e).parents('.checkbox-wrap').siblings('.cart-item-info').children('.footer').children('.quantity-wrap').children('.quntity-container').children('.select-quantity');
                      let idelem=$(selectquantity).children('.pirice-elem').children('.id-hidden').val();
+                     let delelement=$(e).parents('.card-item');
                      deleteItemToLocalStorage(idelem);
+                     $(delelement).remove();
                  })
-                 window.location.reload(true);
+              //   createItems();
+              //   createTotalPaimentPrice();
+          //       window.location.reload(true);
+               ///  readStorageForBasketShow();
              }
          }
       //   console.log(allcheckboxchecked);
