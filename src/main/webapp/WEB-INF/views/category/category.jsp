@@ -53,14 +53,7 @@
     </div>
 
 
-    <%--<nav aria-label="...">--%>
-        <%--<ul class="pagination pagination-lg">--%>
-           <%--<% for(int i=1;i<=countpagin;i++){ %>--%>
-            <%--<li class="page-item"><a class="page-link" href="/category/show/<%=i%>" ><%= i %></a></li>--%>
 
-            <%--<%}%>--%>
-
-    <%--</nav>--%>
     <div class="mt-4 row justify-content-center">
     <nav>
         <ul class="pagination" id="pagination">

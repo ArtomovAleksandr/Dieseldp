@@ -96,7 +96,7 @@
 
         });
 
-        $('.total-paiment-price').text(summ);
+        $('.total-paiment-price').text(summ.toFixed(digital));
 
 
     }
@@ -196,10 +196,11 @@
                      deleteItemToLocalStorage(idelem);
                      $(delelement).remove();
                  })
-              //   createItems();
-              //   createTotalPaimentPrice();
-          //       window.location.reload(true);
-               ///  readStorageForBasketShow();
+                 $('#customCheck').prop('checked', true);
+
+                 $('.custom-control-input').prop('checked', true);
+                 createTotalPaimentPrice();
+
              }
          }
       //   console.log(allcheckboxchecked);

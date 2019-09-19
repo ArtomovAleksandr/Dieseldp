@@ -47,16 +47,27 @@
             </tbody>
         </table>
     </div>
+    <div class="mt-4 row justify-content-center">
+        <nav>
+            <ul class="pagination" id="pagination">
+                <c:forEach varStatus="loop" begin="1" end="${totalpage}">
+                    <c:choose>
+                        <c:when test="${loop.count==namberpage+1}">
+                            <li class="page-item active"><a class="page-link"
+                                                            href="/category/basket/show/${loop.count}">${loop.count}</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item"><a class="page-link"
+                                                     href="/category/basket/show/${loop.count}">${loop.count}</a></li>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+            </ul>
+        </nav>
+    </div>
 
 
-    <%--<nav aria-label="...">--%>
-        <%--<ul class="pagination pagination-lg">--%>
-           <%--<% for(int i=1;i<=countpagin;i++){ %>--%>
-            <%--<li class="page-item"><a class="page-link" href="/category/basket/show/<%=i%>" ><%= i %></a></li>--%>
-
-            <%--<%}%>--%>
-
-    <%--</nav>--%>
 </div>
 <c:import url="../template/footer.jsp"></c:import>
 <!--Scripts-->
