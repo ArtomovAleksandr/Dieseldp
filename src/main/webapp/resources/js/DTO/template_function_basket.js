@@ -17,3 +17,18 @@ function removeStorage(namestorage){
     }
     return false;
 }
+// id,namestorage
+function iscontainsItemById(id,namestorage) {
+    let flag = false;
+    let itemsgoods=readStorage(namestorage);
+    if(!itemsgoods){
+        return flag;
+    }
+    let items=itemsgoods.goods;
+    items.forEach(function (item) {
+        if (item.id==id){
+            flag=true;
+        }
+    });
+    return flag;
+}

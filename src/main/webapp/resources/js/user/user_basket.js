@@ -2,37 +2,37 @@
     var digital = 2;
     var namestorage = 'basketstorge';
 
-    function ishaveStorahe() {
-        if (localStorage.getItem(namestorage) !== null) {
-            return true;
-        }
-        return false;
-    }
+    // function ishaveStorahe() {
+    //     if (localStorage.getItem(namestorage) !== null) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
 
-     function iscontainsItemById(id) {
-         let flag = false;
-         if(!ishaveStorahe()){
-             return flag;
-         }
-         let items=readStorage().goods;
-         items.forEach(function (item) {
-                  if (item.id==id){
-                      flag=true;
-                  }
-          });
-         return flag;
-     }
-    function readStorage() {
-        if (ishaveStorahe()) {
-            return JSON.parse(localStorage.getItem(namestorage));
-        }
-        return false;
-    }
+     // function iscontainsItemById(id) {
+     //     let flag = false;
+     //     if(!ishaveStorahe()){
+     //         return flag;
+     //     }
+     //     let items=readStorage().goods;
+     //     items.forEach(function (item) {
+     //              if (item.id==id){
+     //                  flag=true;
+     //              }
+     //      });
+     //     return flag;
+     // }
+    // function readStorage() {
+    //     if (ishaveStorahe()) {
+    //         return JSON.parse(localStorage.getItem(namestorage));
+    //     }
+    //     return false;
+    // }
 
     function createItems() {
         let conteinerproduct = $('.conteiner-product');
     //    conteinerproduct.empty();
-        let Arraygoods = readStorage();
+        let Arraygoods = readStorage(namestorage);
         console.log('Arraygoods ='+Arraygoods)
         if(Arraygoods==false){
             return;
@@ -112,14 +112,11 @@
         createTotalPaimentPrice();
     });
     $(".button-plus").click(function () {
-          //   alert("Handler for .click() called.");
              let selectquantity=$(this).parents('.select-quantity');
              let inputelem=$(selectquantity).children('.current-quantity-basket').find('input');
              let priceelem=$(selectquantity).children('.pirice-elem').children('.price-hidden').val();
              let idelem=$(selectquantity).children('.pirice-elem').children('.id-hidden').val();
-         //    let currentquantity=$(this).parent().siblings(".current-quantity");
-           //  let inputelem= $(currentquantity).find('input');
-             if(iscontainsItemById(idelem)){
+             if(iscontainsItemById(idelem,namestorage)){
                  let buttomminus = selectquantity.children('.button-minus');
                  let elemdata = inputelem.val();
                  if (elemdata.match(/^[0-9]+$/) == null) {
@@ -144,7 +141,7 @@
         let inputelem=$(selectquantity).children('.current-quantity-basket').find('input');
         let priceelem=$(selectquantity).children('.pirice-elem').children('.price-hidden').val();
         let idelem=$(selectquantity).children('.pirice-elem').children('.id-hidden').val();
-        if(iscontainsItemById(idelem)) {
+        if(iscontainsItemById(idelem,namestorage)) {
             let buttomminus = selectquantity.children('.button-minus');
             let elemdata = inputelem.val();
             if (elemdata.match(/^[0-9]+$/) == null) {
@@ -177,23 +174,23 @@
             $('.delete-position button').addClass('display-off');
         }
         createTotalPaimentPrice()
-   //     console.log("allcheckbox ="+allcheckbox);
-     //   console.log("allcheckboxchecked ="+allcheckboxchecked);
     });
     $('.delete-position button').click(function () {
         let conteinerproduct = $('.conteiner-product');
-         if($('#customCheck').prop('checked')&&ishaveStorahe()){
+         if($('#customCheck').prop('checked')&&ishaveStorahe(namestorage)){
              localStorage.removeItem(namestorage);
              window.location.reload(true);
          //    readStorageForBasketShow();
          }else {
              let allcheckboxchecked = $('.conteiner-product').find("input[type=checkbox]:checked");
+             console.log(allcheckboxchecked);
+             console.log(allcheckboxchecked.get());
              if (allcheckboxchecked.length > 0) {
                  allcheckboxchecked.get().forEach(function (e) {
                      let selectquantity=$(e).parents('.checkbox-wrap').siblings('.cart-item-info').children('.footer').children('.quantity-wrap').children('.quntity-container').children('.select-quantity');
                      let idelem=$(selectquantity).children('.pirice-elem').children('.id-hidden').val();
                      let delelement=$(e).parents('.card-item');
-                     deleteItemToLocalStorage(idelem);
+                     deleteItemToLocalStorage(idelem,namestorage);
                      $(delelement).remove();
                  })
                  $('#customCheck').prop('checked', true);
@@ -208,7 +205,7 @@
     });
 
      function updateItemToLocalStorage(id,quantity){
-         let items=readStorage();
+         let items=readStorage(namestorage);
          let idv=items.goods;//.indexOf(goodselem.id);
          let remove=undefined;
          for(let i=0; i<idv.length;i++){
@@ -224,20 +221,25 @@
              basketShow(items);
          }
      }
-    function deleteItemToLocalStorage(id){
-        let items=readStorage();
-        let idv=items.goods;//.indexOf(goodselem.id);
+    function deleteItemToLocalStorage(id,namestorage){
+        let itemsgoods=readStorage(namestorage);
+        if (!itemsgoods){
+            return false
+        }
+        let idv=itemsgoods.goods;//.indexOf(goodselem.id);
         let remove=undefined;
         for(let i=0; i<idv.length;i++){
             if(idv[i].id==id){
-
                 remove= idv.splice(i,1);
                 break;
             }
         }
         if(remove!=undefined){
-            localStorage.setItem(namestorage,JSON.stringify(items));
-            basketShow(items);
+            localStorage.setItem(namestorage,JSON.stringify(itemsgoods));
+            basketShow(itemsgoods);
+            return true;
+        }else{
+            return false;
         }
     }
 
