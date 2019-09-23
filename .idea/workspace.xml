@@ -4,11 +4,8 @@
     <list default="true" id="e3466139-d198-4984-9a84-7faa6c6189c4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/basket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/basket.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/templatefunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/template_function_basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/template_function_basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/DTO/template_function_basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/user/user_basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/user/user_basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/user/basket_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/user/basket_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/user/basket_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/views/user/basket_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -342,7 +339,8 @@
       <workItem from="1568725082864" duration="469000" />
       <workItem from="1568791500623" duration="5881000" />
       <workItem from="1568887956370" duration="4303000" />
-      <workItem from="1568964707478" duration="5753000" />
+      <workItem from="1568964707478" duration="6027000" />
+      <workItem from="1569226755261" duration="4259000" />
     </task>
     <servers />
   </component>
