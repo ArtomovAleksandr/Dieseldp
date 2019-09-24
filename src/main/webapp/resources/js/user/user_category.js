@@ -50,19 +50,7 @@
          $(e).parents('.order-main').siblings('.price-box').children('.total-price').text((elemdata*price).toFixed(digital));
      }
 
-     function createNewStorage(e){
-         let timenow=Date.now();
-         let storage={
-             time:timenow,
-             goods: [
-                 {id: e.id,name:e.name,factory:e.factory,catalog:e.catalog,unit:e.unit,price:e.price,quantity:e.quantity},
 
-             ]
-
-         }
-         localStorage.setItem(namestorage,JSON.stringify(storage));
-      //   readStorageForBasketShow(namestorage);
-     }
      function createGoods(e){
          let id=$(e).val();
          let name= $(e).parents('.basket-show').children('.basket-order-head').children('.basket-name').children('.basket-description').text().trim();
@@ -75,21 +63,7 @@
          return goods;
      }
 
-     // function updateItemToLocalStorage(goodselem){
-     //     let items=readStorage();
-     //     let idv=items.goods;//.indexOf(goodselem.id);
-     //     let remove=undefined;
-     //     for(let i=0; i<idv.length;i++){
-     //         if(idv[i].id==goodselem.id){
-     //             remove= idv.splice(i,1,goodselem);
-     //             break;
-     //         }
-     //     }
-     //     if(remove!=undefined){
-     //         localStorage.setItem(namestorage,JSON.stringify(items));
-     //         readStorageForBasketShow(namestorage);
-     //     }
-     // }
+
      $('.to-basket').click(function () {
          let goodselem = createGoods(this);
          if(ishaveStorahe(namestorage)){
@@ -103,7 +77,7 @@
                  addItemToLocalStorage(goodselem,namestorage);
              }
          }else {
-             createNewStorage(goodselem);
+             createNewStorage(goodselem,namestorage);
          }
          readStorageForBasketShow(namestorage);
      });

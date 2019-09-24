@@ -37,7 +37,7 @@ function updateItemToLocalStorage(id,quantity,namestorage){
     if(!itemsgood){
         return false;
     }
-    let idv=itemsgood.goods;//.indexOf(goodselem.id);
+    let idv=itemsgood.goods;
     let remove=undefined;
     for(let i=0; i<idv.length;i++){
         if(idv[i].id==id){
@@ -54,6 +54,19 @@ function updateItemToLocalStorage(id,quantity,namestorage){
     }
     return false;
 }
+function createNewStorage(e,namestorage){
+    let timenow=Date.now();
+    let storage={
+        time:timenow,
+        goods: [
+            {id: e.id,name:e.name,factory:e.factory,catalog:e.catalog,unit:e.unit,price:e.price,quantity:e.quantity}
+        ]
+
+    }
+    localStorage.setItem(namestorage,JSON.stringify(storage));
+
+}
+
 function addItemToLocalStorage(goodselem,namestorage){
     let storagedata=readStorage(namestorage);
     if(storagedata!=false) {
@@ -82,12 +95,6 @@ function deleteItemToLocalStorage(id,namestorage){
     return false;
 }
 
-// function basketShow(namestorage) {
-//     let item=readStorage(namestorage);
-//     if(item.goods.length>0){
-//         $('#goods-basket').removeClass('display-off').text(item.goods.length);
-//     }
-// }
 
 function readStorageForBasketShow(namestorage)
 {

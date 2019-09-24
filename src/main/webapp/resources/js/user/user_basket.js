@@ -129,7 +129,7 @@
                 $(buttomminus).attr('disabled', true);
             }
             if( updateItemToLocalStorage(idelem,elemdata,namestorage)){
-                basketShow(namestorage);
+                readStorageForBasketShow(namestorage);
             }
             $(inputelem).val(elemdata);
             $(selectquantity).parents('.footer').children('.price-wrap').children('.price-hur').text((elemdata * parseFloat(priceelem)).toFixed(digital));
@@ -161,15 +161,15 @@
          //    readStorageForBasketShow();
          }else {
              let allcheckboxchecked = $('.conteiner-product').find("input[type=checkbox]:checked");
-             console.log(allcheckboxchecked);
-             console.log(allcheckboxchecked.get());
+           //  console.log(allcheckboxchecked);
+           //  console.log(allcheckboxchecked.get());
              if (allcheckboxchecked.length > 0) {
                  allcheckboxchecked.get().forEach(function (e) {
                      let selectquantity=$(e).parents('.checkbox-wrap').siblings('.cart-item-info').children('.footer').children('.quantity-wrap').children('.quntity-container').children('.select-quantity');
                      let idelem=$(selectquantity).children('.pirice-elem').children('.id-hidden').val();
                      let delelement=$(e).parents('.card-item');
                      if(deleteItemToLocalStorage(idelem,namestorage)){
-                         basketShow(namestorage);
+                         readStorageForBasketShow(namestorage);
                      }
                      $(delelement).remove();
                  })
