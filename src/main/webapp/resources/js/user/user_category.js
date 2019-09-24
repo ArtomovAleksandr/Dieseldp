@@ -1,7 +1,6 @@
 ﻿$(function () {
     var digital=2;
     var namestorage='basketstorge';
-    var fulltimestorage=10000;//минуты
     $( ".order button").click(function() {
         $(this).parents('.capture-order').addClass('display-off');
         $(this).parents('.product-show').children().last().removeClass('display-off');
@@ -50,26 +49,7 @@
          let price= parseFloat(pricestr).toFixed(digital);
          $(e).parents('.order-main').siblings('.price-box').children('.total-price').text((elemdata*price).toFixed(digital));
      }
-     //work with localstorage
-     function ishaveStorahe(){
-         if(localStorage.getItem(namestorage)!==null){
-           return true;
-         }
-         return false;
-     }
-     function iscontainsItemById(goods) {
-         let items=readStorage().goods;
-         let flag = false;
-         items.forEach(function (item) {
-                  if (item.id==goods.id){
-                      flag=true;
-                  }
-          });
-         return flag;
-     }
-     function readStorage(){
-         return JSON.parse(localStorage.getItem(namestorage));
-     }
+
      function createNewStorage(e){
          let timenow=Date.now();
          let storage={
@@ -81,7 +61,7 @@
 
          }
          localStorage.setItem(namestorage,JSON.stringify(storage));
-         basketShow(storage);
+      //   readStorageForBasketShow(namestorage);
      }
      function createGoods(e){
          let id=$(e).val();
@@ -94,72 +74,41 @@
          let goods= new DTOGoodsStorage(id,name,factory,catalog,unit,price,quantity);
          return goods;
      }
-     function addItemToLocalStorage(goodselem){
-         let storagedata=readStorage();
-         storagedata.goods.push(goodselem);
-         localStorage.setItem(namestorage,JSON.stringify(storagedata));
-         basketShow(storagedata);
-     }
-     function updateItemToLocalStorage(goodselem){
-         let items=readStorage();
-         let idv=items.goods;//.indexOf(goodselem.id);
-         let remove=undefined;
-         for(let i=0; i<idv.length;i++){
-             if(idv[i].id==goodselem.id){
-                 remove= idv.splice(i,1,goodselem);
-                 break;
-             }
-         }
-         if(remove!=undefined){
-             localStorage.setItem(namestorage,JSON.stringify(items));
-             basketShow(items);
-         }
-     }
+
+     // function updateItemToLocalStorage(goodselem){
+     //     let items=readStorage();
+     //     let idv=items.goods;//.indexOf(goodselem.id);
+     //     let remove=undefined;
+     //     for(let i=0; i<idv.length;i++){
+     //         if(idv[i].id==goodselem.id){
+     //             remove= idv.splice(i,1,goodselem);
+     //             break;
+     //         }
+     //     }
+     //     if(remove!=undefined){
+     //         localStorage.setItem(namestorage,JSON.stringify(items));
+     //         readStorageForBasketShow(namestorage);
+     //     }
+     // }
      $('.to-basket').click(function () {
          let goodselem = createGoods(this);
-         if(ishaveStorahe()){
+         if(ishaveStorahe(namestorage)){
 
-             if(iscontainsItemById(goodselem)){
+             if(iscontainsItemById(goodselem.id,namestorage)){
        //        console.log('isConteins');
-               updateItemToLocalStorage(goodselem);
+                updateItemToLocalStorage(goodselem.id,goodselem.quantity,namestorage);
 
              }else{
          //        console.log('noContains');
-                 addItemToLocalStorage(goodselem);
+                 addItemToLocalStorage(goodselem,namestorage);
              }
          }else {
              createNewStorage(goodselem);
          }
+         readStorageForBasketShow(namestorage);
      });
-        
-     function checkFullTime() {
-         if(ishaveStorahe()){
-            let timestorage=readStorage().time;
-            let timenow=Date.now();
-            let fulltime=((timenow-timestorage)/60000).toFixed(0);
-       //     console.log('minute = '+fulltime);
-            if(fulltimestorage<fulltime){
-                localStorage.removeItem(namestorage);
-            }
 
-         }
-     }
-     function basketShow(e) {
-       if(e.goods.length>0){
-       $('#goods-basket').removeClass('display-off').text(e.goods.length);
-        }
-     }
-     function readStorageForBasketShow()
-     {
-         if(ishaveStorahe()) {
-             let goods = readStorage();
-             basketShow(goods);
-         }else{
-             $('#goods-basket').addClass('display-off');
-         }
-     }
-     checkFullTime();
-     readStorageForBasketShow();
+     readStorageForBasketShow(namestorage);
 
 });
 

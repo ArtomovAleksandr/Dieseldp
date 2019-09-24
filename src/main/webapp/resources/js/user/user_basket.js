@@ -100,7 +100,7 @@
                      elemdata = parseInt(elemdata) + 1;
                  }
                  if( updateItemToLocalStorage(idelem,elemdata,namestorage)){
-                    basketShow(namestorage);
+                     readStorageForBasketShow(namestorage);
                  }
 
                  $(inputelem).val(elemdata);
@@ -187,22 +187,8 @@
 
 
 
-     function basketShow(namestorage) {
-         let item=readStorage(namestorage);
-         if(item.goods.length>0){
-             $('#goods-basket').removeClass('display-off').text(item.goods.length);
-        }
-     }
-     function readStorageForBasketShow()
-     {
-             let goods = readStorage(namestorage);
-             if(goods){
-                 basketShow(namestorage);
-             }else {
-                 $('#goods-basket').addClass('display-off');
-             }
-     }
-      readStorageForBasketShow();
+
+    readStorageForBasketShow(namestorage);
 
 });
 
