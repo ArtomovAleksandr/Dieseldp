@@ -5,6 +5,7 @@
 <head>
     <c:import url="../template/userhead.jsp"></c:import>
     <link rel="stylesheet" href="../../../resources/css/styletitle.css">
+    <link rel="stylesheet" href="../../../resources/css/stylecategory.css">
     <%--<link  href="../../../resources/css/style.css" rel="stylesheet">--%>
 
 </head>
@@ -24,7 +25,7 @@
             <div class="product col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
 
                 <div class="product-border">
-                    <div class="product-show">
+                    <%--<div class="product-show">--%>
                         <div class="image">
                             <img src="https://wegstr.com/image/cache/catalog/NOVY%20SEDY%20MODEL/cnc-milling-machine-WEGSTR-ES-AUTO_LEVEL_NEW-220x180.jpg"
                                  alt="espanol">
@@ -33,7 +34,7 @@
                          </div>
                         <div class="capture-order">
                             <div class="capture">
-                                <div>
+                                <div class="capture-row-name">
                                     <div class="capture-descript">Наименование</div>
                                     <div class="capture-name">${good.name}</div>
                                 </div>
@@ -41,7 +42,7 @@
                                     <div class="capture-descript">Производитель</div>
                                     <div class="capture-name">${good.factory.name}</div>
                                 </div>
-                                <div>
+                                <div class="capture-catalog">
                                     <div class="capture-descript">Каталожный номер</div>
                                     <div class="capture-name">${good.catalog}</div>
                                 </div>
@@ -49,19 +50,20 @@
                                     <div class="capture-descript">Еденица измерения</div>
                                     <div class="capture-name">${good.unit}</div>
                                 </div>
-                                <div class="capture-div-price">
+                                <div class="capture-price">
                                     <div class="capture-descript-price">Цена</div>
                                     <div class="capture-name-price">${good.priceouttable}</div>
                                     <div class="capture-descript">гр.</div>
                                 </div>
-                                <div class="order">
-                                    <button>
-                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                    </button>
-                                </div>
+
+                            </div>
+                            <div class="order">
+                                <button>
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="basket-show display-off">
+                        <div class="basket-show">
                             <div class="basket-order-head">
 
                                 <button>
@@ -98,8 +100,9 @@
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                         </button>
                                     </div>
-                                    <button class="to-basket" value="${good.id}">В КОРЗИНУ</button>
                                 </div>
+                                    <button class="to-basket" value="${good.id}">В КОРЗИНУ</button>
+
                             </div>
                             <div class="line-box">
                                 <div class="line">
@@ -110,15 +113,17 @@
                                 <div class="order-price-fixed">
                                     Сумма товара
                                 </div>
-                                <div class="curency">
-                                    гр.
-                                </div>
+                                <div class="total-price-curency">
                                 <div class="total-price">
                                     ${good.priceouttable}
                                 </div>
+                                <div class="curency">
+                                    гр.
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <%--</div>--%>
                 </div>
 
             </div>

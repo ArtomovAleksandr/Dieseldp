@@ -2,12 +2,12 @@
     var digital=2;
     var namestorage='basketstorge';
     $( ".order button").click(function() {
-        $(this).parents('.capture-order').addClass('display-off');
-        $(this).parents('.product-show').children().last().removeClass('display-off');
+        $(this).parents('.capture-order').css('display','none');
+        $(this).parents('.product-border').children('.basket-show').css('display', 'flex');
     });
      $('.basket-order-head button').click(function () {
-         $(this).parents('.basket-show').addClass('display-off');
-         $(this).parents('.product-show').children('.capture-order').removeClass('display-off');
+         $(this).parents('.basket-show').css('display','none');
+         $(this).parents('.product-border').children('.capture-order').css('display', 'flex');
 
      });
 

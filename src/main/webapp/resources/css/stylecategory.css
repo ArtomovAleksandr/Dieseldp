@@ -1,0 +1,205 @@
+.product{
+    height: auto;
+    padding: 15px;
+}
+.product-border{
+    border: black 1px solid !important;
+    border-radius: 10px !important;
+    box-shadow: rgb(117,117,117) -5px 5px 10px 0px;
+    box-sizing: content-box;
+    max-height: content-box !important;
+    display: flex;
+    flex-direction: column;
+}
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+.image img{
+    height: 180px;
+}
+.capture-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.capture{
+    width: calc(100% - 50px);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.capture-row-name, .capture-factory, .capture-catalog, .capture-unit, .capture-price{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    white-space: nowrap;
+}
+.capture-descript, .capture-descript-price{
+    color: black;
+    padding: 2px;
+    margin-right: 10px;
+}
+.capture-descript-price{
+    font-size: 20px;
+}
+.capture-name, .capture-name-price{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.capture-name-price{
+    font-size: 28px;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+    padding-right: 12px;
+}
+.order button{
+
+    border-radius: 50%;
+    background-color:#ffec64;
+    font-size: 20px;
+    border:2px solid #ffaa22;
+    color:#333333;
+    /*border: 1px solid black;*/
+    width:40px;
+    height: 40px;
+    /*font-weight: 200;*/
+    /*line-height: 40px;*/
+}
+.order button:hover {
+    background-color:#ffab23;
+}
+.basket-show{
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+}
+.basket-order-head{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+.basket-order-head button{
+    border: none;
+    padding: 0;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /*line-height: 40px;*/
+}
+.basket-name{
+    width: calc(100% - 50px);
+    height: 40px;
+    margin-left: 20px;
+}
+.basket-description{
+    font-size: 16px;
+    margin: 0 ;
+    padding-left: 10px;
+    color: #212121;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.basket-unit{
+    text-align: left;
+    margin-top: 0;
+    line-height: 14px;
+    font-size: 14px;
+    color: #6a6a6a;
+    padding-left: 10px;
+}
+.order-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.add-cart-wrap{
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+.select-quantity-button{
+    padding: 0;
+    min-width: 0;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    line-height: 25px;
+    border-radius: 50%;
+    border: 1px black solid;
+}
+.current-quantity input{
+    width: 80px;
+    font-size: 15px;
+    border-radius: 7px;
+    border:gray solid 1px;
+    text-align: center;
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.to-basket{
+    width: 100px;
+    height: 30px;
+    background-color: #e56c36;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.line{
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color:rgb(48,110,160);
+}
+.price-box{
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-price-fixed{
+    margin-left: 20px;
+    padding-top: 5px;
+    font-weight: 700;
+    color: #000;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.total-price-curency{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+}
+.total-price{
+    display: flex;
+    /*float: right;*/
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.curency{
+    /*display: inline-block;*/
+    /*float: right;*/
+    color: #000;
+    margin-top: 15px;
+}
