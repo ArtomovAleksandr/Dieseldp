@@ -1,0 +1,45 @@
+#top{
+    background-color: rgb(233,251,255);
+    border-bottom: 1px solid #e2e2e2;
+}
+.fa-phone, .fa-user, .basket, .fa-share, .fa-trash, .fa-shopping-cart{
+    font-size: 25px;
+}
+.style-fa{
+    font-size: 20px;
+}
+#repead-images{
+    background-image: url("../images/b1.png");
+    background-repeat: repeat-x;
+}
+.basket{
+    position: relative;
+}
+#goods-basket{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255,106,30,.9);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+    font-weight: 600;
+    color: #ebf3e7;
+    top: 0px;
+    left: 15px;
+    border-radius: 50%;
+}
+#menu{
+    background-color: rgb(48,110,160)!important;
+    border-radius: 20px;
+    background-image: none!important;
+    border-color: rgb(255,255,255) !important;
+    border: 1px solid;
+    box-shadow: rgb(117,117,117)-5px 5px 10px 0px;
+}
+.color_white, .color_white_hover{
+    color: white !important;
+}
+.color_white_hover:hover{
+    color: yellow !important;
+}

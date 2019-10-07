@@ -4,7 +4,9 @@
 <html lang="ru">
 <head>
     <c:import url="../template/userhead.jsp"></c:import>
+    <link rel="stylesheet" href="../../../resources/css/styletitle.css">
     <%--<link  href="../../../resources/css/style.css" rel="stylesheet">--%>
+
 </head>
 <body>
 <div class="container">
