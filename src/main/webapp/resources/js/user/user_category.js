@@ -45,9 +45,11 @@
          countprice(this,elemdata);
      });
      function countprice(e,elemdata) {
-         let pricestr= $(e).parents('.product-show').children('.capture-order').children('.capture').children('.capture-div-price').children('.capture-name-price').text();
+         let pricestr= $(e).parents('.product-border').children('.capture-order').children('.capture').children('.capture-price').children('.capture-name-price').text();
          let price= parseFloat(pricestr).toFixed(digital);
-         $(e).parents('.order-main').siblings('.price-box').children('.total-price').text((elemdata*price).toFixed(digital));
+       //  $(e).parents('.order-main').siblings('.price-box').children('.total-price').text((elemdata*price).toFixed(digital));
+      //   console.log($(e).parents('.basket-show').children('.price-box').children('.total-price-curency').children('.total-price'));
+         $(e).parents('.basket-show').children('.price-box').children('.total-price-curency').children('.total-price').text((elemdata*price).toFixed(digital));
      }
 
 
@@ -55,10 +57,10 @@
          let id=$(e).val();
          let name= $(e).parents('.basket-show').children('.basket-order-head').children('.basket-name').children('.basket-description').text().trim();
          let catalog= $(e).parents('.basket-show').children('.basket-order-head').children('.basket-name').children('.basket-unit').text().trim();
-         let factory= $(e).parents('.product-show').children('.capture-order').children('.capture').children('.capture-factory').children('.capture-name').text();
-         let unit= $(e).parents('.product-show').children('.capture-order').children('.capture').children('.capture-unit').children('.capture-name').text();
-         let price= $(e).parents('.product-show').children('.capture-order').children('.capture').children('.capture-div-price').children('.capture-name-price').text();
-         let quantity=$(e).siblings(".current-quantity").find('input').val();
+         let factory= $(e).parents('.product-border').children('.capture-order').children('.capture').children('.capture-factory').children('.capture-name').text();
+         let unit= $(e).parents('.product-border').children('.capture-order').children('.capture').children('.capture-unit').children('.capture-name').text();
+         let price= $(e).parents('.product-border').children('.capture-order').children('.capture').children('.capture-price').children('.capture-name-price').text();
+         let quantity=$(e).siblings(".add-cart-wrap").children('.current-quantity').find('input').val();
          let goods= new DTOGoodsStorage(id,name,factory,catalog,unit,price,quantity);
          return goods;
      }

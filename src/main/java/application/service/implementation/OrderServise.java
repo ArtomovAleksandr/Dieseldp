@@ -16,6 +16,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -35,6 +37,8 @@ public class OrderServise implements EntityService<Order> {
          Order order=new Order();
          order.setFone(orderDTO.getFone());
          order.setName(orderDTO.getName());
+         String createorderDateTime =LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")).toString();
+         order.setCreateorderDateTime(createorderDateTime);
          List<OrderStorageGoodsDTO> goods=orderDTO.getGoods();
          List<QuantityGoodsInOrder>quantityGoodsInOrders=new ArrayList<>();
          for (OrderStorageGoodsDTO go:goods) {

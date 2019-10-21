@@ -18,8 +18,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Имя</th>
                 <th scope="col">Телефон</th>
-                <th scope="col">Кол. позиций</th>
-
+                <th scope="col">Кол.</th>
+                <th scope="col">Время</th>
                 <th colspan="3">
                     <a href="/userorder/showtruedone/1">
                         <button class="btn btn-outline-info">
@@ -36,6 +36,7 @@
                     <td scope="row">${order.name}</td>
                     <td scope="row">${order.fone}</td>
                     <td scope="row">${order.countgoods}</td>
+                    <td scope="row">${order.createorderDateTime}</td>
                     <td colspan="3">
                                 <button class="btn btn-outline-danger  del"  value="${order.id}">
                                     Удалить

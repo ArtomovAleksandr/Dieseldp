@@ -4,9 +4,6 @@
     text-align: center;
 
 }
-.display-off{
-    display: none;
-}
 .product-border{
     border: black 1px solid !important;
     border-radius: 10px !important;

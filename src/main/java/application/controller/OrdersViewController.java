@@ -36,6 +36,7 @@ public class OrdersViewController {
         for (Order order:orderList) {
             order.setCountGoods();
             order.setQuantityGoodsInOrders(null);
+            order.setDateTameForOut();
         }
         model.addAttribute("orders",orderList);
         model.addAttribute("totalpage", page.getTotalPages());
@@ -71,11 +72,13 @@ public class OrdersViewController {
             ex.getMessage();
         }
         order.setCountGoods();
+        order.setDateTameForOut();
         order.totalOrderSetZero();
         for (QuantityGoodsInOrder quwontity:order.getQuantityGoodsInOrders()) {
             quwontity.getGoods().countPiceForUser();
             quwontity.totalGoodsSumm(quwontity.getGoods().getPriceouttable());
             order.totalOrderSumm(quwontity.getTotalgoods());
+
         }
         model.addAttribute("order",order);
         return "orders/orderbyid";

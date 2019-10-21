@@ -17,9 +17,9 @@
             <tr>
                 <th scope="col">Имя</th>
                 <th scope="col">Телефон</th>
-                <th scope="col">Кол. позиций</th>
-
-                <th colspan="4"></th>
+                <th scope="col">Кол.</th>
+                <th scope="col">Время</th>
+                <th colspan="3"></th>
             </tr>
             </thead>
             <tbody>
@@ -27,8 +27,8 @@
                 <td>${order.name}</td>
                 <td>${order.fone}</td>
                 <td>${order.countgoods}</td>
-                <%--<td></td>--%>
-                <td colspan="4"></td>
+               <td>${order.createorderDateTime}</td>
+                <td colspan="3"></td>
             </tr>
             <tr>
                 <th>Наименование</th>

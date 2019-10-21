@@ -43,3 +43,6 @@
 .color_white_hover:hover{
     color: yellow !important;
 }
+.display-off{
+    display: none;
+}

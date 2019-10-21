@@ -72,13 +72,8 @@ $(function () {
 
 
 
-
-
-
-
-
       if(!ishaveStorahe(namestorage)){
-          alert("Ошибка, запчастeй не в корзине")
+          alert("Ошибка, запчастeй нет в корзине")
           return;
       }
       let fone=  $('.client-fone-data input').val();
@@ -89,10 +84,10 @@ $(function () {
 
           return;
        }
-      // if(fone.match(/[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/)==null){
+      if(fone.match(/[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}/)==null){
 
-      //  return;
-      // }
+       return;
+      }
       let storage=readStorage(namestorage);
       var orderDto=createNewData(fone,name,storage.goods);
       ////////let servise=new AJAXService();

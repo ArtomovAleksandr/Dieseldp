@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,9 +24,8 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    private Date createorder;
-
+    @Column(length = 25)
+    private String createorderDateTime;
     private String name;
     private String fone;
     @Column(nullable = false)
@@ -47,6 +48,13 @@ public class Order {
     }
     public void setCountGoods(){
         this.countgoods=quantityGoodsInOrders.size();
+    }
+    public void setDateTameForOut(){
+        if(this.createorderDateTime!=null) {
+            LocalDateTime dateTime=LocalDateTime.parse( this.createorderDateTime, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+            String abc = new Integer(dateTime.getDayOfMonth()).toString()+"-"+new Integer(dateTime.getMonthValue()).toString()+"-"+new Integer(dateTime.getYear()).toString()+"   "+new Integer(dateTime.getHour()).toString()+":"+new Integer((dateTime.getMinute())).toString();
+            this.createorderDateTime = abc;
+        }
     }
 
 }

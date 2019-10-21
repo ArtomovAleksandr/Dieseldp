@@ -18,7 +18,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Имя</th>
                 <th scope="col">Телефон</th>
-                <th scope="col">Кол. позиций</th>
+                <th scope="col">Кол.</th>
 
                 <th colspan="3">
                     <a href="/userorder/showfalsedone/1">
@@ -36,6 +36,7 @@
                     <td scope="row">${order.name}</td>
                     <td scope="row">${order.fone}</td>
                     <td scope="row">${order.countgoods}</td>
+
                     <td colspan="3">
                                 <button class="btn btn-outline-danger  del"  value="${order.id}">
                                     Удалить
