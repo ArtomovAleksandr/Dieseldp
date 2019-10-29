@@ -26,7 +26,7 @@
     <hibernate-entitymanager-version>5.3.3.Final</hibernate-entitymanager-version>
     <hibernate-core-version>5.3.3.Final</hibernate-core-version>
     <lombok-version>1.18.2</lombok-version>
-    <jackson-version>2.9.6</jackson-version>
+    <jackson-version>2.10.0</jackson-version>
     <maven-clear-version>3.0.0</maven-clear-version>
     <maven-resources-version>3.0.2</maven-resources-version>
     <maven-compiler-version>3.7.0</maven-compiler-version>
