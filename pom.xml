@@ -24,7 +24,7 @@
     <taglibs-standard-version>1.2.5</taglibs-standard-version>
     <mysql-version>8.0.11</mysql-version>
     <hibernate-entitymanager-version>5.3.3.Final</hibernate-entitymanager-version>
-    <hibernate-core-version>5.3.3.Final</hibernate-core-version>
+    <hibernate-core-version>5.4.24.Final</hibernate-core-version>
     <lombok-version>1.18.2</lombok-version>
     <jackson-version>2.9.6</jackson-version>
     <maven-clear-version>3.0.0</maven-clear-version>
